@@ -34,3 +34,14 @@ Cada vez que ejecutamos algo en JavaScript **se corre dentro de un contexto de e
 > Básicamente, vamos a decir que es __global__ cualquier bloque de código que no esté declarado dentro de una función.
 
   
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+[Home](/index.md)

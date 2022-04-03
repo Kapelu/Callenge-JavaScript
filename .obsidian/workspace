@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "671298d764b2ff76",
+        "id": "46bd5c8b6e721574",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Módulo1-Foundations/01-JavaScriptAvanzado1.md",
+            "file": "index.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Módulo1-Foundations/01-JavaScriptAvanzado1.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,8 +86,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "671298d764b2ff76",
+  "active": "46bd5c8b6e721574",
   "lastOpenFiles": [
-    "Módulo1-Foundations/01-JavaScriptAvanzado1.md"
+    "index.md",
+    "Módulo1-Foundations/01-JavaScriptAvanzado1.md",
+    "Módulo1-Foundations/00-IntroToCS.md"
   ]
 }
