@@ -1,20 +1,15 @@
 <H2 style='color:#FFC300' align= center>CONCEPTOS FUNDAMENTALES DE JAVASCRIPT</H2>
-<H1 align= center>----------------------------------------------</H1>
   
-<H6 align= rigth style='color:#2471A3'><i>SINGLE THREDED y SINCRONICO</i></H6>
-<H6 align= rigth style='color:#DAF7A6' ><i>Hilo único y Sincronico</i></H6>
+<H6 align= rigth style='color:#2471A3'>SINGLE THREDED y SINCRONICO <i>(Hilo único y Sincronico)</i></H6>
 
 Significa que JavaScript solo puede ejecutar una sola intruccion y en orden. Parece confuso dado a la velocidad de los procesadores que dan la sensacion de paralelismo del mismo.
   
-<H4 align= rigth style='color:#2471A3' ><i>SYNTAX PARSER</i></H4>
-<H6 align= rigth style='color:#DAF7A6' ><i>Analizador de sintaxis</i></H6>
+<H4 align= rigth style='color:#2471A3' >SYNTAX PARSER <i>(Analizador de sintaxis)</i></H4>
 
 Analiza la Sintaxis, basicamente es esto. JavaScript lee el codigo y determiina si su sintaxis es valida o no, en caso de estar bien se genera el codigo a nivel maquina para ejecutar las instrucciones, sumando a esto ciertos comportamientos extras, como ser el entorno lexico.
 
   
-<H6 align= rigth style='color:#2471A3'><i>LEXICAL ENVIRONMENT</i></H6>
-<H6 align= rigth style='color:#DAF7A6' ><i>Analizador de sintaxis</i></H6>
-
+<H6 align= rigth style='color:#2471A3'>LEXICAL ENVIRONMENT <i>(Analizador de sintaxis)</i></H6>
 
 Esto tiene que ver con 'DONDE' estan declarados los estatment en el codigo. significa que dependiendo de donde esten declarado es el comportamiento que tendran. ej:
 
