@@ -4,7 +4,7 @@
 
 Significa que JavaScript solo puede ejecutar una sola intruccion y en orden. Parece confuso dado a la velocidad de los procesadores que dan la sensacion de paralelismo del mismo.
   
-<H4 align= rigth style='color:#2471A3' >SYNTAX PARSER <i>(Analizador de sintaxis)</i></H4>
+<H6 align= rigth style='color:#2471A3' >SYNTAX PARSER <i>(Analizador de sintaxis)</i></H6>
 
 Analiza la Sintaxis, basicamente es esto. JavaScript lee el codigo y determiina si su sintaxis es valida o no, en caso de estar bien se genera el codigo a nivel maquina para ejecutar las instrucciones, sumando a esto ciertos comportamientos extras, como ser el entorno lexico.
 
