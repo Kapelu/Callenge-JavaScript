@@ -1,0 +1,51 @@
+<html>
+<head>
+   <title>Colores RGBA con CSS 3</title>
+<style type="text/css">
+div.cuadrado{
+   width: 150px;
+   height: 40px;
+   border: 1px solid #ffffff;
+   margin: 50px;
+}
+div.textogrande{
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight:bold;
+   font-size: 20pt;
+}
+</style>
+</head>
+
+<body>
+<h1>Colores RGBA con CSS 3</h1>
+
+<h2>Ejemplo de capas con fondo azul y varias transparencias</h2>
+<div class="cuadrado" style="background-color: rgba(0, 0, 255, 0.1);"></div>
+<div class="cuadrado" style="background-color: rgba(0, 0, 255, 0.4);"></div>
+<div class="cuadrado" style="background-color: rgba(0, 0, 255, 0.7);"></div>
+<div class="cuadrado" style="background-color: rgba(0, 0, 255, 1);"></div>
+
+<h2>Ejemplo de capas con fondo verde y varias transparencias, sobre una capa con fondo amarillo</h2>
+<div style="background-image: url(./images/background.jpg); padding: 10px;">
+<div class="cuadrado" style="background-color: rgba(0, 255, 0, 0.1);"></div>
+<div class="cuadrado" style="background-color: rgba(0, 255, 0, 0.4);"></div>
+<div class="cuadrado" style="background-color: rgba(0, 255, 0, 0.7);"></div>
+<div class="cuadrado" style="background-color: rgba(0, 255, 0, 1);"></div>
+</div>
+
+<h2>Ejemplo de capas con fondo naranja y varias transparencias, sobre una capa con una imagen de fondo</h2>
+<div style="background-color: #ff3; padding: 80px;">
+<div class="cuadrado" style="background-color: rgba(255, 125, 0, 0.1);"></div>
+<div class="cuadrado" style="background-color: rgba(255, 125, 0, 0.4);"></div>
+<div class="cuadrado" style="background-color: rgba(255, 125, 0, 0.7);"></div>
+<div class="cuadrado" style="background-color: rgba(255, 125, 0, 1);"></div>
+</div>
+
+<h2>Ejemplo de texto de color rojo y varias transparencias, sobre una capa con una imagen de fondo</h2>
+<div style="background-image: url(./images/background.jpg); padding: 10px;">
+<div class="textogrande" style="color: rgba(200, 0, 0, 0.3);">Este texto está para que se vea que puede ser también medio transparente</div>
+<div class="textogrande" style="color: rgba(200, 0, 0, 0.7);">Este texto está para que se vea que puede ser también medio transparente</div>
+</div>
+
+</body>
+</html>
