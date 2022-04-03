@@ -24,9 +24,10 @@ const kapelu = {
 
 <h6 align="rigth"><i>Módulo I</i></h6>
 
-[00 - Intro to Computer Science](./M%C3%B3dulo1-Foundations/00-IntroToCS.md)
-<br>
-[01 - JavaScript Avanzado I](./M%C3%B3dulo1-Foundations/01-JavaScriptAvanzado1.md)
+[![00 - Intro to Computer Science](https://img.shields.io/badge/00_-_Intro_to_Computer_Science-414141?style=for-the-badge&logo=ApacheRocketMQ&logoColor=informational&link=./M%C3%B3dulo1-Foundations/00-IntroToCS.md)](./M%C3%B3dulo1-Foundations/00-IntroToCS.md)
+<br>   
+
+[![01 - JavaScript Avanzado I](https://img.shields.io/badge/01_-_JavaScript_Avanzado_I-414141?style=for-the-badge&logo=ApacheRocketMQ&logoColor=informational&link=./M%C3%B3dulo1-Foundations/01-JavaScriptAvanzado1.md)](./M%C3%B3dulo1-Foundations/01-JavaScriptAvanzado1.md)
 
 
 

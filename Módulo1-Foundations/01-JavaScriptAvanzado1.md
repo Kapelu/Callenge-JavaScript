@@ -31,7 +31,7 @@ contiene información sobre *qué* código se está ejecutando en cada momento. 
 
 Cada vez que ejecutamos algo en JavaScript **se corre dentro de un contexto de ejecución**. Como todo el código corre en un contexto, si no especificamos ese contexto (veremos cómo se hace despues) entonces el código se va a ejecutar en el __contexto global__, que es el contexto de base que nos crea automáticamente el interprete.  
 
-> Básicamente, vamos a decir que es __global__ cualquier bloque de código que no esté declarado dentro de una función.
+> Básicamente, vamos a decir que es _global_ cualquier bloque de código que no esté declarado dentro de una función.
 
   
 
