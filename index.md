@@ -7,7 +7,7 @@
 const kapelu = {
     name : 'Daniel Calderon',
     henry: 'FT-25a',
-	hobby: ['Programar', 'Música', 'Caminar', 'Viajar en Camión😍']
+    hobby: ['Programar', 'Música', 'Caminar', 'Viajar en Camión😍']
     code : ['Javascript', 'HTML', 'CSS', 'NodeJS'],
     tools: ['Visual Studio Code','GitBash', 'GitHub'],
     github: 'https://github.com/Kapelu',
