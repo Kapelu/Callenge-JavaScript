@@ -139,9 +139,16 @@
 
 > NOT (es la negacion de lo que tengo)
 
-## Half Adder
+<H6 align= rigth style='color:#2471A3' >HALF ADDER <i>(Medio sumador)</i></H6>
 
-### PASAR DE DECIMAL A BINARIO  
+El Half-Adder es un bloque de construcción básico para sumar dos números como dos entradas y producir dos salidas. El sumador se utiliza para realizar la operación OR de dos números binarios de un solo bit. Los bits de **sumador** y **sumador** son dos estados de entrada, y **'carry** ' y **'sum** ' son dos estados de salida del medio sumador.
+
+      A ---->┌────────────┐----> Suma
+	                │ HALF ADDER │
+	  B ---->└────────────┘----> Acarreo	  
+
+
+<H6 align= rigth style='color:#2471A3' >PASAR DE DECIMAL A BINARIO</H6>  
 
 Si quisiéramos sumar 19+24 sabemos que la suma de 9+4 = 13, por lo tanto en el resultado final en la unidad nos queda un 3 y debemos “llevarnos” la decena. Luego, para la decena debemos sumar 1 + 2 + 1 = 4. Obteniendo como resultado final 43.
 En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay acarreo) mientras que el XOR efectúa la suma.
@@ -160,9 +167,7 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay 
 
 
 
-### PASAR DE BINARIO A DECIMAL
-
-  
+<H6 align= rigth style='color:#2471A3' >PASAR DE BINARIO A DECIMAL</H6>
 
 1 Byte ---> 8 posiciones ---> 8 bit
 
@@ -251,4 +256,4 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay 
 <br>
 <br>
 <br>
-[Home](/index.md)
+[Home](./index.md)

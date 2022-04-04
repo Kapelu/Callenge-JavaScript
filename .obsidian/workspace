@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Módulo1-Foundations/01-JavaScriptAvanzado1.md",
-            "mode": "source"
+            "mode": "preview"
           }
         }
       }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "9a6dec915ccfa57b",
@@ -90,7 +89,7 @@
   "active": "46bd5c8b6e721574",
   "lastOpenFiles": [
     "Módulo1-Foundations/01-JavaScriptAvanzado1.md",
-    "index.md",
-    "Módulo1-Foundations/00-IntroToCS.md"
+    "Módulo1-Foundations/00-IntroToCS.md",
+    "index.md"
   ]
 }

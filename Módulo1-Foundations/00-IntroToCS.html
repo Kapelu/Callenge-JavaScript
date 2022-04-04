@@ -6,16 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>00-Introducción To Computer Science</title>
     <!-- Comienza stylo CSS -->
-    <style>         
-        body {   /*Imagen de fondo y color*/      
-            background-color: #c02525;
+    <style>       
+        body {   /*Imagen de fondo y color  */ 
+            background-color: #000000;
             background-repeat: no-repeat;
-            background-position:center center;
-            /*background-image: url("../images/background.png");*/
-            background-size: cover;   
+            background-position:center;
+            background-image: url("../images/background.png");
+            background-size: cover;
             /*background:-webkit-linear-gradient(#aa0202ec, #b90c0c93 40%, #7e6d6db9);*/
         }
-        div.titulo{ /*Titulo*/
+        .global{
+            width: 1270px;
+            height: 750px;
+            border: 1px solid rgb(255, 255, 255);
+            margin-left: 140px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: rgba(151, 118, 118, 0.479);
+            color: rgb(226, 226, 225);
+        }
+        /*
+        div.titulo{ /*Titulo
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight:bold;
             margin: auto;
@@ -24,14 +35,34 @@
             color: rgba(255, 2, 141, 0.842);
             border-top-left-radius:0;
             border-bottom-left-radius:0,
-        }        
-        .texto {
+        }
+        */
+        /*
+        .botones{
             width: 1110px;
             height: 610px;
             background-color: rgba(253, 253, 253, 0);
             color: rgb(226, 226, 225);
             font-size: 18px;
 	        border: 0px solid rgb(255, 255, 255);
+            
+
+        }
+        .fondoTexto{
+            width: 1110px;
+            height: 610px;
+            background-color: rgba(253, 253, 253, 0);
+            color: rgb(226, 226, 225);
+            font-size: 18px;
+	        border: 0px solid rgb(255, 255, 255);            
+        }    
+        .texto {
+            width: 1110px;
+            height: 610px;
+            background-color: rgba(253, 253, 253, 0);
+            color: rgb(226, 226, 225);
+            font-size: 18px;
+	        
             overflow-y: scroll !important;
             padding-left: 10px;
             padding-right: 45px;
@@ -48,13 +79,15 @@
             word-wrap:break-word;
         }
 
-
+*/
     </style>
 </head>
 <body>
-    
+    <div class="global"></div>
+    <div class="botones"></div>
+    <div class="fondoTexto"></div>
     <div class="titulo">Introducción a Computer Science</div>
-    <div class="texto">
+    <!--<div class="texto">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
             Viiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
@@ -124,7 +157,7 @@
             Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
             Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
         </p>
-    </div>
+    </div>-->
 
     
 </body>
