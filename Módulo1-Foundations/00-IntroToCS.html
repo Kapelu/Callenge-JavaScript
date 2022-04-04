@@ -8,27 +8,35 @@
     <!-- Comienza stylo CSS -->
     <style>         
         body {   /*Imagen de fondo y color*/      
-            background-color: #000000;
+            background-color: #c02525;
             background-repeat: no-repeat;
-            background-image: url("../images/background.png");
-            background-size: cover;            
+            background-position:center center;
+            /*background-image: url("../images/background.png");*/
+            background-size: cover;   
+            background:-webkit-linear-gradient(#aa0202ec, #b90c0c93 40%, #7e6d6db9);
         }
         div.titulo{ /*Titulo*/
             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight:bold;
-            margin: 5px;
-            font-size: 30pt;
+            margin: auto;
+            text-align: center;
+            font-size: 45px;
             color: rgba(255, 2, 141, 0.842);
+            border-top-left-radius:0;
+            border-bottom-left-radius:0,
+            
+            
+            /*font: 13px/18px monospace;*/
             /*text-transform: uppercase;*/
         }        
         .texto {
-            width: 890px;
+            width: 1110px;
             height: 610px;
             background-color: rgba(253, 253, 253, 0);
             color: rgb(226, 226, 225);
             font-size: 18px;
 	        border: 0px solid rgb(255, 255, 255);
-            overflow-y: scroll;
+            overflow-y: scroll !important;
             padding-left: 10px;
             padding-right: 45px;
             position: relative;
@@ -38,6 +46,10 @@
             left: 150px;
             text-align: justify;
             justify-content:center;
+            border-top-left-radius:0;
+            border-bottom-left-radius:0;
+            border-color:#999;color:#222;
+            word-wrap:break-word;
         }
 
 
@@ -45,7 +57,7 @@
 </head>
 <body>
     
-    <div align='center' class="titulo">Introducción a Computer Science</div>
+    <div class="titulo">Introducción a Computer Science</div>
     <div class="texto">
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
