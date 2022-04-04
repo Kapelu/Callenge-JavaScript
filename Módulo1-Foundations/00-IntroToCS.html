@@ -1,164 +1,84 @@
 <!DOCTYPE html>
 <html lang='es'>
-<head>
-    <meta charset='UTF-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>00-Introducción To Computer Science</title>
-    <!-- Comienza stylo CSS -->
-    <style>       
-        body {   /*Imagen de fondo y color  */ 
-            background-color: #000000;
-            background-repeat: no-repeat;
-            background-position:center;
-            background-image: url("../images/background.png");
-            background-size: cover;
-            /*background:-webkit-linear-gradient(#aa0202ec, #b90c0c93 40%, #7e6d6db9);*/
-        }
-        .global{
-            width: 1270px;
-            height: 750px;
-            border: 1px solid rgb(255, 255, 255);
-            margin-left: 140px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            background-color: rgba(151, 118, 118, 0.479);
-            color: rgb(226, 226, 225);
-        }
-        /*
-        div.titulo{ /*Titulo
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight:bold;
-            margin: auto;
-            text-align: center;
-            font-size: 45px;
-            color: rgba(255, 2, 141, 0.842);
-            border-top-left-radius:0;
-            border-bottom-left-radius:0,
-        }
-        */
-        /*
-        .botones{
-            width: 1110px;
-            height: 610px;
-            background-color: rgba(253, 253, 253, 0);
-            color: rgb(226, 226, 225);
-            font-size: 18px;
-	        border: 0px solid rgb(255, 255, 255);
-            
-
-        }
-        .fondoTexto{
-            width: 1110px;
-            height: 610px;
-            background-color: rgba(253, 253, 253, 0);
-            color: rgb(226, 226, 225);
-            font-size: 18px;
-	        border: 0px solid rgb(255, 255, 255);            
-        }    
-        .texto {
-            width: 1110px;
-            height: 610px;
-            background-color: rgba(253, 253, 253, 0);
-            color: rgb(226, 226, 225);
-            font-size: 18px;
-	        
-            overflow-y: scroll !important;
-            padding-left: 10px;
-            padding-right: 45px;
-            position: relative;
-            margin-left: 110px;
-            margin-top: 1px;
-            margin-bottom: 103px;
-            left: 150px;
-            text-align: justify;
-            justify-content:center;
-            border-top-left-radius:0;
-            border-bottom-left-radius:0;
-            border-color:#999;color:#222;
-            word-wrap:break-word;
-        }
-
-*/
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>00-Introducción To Computer Science</title>
+        <!-- Comienza style CSS -->
+        <style>
+            .menu { grid-area: menu; }
+            .button {
+                width: 140px;
+                height:30px;
+                margin: 10px;
+                display: grid;
+                align-content: center;
+                justify-content:center;
+                padding: 10px 10px;
+                font-size: 14px;
+                cursor: pointer;
+                text-align: center;	
+                text-decoration: none;
+                outline: none;
+                color: rgb(0, 0, 0);
+                background-color: #ffee01;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 5px #999;
+            }
+            .button:hover {background-color: #ffee01a6}
+            .button:active {
+                background-color: #ffee01;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            .titulo { grid-area: titulo; }
+            .cuerpo { grid-area: cuerpo; }
+    
+            .grid-container {
+                display: grid;
+                
+               
+                background-color: #00000044;
+                background-repeat: no-repeat;
+                background-position:center;
+                background-image: url("../images/background.png");
+                background-size: cover;
+                display: grid;
+                grid:
+                'titulo titulo titulo titulo titulo titulo'
+                'menu cuerpo cuerpo cuerpo cuerpo cuerpo';
+                grid-gap: 1px;
+                background-color: #2195f310;
+                padding: 1px;
+           }
+           .grid-container > div {
+               display: grid;
+               grid-template-columns: 50px 20px;
+               grid-template-rows: 1px 250px;
+                
+               background-color: rgba(255, 255, 255, 0.226);
+               text-align: center;
+               /*padding: 10px 20px 20px;*/
+               font-size: 10px;
+           }
     </style>
 </head>
-<body>
-    <div class="global"></div>
-    <div class="botones"></div>
-    <div class="fondoTexto"></div>
-    <div class="titulo">Introducción a Computer Science</div>
-    <!--<div class="texto">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-            Viiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-            Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-            Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet      mi.
-            Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor      tortor.
-            Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-            Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-            Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-            Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet      mi.
-            Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor      tortor.
-            Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-            Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-        </p><p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-            Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-            Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet      mi.
-            Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor      tortor.
-            Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-            Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-            Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-            Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet      mi.
-            Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor      tortor.
-            Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-            Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-        </p><p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-            Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-            Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet      mi.
-            Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor      tortor.
-            Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-            Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-            Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-            Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet      mi.
-            Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor      tortor.
-            Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-            Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-        </p><p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-            Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-            Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet      mi.
-            Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor      tortor.
-            Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-            Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor eget pulvinar lobortis.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam ac dolor augue.
-            Pellentesque mi mi, laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-            Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut arcu aliquam purus viverra dictum vel sit amet      mi.
-            Duis nisl mauris, aliquam sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem aliquam, congue porttitor      tortor.
-            Sed tempor nisl a lorem consequat, id maximus erat aliquet. Sed sagittis porta libero sed condimentum.
-            Aliquam finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id ultrices ultrices, tempor et tellus.
-        </p>
-    </div>-->
-
-    
-</body>
+    <body>
+        <div class="grid-container">
+            <div class="menu">
+            <button class="button">Home</button>
+            <button class="button">JS Avanzado I
+            <button class="button">JS Avanzado II</button>
+            <button class="button">JS Avanzado III</button>
+            <button class="button">Base de Datos I</button>
+            <button class="button">Base de Datos II</button>
+            <button class="button">Base de Datos III</button>
+            <button class="button">Algoritmos I</button>
+            <button class="button">Algoritmos II</button>
+        </div>
+        <div class="titulo"><div id="titulo">Introducción a Computer Science</div></h1></div>
+        <div class="cuerpo">Texto</div>
+    </body>
 </html>
