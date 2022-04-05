@@ -3,82 +3,30 @@
     <head>
         <meta charset='UTF-8'>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>00-Introducción To Computer Science</title>
-        <!-- Comienza style CSS -->
-        <style>
-            .menu { grid-area: menu; }
-            .button {
-                width: 140px;
-                height:30px;
-                margin: 10px;
-                display: grid;
-                align-content: center;
-                justify-content:center;
-                padding: 10px 10px;
-                font-size: 14px;
-                cursor: pointer;
-                text-align: center;	
-                text-decoration: none;
-                outline: none;
-                color: rgb(0, 0, 0);
-                background-color: #ffee01;
-                border: none;
-                border-radius: 15px;
-                box-shadow: 0 5px #999;
-            }
-            .button:hover {background-color: #ffee01a6}
-            .button:active {
-                background-color: #ffee01;
-                box-shadow: 0 5px #666;
-                transform: translateY(4px);
-            }
-            .titulo { grid-area: titulo; }
-            .cuerpo { grid-area: cuerpo; }
-    
-            .grid-container {
-                display: grid;
-                
-               
-                background-color: #00000044;
-                background-repeat: no-repeat;
-                background-position:center;
-                background-image: url("../images/background.png");
-                background-size: cover;
-                display: grid;
-                grid:
-                'titulo titulo titulo titulo titulo titulo'
-                'menu cuerpo cuerpo cuerpo cuerpo cuerpo';
-                grid-gap: 1px;
-                background-color: #2195f310;
-                padding: 1px;
-           }
-           .grid-container > div {
-               display: grid;
-               grid-template-columns: 50px 20px;
-               grid-template-rows: 1px 250px;
-                
-               background-color: rgba(255, 255, 255, 0.226);
-               text-align: center;
-               /*padding: 10px 20px 20px;*/
-               font-size: 10px;
-           }
-    </style>
-</head>
+        <link rel="stylesheet" href="../style/styleNote.css">        
+    </head>
     <body>
-        <div class="grid-container">
-            <div class="menu">
-            <button class="button">Home</button>
-            <button class="button">JS Avanzado I
-            <button class="button">JS Avanzado II</button>
-            <button class="button">JS Avanzado III</button>
-            <button class="button">Base de Datos I</button>
-            <button class="button">Base de Datos II</button>
-            <button class="button">Base de Datos III</button>
-            <button class="button">Algoritmos I</button>
-            <button class="button">Algoritmos II</button>
+        <div class="container">
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, incidunt.
+            </div>
+            <div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, modi.
+
+                </div>
+                <div>
+                    <div>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, modi aperiam saepe adipisci voluptatem dolor at, doloribus soluta repellendus quisquam ratione quibusdam atque ullam sapiente consectetur, inventore temporibus praesentium. Laudantium hic quos provident incidunt blanditiis rem, aut pariatur magni impedit illum voluptate accusamus atque sed, itaque temporibus nesciunt esse harum!
+                    </div>
+
+                </div>
+
+            </div>
+            <div>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatum.
+            </div>
         </div>
-        <div class="titulo"><div id="titulo">Introducción a Computer Science</div></h1></div>
-        <div class="cuerpo">Texto</div>
     </body>
 </html>
