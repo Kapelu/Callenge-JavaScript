@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "46bd5c8b6e721574",
+        "id": "6de472107b13b4fa",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Módulo1-Foundations/00-IntroToCS.md",
+            "file": "Módulo1-Foundations/01-JavaScriptAvanzadoI.md",
             "mode": "preview"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 219
   },
   "right": {
     "id": "9a6dec915ccfa57b",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Módulo1-Foundations/00-IntroToCS.md",
+                "file": "Módulo1-Foundations/01-JavaScriptAvanzadoI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,10 +86,16 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "46bd5c8b6e721574",
+  "active": "6de472107b13b4fa",
   "lastOpenFiles": [
+    "Módulo1-Foundations/01-JavaScriptAvanzadoI.md",
+    "Módulo1-Foundations/01-OOP.md",
+    "index.md",
+    "Módulo1-Foundations/08-ExtraTesting.md",
     "Módulo1-Foundations/00-IntroToCS.md",
-    "Módulo1-Foundations/01-JavaScriptAvanzado1.md",
-    "index.md"
+    "_src/assets/01-JavaScriptAvanzado-I/protoypeInheritance.png.md",
+    "Módulo1-Foundations/01-errores.md",
+    "Módulo1-Foundations/06-AlgoritmosI.md",
+    "Módulo1-Foundations/01-JavaScriptAvanzado1.md"
   ]
 }

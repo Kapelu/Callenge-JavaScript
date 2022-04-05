@@ -158,5 +158,12 @@ Para lograr este comportamiento, el engine JavaScript tiene lo que se conoce com
 
 <br>
 <br>
+
+[![Errores](https://img.shields.io/badge/01_-_Errores-414141?style=for-the-badge&logo=ApacheRocketMQ&logoColor=informational&link=01-errores.md)](01-errores.md)<br>
+
+[![OOP](https://img.shields.io/badge/01_-_OOP-414141?style=for-the-badge&logo=ApacheRocketMQ&logoColor=informational&link=01-OOP.md)](01-OOP.md)   
+
+<br>
+<br>
 <br>
 [Home](/index.md)
