@@ -1,7 +1,9 @@
 .body {
+    background-color: rgba(0, 0, 0, 0.055);
     display: grid;
     grid-template-rows: 70px 640px 50px;
     gap: 10px;
+    padding: 0px;
 }
 .titulo{    
     font-family:sans-serif;
@@ -9,25 +11,43 @@
     margin: auto;
     text-align: center;
     font-size: 45px;
-    color: rgba(255, 2, 141, 0.842);
+    color: rgba(0, 172, 252, 0.842);
+}
+.subtitulos{
+    font-family:sans-serif;
+    font-weight:bold;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    color: #0b4e7a;
+
 }
 .cuerpo{
     display: grid;
-    grid-template-columns: 200px 1224px;
+    grid-template-columns: 255px 1175px;
+    border-style: none;
 }
 .notas{
-    background: rgba(153, 153, 153, 0.068);
+    background: rgba(158, 158, 158, 0.856);
     width: 78x;
-    height: 635px;    
+    height: 630px;    
     text-align: justify;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.849);
     overflow-y: scroll;
     padding-left: 10px;
     padding-right: 25px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     word-wrap:break-word;
+    border-radius: 15px;
 }
 .pie{
-    background: #a3d8e6;
+    font-family:sans-serif;
+    font-weight:bold;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    color: rgba(221, 96, 165, 0.39);
 }
 .button {
     width: 170px;
@@ -39,18 +59,18 @@
     margin: 8px;
     margin-top: 28px;
     text-align: center;
-    background-color: #ffee00;
-    border: 5px;
+    background-color: #ffee00ce;
+    border: 0px;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 7px #999;
 }
 
 .button:hover {
-    background-color: #ffee0096
+    background-color: #dda8168c
 }
 
 .button:active {
-    background-color: #d0ff00;
+    background-color: #ffd000;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
