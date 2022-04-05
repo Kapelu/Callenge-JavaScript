@@ -1,10 +1,9 @@
-.grid{
-    display: grid;
-}
-div{
+
+div {
     background: #ecf0f1;
     padding: 1em;
+    
 }
-div:hover{
+div:hover {
     border: 1px #f1c40f
 }
