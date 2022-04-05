@@ -1,9 +1,10 @@
-
-div {
-    background: #ecf0f1;
-    padding: 1em;
-    
+grid {
+    display: grid;
+    background: #a3d8e6;
+    grid-template-rows: 20px 100px 50px;
 }
-div:hover {
-    border: 1px #f1c40f
+
+.cuerpo{
+    display: grid;
+    grid-template-columns: 100px 100px;
 }
