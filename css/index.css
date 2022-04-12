@@ -1,15 +1,13 @@
 .body {
-    background-image: url(/scr/Index.jpeg);
-    background-color: rgba(0, 0, 0, 0.055);
     display: grid;
-    grid-template-rows: 70px 640px 60px;
+    grid-template-rows: 70px 620px 60px;
     gap: 10px;
     padding: 0px;
     background-repeat: no-repeat;
 }
 
 .titulo {
-    font-family: sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     margin: auto;
     text-align: center;
@@ -20,16 +18,16 @@
 .subtitulos {
     font-family: sans-serif;
     font-weight: bold;
-    margin: auto;
-    text-align: center;
-    font-size: 25px;
+    margin: 5px;
+    text-align: 50px;
+    font-size: 35px;
     color: #0b4e7a;
 
 }
 
 .cuerpo {
     display: grid;
-    grid-template-columns: 290px 1175px;
+    grid-template-columns: 400px 1000px;
     border-style: none;
 }
 
@@ -49,13 +47,13 @@
     border-radius: 15px;
 }
 .notas {
-    background: rgba(158, 158, 158, 0.856);
-    width: 1024px;
-    height: 600px;
+    background: rgba(158, 158, 158, 0);
+    width: 800px;
+    height: 580px;
     align-content: center;
     text-align: justify;
     font-size: 20px;
-    color: rgba(0, 0, 0, 0.849);
+    color: rgb(255, 255, 255);
     /*overflow-y: scroll;*/
     padding-left: 20px;
     padding-right: 20px;
@@ -68,33 +66,33 @@
     font-family: sans-serif;
     font-weight: bold;
     margin: auto;
-    text-align: center;
-    font-size: 25px;
+    text-align: left;
+    font-size: 20px;
     color: rgba(221, 96, 165, 0.39);
 }
 
 .button {
     width: 200px;
-    height: 50px;
+    height: 40px;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
-    margin: 20px;
+    margin: 10px;
     margin-top: 50px;
     text-align: center;
-    background-color: #ffee00ce;
+    background-color: #ffee00e1;
     border: 0px;
     border-radius: 15px;
     box-shadow: 0 7px #999;
 }
 
 .button:hover {
-    background-color: #dda8168c
+    background-color: #f7f31e8c
 }
 
 .button:active {
-    background-color: #ffd000;
+    background-color: #ebdc53;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
