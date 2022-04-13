@@ -3,6 +3,7 @@
 
 <H3 align= rigth style='color:#2471A3' >TABLA DE LA VERDAD</H3>  
 
+![AND](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
 <img scr='https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaAND.png' Alt=''>
 
 
