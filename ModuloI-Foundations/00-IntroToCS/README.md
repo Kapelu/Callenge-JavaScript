@@ -12,7 +12,7 @@
 
 > NOT (es la negacion de lo que tengo)
 
-Podemos ver un ejemplo de tabla de la verdad [AQUI](https://github.com/Kapelu/Henry-FullStackDeveloper/blob/main/Modulo1-Foundations/00-IntroToCS/homework/01%20-%20TablaVerdad.js)
+Podemos ver un ejemplo de tabla de la verdad, para ejecutarlo en consola del explorador [AQUI](https://github.com/Kapelu/Henry-FullStackDeveloper/blob/main/Modulo1-Foundations/00-IntroToCS/homework/01%20-%20TablaVerdad.js)
 
 
 <H3 align= rigth style='color:#2471A3' >HALF ADDER <i>(Medio sumador)</i></H3>
