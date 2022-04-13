@@ -3,10 +3,10 @@
 
 <H3 align= rigth style='color:#2471A3' >TABLA DE LA VERDAD</H3>  
 
-![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
-![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaOR.png)
-![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaXOR.png)
-![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaNOT.png)
+![](/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
+![](/scr/MI-Foundations/00-IntroToCS/TablaOR.png)
+![](/scr/MI-Foundations/00-IntroToCS/TablaXOR.png)
+![](/scr/MI-Foundations/00-IntroToCS/TablaNOT.png)
 
 > XOR - exclusive OR ( una salida verdadera resulta si una, y solo una de las entradas a la puerta es verdadera. Si ambas entradas son falsas o ambas son verdaderas, resulta en una salida falsa)
 
@@ -63,7 +63,7 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay 
    7  +  6 +  5 +  4 + 3 + 2 + 1 + 0  
 
   
- ![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/binario.png)
+ ![](/scr/MI-Foundations/00-IntroToCS/binario.png)
 
 
                        *************************************
@@ -75,8 +75,12 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay 
      ─ ─ ─ ─ ─ ─ ─ ─
      :) = 800  --> BINARIO ===> 
        11 00100000 --> 2 byte = UNICODE agrega 110 al 1° bit y 10 al 2° bit ─┐
-    11011 10001000 00 <───────────────────────────────────────────────────────┘
-              └─── se pasa a 3 byte ─────────> 111011 10001000 1000 ├───> se cuenta de Izquierda a derecha para las posiciones de los bytes
+                                                                                
+    11011 10001000 00 <──────────────────────────────────────────────────────┘
+
+              └─── se pasa a 3 byte ─────────> 111011 10001000 1000 
+                                                     ├───> se cuenta de Izquierda a derecha para las 
+                                                           posiciones de los bytes
 
 
 <br>
