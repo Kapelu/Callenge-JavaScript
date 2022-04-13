@@ -64,8 +64,9 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay 
 
   
  ![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/binario.png)
-!
-                        *************************************
+
+
+                       *************************************
                        ************   UNICODE   ************
                        *************************************
 <table>
