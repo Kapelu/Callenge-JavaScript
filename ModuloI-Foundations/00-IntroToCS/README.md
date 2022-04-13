@@ -75,9 +75,9 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay 
      ─ ─ ─ ─ ─ ─ ─ ─
      :) = 800  --> BINARIO ===> 
        11 00100000 --> 2 byte = UNICODE agrega 110 al 1° bit y 10 al 2° bit ─┐
-                                                                                
+                                                                             │   
     11011 10001000 00 <──────────────────────────────────────────────────────┘
-
+              │
               └─── se pasa a 3 byte ─────────> 111011 10001000 1000 
                                                      ├───> se cuenta de Izquierda a derecha para las 
                                                            posiciones de los bytes
