@@ -12,6 +12,10 @@
 
 > NOT (es la negacion de lo que tengo)
 
+Podemos ver un ejemplo de tabla de la verdad [AQUI](https://github.com/Kapelu/Henry-FullStackDeveloper/blob/main/Modulo1-Foundations/00-IntroToCS/homework/01%20-%20TablaVerdad.js)
+
+Veamos un ejemplo de tabla de la verdad en JavaScript
+
 <H3 align= rigth style='color:#2471A3' >HALF ADDER <i>(Medio sumador)</i></H3>
 
 El Half-Adder es un bloque de construcción básico para sumar dos números como dos entradas y producir dos salidas. El sumador se utiliza para realizar la operación OR de dos números binarios de un solo bit. Los bits de **sumador** y **sumador** son dos estados de entrada, y **'carry** ' y **'sum** ' son dos estados de salida del medio sumador.
@@ -135,11 +139,7 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay 
 
 
 
-<pre><code>&lt;ul&gt;
-  &lt;li&gt;Item 1 &lt;b&gt;Se muestra el código&lt;/b&gt;&lt;/li&gt;
-  &lt;li&gt;Item 2 &lt;i&gt;HTML como código&lt;/i&gt;&lt;/li&gt;
-  &lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+
 <h1 align='center'></h1>
 <br/> 
 <br/> 
