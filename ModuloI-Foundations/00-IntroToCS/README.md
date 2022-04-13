@@ -3,9 +3,8 @@
 
 <H3 align= rigth style='color:#2471A3' >TABLA DE LA VERDAD</H3>  
 
-<a href='/scr/MI-Foundations/00-IntroToCS/TablaAND.png'>
-  <img scr='/scr/MI-Foundations/00-IntroToCS/TablaAND.png'>
-</a>
+<img scr='/scr/MI-Foundations/00-IntroToCS/TablaAND.png' Alt='AND'>
+
 
 > XOR - exclusive OR ( una salida verdadera resulta si una, y solo una de las entradas a la puerta es verdadera. Si ambas entradas son falsas o ambas son verdaderas, resulta en una salida falsa)
 
