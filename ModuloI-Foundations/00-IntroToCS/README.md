@@ -63,20 +63,8 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay 
    7  +  6 +  5 +  4 + 3 + 2 + 1 + 0  
 
   
-  
-
-*           Estado Fisico-------->  OFF  ON   ON   OFF  OFF  ON   ON  OFF
-
-*           Notacion Binaria----->   0    1    1    0    0    1    1   0
-
-*           Orden de Magnitud---->  2^7  2^6  2^5  2^4  2^3  2^2  2^1 2^0
-
-*           Valor Decimal--------->  128  64   32   16    8    4    2   1
-
-*           Valor Aplicable-------->   0   64   32    0    0    4    2   0
-
-*           Total Valor Decimal--->         102 = 64 + 32 + 4 + 2 
-
+ ![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/binario.png)
+!
                         *************************************
                        ************   UNICODE   ************
                        *************************************
