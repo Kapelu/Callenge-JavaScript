@@ -3,7 +3,7 @@
 
 <H3 align= rigth style='color:#2471A3' >TABLA DE LA VERDAD</H3>  
 
-<img scr='https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaAND.png' Alt='AND'>
+<img scr='https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaAND.png' Alt=''>
 
 
 > XOR - exclusive OR ( una salida verdadera resulta si una, y solo una de las entradas a la puerta es verdadera. Si ambas entradas son falsas o ambas son verdaderas, resulta en una salida falsa)
