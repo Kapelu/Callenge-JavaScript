@@ -14,7 +14,6 @@
 
 Podemos ver un ejemplo de tabla de la verdad [AQUI](https://github.com/Kapelu/Henry-FullStackDeveloper/blob/main/Modulo1-Foundations/00-IntroToCS/homework/01%20-%20TablaVerdad.js)
 
-Veamos un ejemplo de tabla de la verdad en JavaScript
 
 <H3 align= rigth style='color:#2471A3' >HALF ADDER <i>(Medio sumador)</i></H3>
 
