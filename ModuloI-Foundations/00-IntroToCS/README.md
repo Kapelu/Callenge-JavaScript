@@ -69,47 +69,8 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay 
                        *************************************
                        ************   UNICODE   ************
                        *************************************
-<table>
-	<thead>
-	<tr>
-		<th>&nbsp;Nro de bytes&nbsp;</th>
-		<th>Bytes 1</th>
-		<th>Bytes 2</th>
-		<th>Bytes 3</th>
-		<th>Bytes 4</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</td>
-		<td>&nbsp;0XXXXXXX</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2</td>
-		<td>&nbsp;110XXXXX</td>
-		<td>&nbsp;10XXXXXX&nbsp;</td>
-		<td>&nbsp;10XXXXXX&nbsp;</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3</td>
-		<td>&nbsp;1110XXXX</td>
-		<td>&nbsp;10XXXXXX</td>
-		<td>&nbsp;10XXXXXX</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4</td>
-		<td>&nbsp;11110XXX</td>
-		<td>&nbsp;10XXXXXX</td>
-		<td>&nbsp;10XXXXXX</td>
-		<td>&nbsp;10XXXXXX</td>
-	</tr>
-	<tbody>
-</table>
+
+![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/iunicode.png)
 
      ─ ─ ─ ─ ─ ─ ─ ─
      :) = 800  --> BINARIO ===> 
