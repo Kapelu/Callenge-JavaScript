@@ -4,15 +4,9 @@
 <H3 align= rigth style='color:#2471A3' >TABLA DE LA VERDAD</H3>  
 
 ![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
-![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
-![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
-![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
-
-
-
-
-<img scr='https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaAND.png' Alt=''>
-
+![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaOR.png)
+![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaXOR.png)
+![](https://github.com/Kapelu/Henry-Apuntes/blob/main/scr/MI-Foundations/00-IntroToCS/TablaNOT.png)
 
 > XOR - exclusive OR ( una salida verdadera resulta si una, y solo una de las entradas a la puerta es verdadera. Si ambas entradas son falsas o ambas son verdaderas, resulta en una salida falsa)
 
