@@ -2,37 +2,34 @@
  
 
 <H3 align= 'center' style='color:#2471A3' ><i>SINGLE THREADED Y SINCRÓNICO</i></H3>
+<h1 align='center'></h1>
 
-- ****
+Un **thread** (o hilo de ejecución) es la secuencia de instrucciones más pequeña que puede ser manejada por un *planificador de recursos* (se encarga de repartir el tiempo disponible de los recursos del sistema entre todos los procesos).
     
-    Un **thread** (o hilo de ejecución) es la secuencia de instrucciones más pequeña que puede ser manejada por un *planificador de recursos* (se encarga de repartir el tiempo disponible de los recursos del sistema entre todos los procesos).
-    
-    JavaScript es **Single Threaded** y **Sincrónico**, es decir que sólo puede hacer un sólo comando o instrucción en cada momento y que lo hace en orden, empieza la instrucción siguiente cuando termina la anterior.
+JavaScript es **Single Threaded** y **Sincrónico**, es decir que sólo puede hacer un sólo comando o instrucción en cada momento y que lo hace en orden, empieza la instrucción siguiente cuando termina la anterior.
     
 <H3 align= 'center' style='color:#2471A3' ><i>SYNTAX PARSER</i></H3>
-
-- ****
+<h1 align='center'></h1>
     
-    Lee el código línea por línea y determina lo que hace cada parte. También chequea si la gramática es correcta o no. El ***Syntax Parser*** es el intérprete entre tu código y la computadora. Traduce tu código a un lenguaje que la máquina puede entender.
+Lee el código línea por línea y determina lo que hace cada parte. También chequea si la gramática es correcta o no. El ***Syntax Parser*** es el intérprete entre tu código y la computadora. Traduce tu código a un lenguaje que la máquina puede entender.
     
 <H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
-
-- ****
+<h1 align='center'></h1>
+  
+El ***Lexical Environment*** tiene que ver con *dónde* están declarados ciertos statements o expresiones en tu código. No será lo mismo hacerlo en un lugar que en otro.
     
-    El ***Lexical Environment*** tiene que ver con *dónde* están declarados ciertos statements o expresiones en tu código. No será lo mismo hacerlo en un lugar que en otro.
+```javascrit
+function hola() {
+    var foo = "Hola!";
+}
+var bar = "chao!";
+```
     
-    ```jsx
-    function hola() {
-    	var foo = "Hola!";
-    }
-    var bar = "chao!";
-    ```
+Por ejemplo, para el interprete las dos declaraciones de variable del arriba tendrán signicados muy distintos. Si bien la operación es igual en los dos (asignación) al estar en lugares distintos (una dentro de una función y la otra no) el interprete las parseará de forma distinta.
     
-    Por ejemplo, para el interprete las dos declaraciones de variable del arriba tendrán signicados muy distintos. Si bien la operación es igual en los dos (asignación) al estar en lugares distintos (una dentro de una función y la otra no) el interprete las parseará de forma distinta.
-    
-    - **GLOBAL ENVIROMENT**
+- **GLOBAL ENVIROMENT**
         
-        El **Global Enviroment** es la ventana “padre” del código. El la parte más externa, la que envuelve a todo el código. Dentro de este contexto podremos encontrar otros contextos.
+    El **Global Enviroment** es la ventana “padre” del código. El la parte más externa, la que envuelve a todo el código. Dentro de este contexto podremos encontrar otros contextos.
         
 - **EXECUTION CONTEXT**
     
