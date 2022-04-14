@@ -7,13 +7,17 @@
 
 <table cellspacing="20">
 <tr>
-<td>Celda 1</td>
-<td>Celda 2</td>
-<td>Celda 3</td>
+<td><img src="/scr/MI-Foundations/00-IntroToCS/TablaAND.png" alt="AND" width="240" height="130"/></td>
+<td><img src="/scr/MI-Foundations/00-IntroToCS/TablaOR.png" alt="AND" width="240" height="130"/></td>
+<td><img src="/scr/MI-Foundations/00-IntroToCS/TablaXOR.png" alt="AND" width="240" height="130"/></td>
+<td><img src="/scr/MI-Foundations/00-IntroToCS/TablaAND.png" alt="AND" width="240" height="130"/></td>
 </tr>
 </table>
 
-<img src="/scr/MI-Foundations/00-IntroToCS/TablaAND.png" alt="AND" width="240" height="130" />
+
+
+
+<img src="/scr/MI-Foundations/00-IntroToCS/TablaNOT.png" alt="AND" width="240" height="130"/>
 
 ![](/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
 ![](/scr/MI-Foundations/00-IntroToCS/TablaOR.png)
