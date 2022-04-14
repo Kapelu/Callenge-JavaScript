@@ -5,24 +5,15 @@
 <h1 align='center'></h1>
 
 
-<table cellspacing="20">
+<table cellspacing="0">
 <tr>
 <td><img src="/scr/MI-Foundations/00-IntroToCS/TablaAND.png" alt="AND" width="240" height="130"/></td>
 <td><img src="/scr/MI-Foundations/00-IntroToCS/TablaOR.png" alt="AND" width="240" height="130"/></td>
 <td><img src="/scr/MI-Foundations/00-IntroToCS/TablaXOR.png" alt="AND" width="240" height="130"/></td>
-<td><img src="/scr/MI-Foundations/00-IntroToCS/TablaAND.png" alt="AND" width="240" height="130"/></td>
+<td><img src="/scr/MI-Foundations/00-IntroToCS/TablaNOT.png" alt="AND" width="240" height="130"/></td>
 </tr>
 </table>
 
-
-
-
-<img src="/scr/MI-Foundations/00-IntroToCS/TablaNOT.png" alt="AND" width="240" height="130"/>
-
-![](/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
-![](/scr/MI-Foundations/00-IntroToCS/TablaOR.png)
-![](/scr/MI-Foundations/00-IntroToCS/TablaXOR.png)
-![](/scr/MI-Foundations/00-IntroToCS/TablaNOT.png)
 
 > XOR - exclusive OR ( una salida verdadera resulta si una, y solo una de las entradas a la puerta es verdadera. Si ambas entradas son falsas o ambas son verdaderas, resulta en una salida falsa)
 
