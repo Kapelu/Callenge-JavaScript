@@ -5,7 +5,7 @@
 <h1 align='center'></h1>
 
 
-<table cellspacing="0">
+<table cellpadding='0' cellspacing='0' border='0'>
 <tr>
 <td><img src="/scr/MI-Foundations/00-IntroToCS/TablaAND.png" alt="AND" width="240" height="130"/></td>
 <td><img src="/scr/MI-Foundations/00-IntroToCS/TablaOR.png" alt="AND" width="240" height="130"/></td>
@@ -100,8 +100,6 @@ Luego haremos la siguiente operación. Elevaremos el número 2 a cada posición.
               └─── se pasa a 3 byte ─────────> 111011 10001000 1000 
                                                      ├───> se cuenta de Izquierda a derecha para las 
                                                            posiciones de los bytes
-<br>
-<br/> 
 <br/> 
 <br/> 
 <h1 align='center'></h1>

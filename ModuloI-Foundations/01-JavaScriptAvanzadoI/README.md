@@ -104,7 +104,8 @@ Dentro del ***Execution Context*** existen distintos elementos. Estos son
     ```
     
     Todas las variables declaradas no estarán definidas en el hoisting. Las funciones declaradas como variables tampoco. Solo las funciones declaradas como *statement* serán reconocidas como una función completa.
-    
+
+<br>
 <h1 align='center'></h1>
 <H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
 <h1 align='center'></h1>
@@ -143,6 +144,7 @@ Dentro del ***Execution Context*** existen distintos elementos. Estos son
         
         Es importante señalar que el entorno de A() se cerrará sólo cuando se finalize el entorno y ejecución de la función B(). Posteriormente que finaliza el entorno de A() se finaliza el código y termina con el contexto global.
         
+<br>
 <h1 align='center'></h1>
 <H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
 <h1 align='center'></h1>
@@ -163,6 +165,7 @@ Dentro del ***Execution Context*** existen distintos elementos. Estos son
     
     En este caso, nosotros podremos utilizar la variable **foo** en el contexto global y en las funciones. Pero las variables **saludo** solo pueden utilizarse en su función propia. Cabe destacar que, aunque ambas variables se llamen igual y tengan el mismo valor, no se pisaran y ambas son completamente diferentes, ya que están en contextos distintos. Es decir, si yo cambiara la variable **saludo** de alguna de las dos funciones, esta no cambiaría en la otra.
     
+<br>
 <h1 align='center'></h1>
 <H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
 <h1 align='center'></h1>
@@ -188,6 +191,7 @@ Dentro del ***Execution Context*** existen distintos elementos. Estos son
     console.log(global);          // 'Hello'
     ```
     
+<br>
 <h1 align='center'></h1>
 <H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
 <h1 align='center'></h1>
@@ -223,6 +227,7 @@ Dentro del ***Execution Context*** existen distintos elementos. Estos son
     
     Si el intérprete llega el scope Global sin encontrar la variable, entonces va a tirar un error.
     
+<br>
 <h1 align='center'></h1>
 <H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
 <h1 align='center'></h1>
@@ -311,6 +316,7 @@ Dentro del ***Execution Context*** existen distintos elementos. Estos son
         }
         ```
         
+<br>
 <h1 align='center'></h1>
 <H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
 <h1 align='center'></h1>
@@ -341,6 +347,7 @@ Dentro del ***Execution Context*** existen distintos elementos. Estos son
     
     Cuando pasamos objetos, arreglos o funciones en variables lo haremos por **referencia**. En ese caso hay un “***reflejo***” de los cambios que hagamos en cualquiera de las variables. En el ejemplo primero creamos un objeto, y luego definimos un nuevo objeto que es igual al primero. Cuando al primero le agregamos la propiedad *Edad*, esta se agregará automáticamente a la segunda.
     
+<br>
 <h1 align='center'></h1>
 <H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
 <h1 align='center'></h1>
@@ -390,6 +397,7 @@ Dentro del ***Execution Context*** existen distintos elementos. Estos son
             // el resultado es le mismo!
             ```
             
+<br>
 <h1 align='center'></h1>
 <H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
 <h1 align='center'></h1>
@@ -412,3 +420,8 @@ Dentro del ***Execution Context*** existen distintos elementos. Estos son
     ```
     
     En este **[ejemplo](http://latentflip.com/loupe/?code=CgpmdW5jdGlvbiBzYWx1ZGFyTWFzVGFyZGUoKXsKCXZhciBzYWx1ZG8gPSAnSG9sYSc7CgoJc2V0VGltZW91dCggZnVuY3Rpb24oKXsKCQljb25zb2xlLmxvZyhzYWx1ZG8pOwoJfSwzMDAwKQp9OwoKc2FsdWRhck1hc1RhcmRlKCk7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)**, el proceso es el siguiente. Primero se ejecuta la función **saludarMasTarde**, y luego, cuando se ejecuta el **setTimeout**, se lo envía al Web Apis. Cuando termina de procesarse y de transcurrirse el tiempo, se lo envía a el **Callback Queue**. Durante todo este tiempo, JavaScript sigue ejecutando el código hasta terminarlo. Una vez terminado, recibe la función del Callback Queue.
+
+<br/> 
+<br/> 
+<h1 align='center'></h1>
+<h3 align="center">Gracias!!!!  :rose:   XOXOXO
