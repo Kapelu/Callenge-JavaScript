@@ -1,7 +1,7 @@
 <h1 align='center'></h1>
-<h1 align="center">INTRO TO CS</h1>
+<h1 align='center'><mark><i><big>*   INTRO TO CS   *</big></i></mark></h1>
 
-<H3 align= rigth style='color:#2471A3' >TABLA DE LA VERDAD</H3>  
+<H3 align='center' style='color:#2471A3' >TABLA DE LA VERDAD</H3>  
 
 ![](/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
 ![](/scr/MI-Foundations/00-IntroToCS/TablaOR.png)
@@ -14,8 +14,9 @@
 
 Podemos ver un ejemplo de tabla de la verdad, para ejecutarlo en consola del explorador [AQUI](https://github.com/Kapelu/Henry-FullStackDeveloper/blob/main/Modulo1-Foundations/00-IntroToCS/homework/01%20-%20TablaVerdad.js)
 
-
-<H3 align= rigth style='color:#2471A3' >HALF ADDER <i>(Medio sumador)</i></H3>
+<h1 align='center'></h1>
+<H3 align='center' style='color:#2471A3' >HALF ADDER <i>(Medio sumador)</i></H3>
+<h1 align='center'></h1>
 
 El Half-Adder es un bloque de construcción básico para sumar dos números como dos entradas y producir dos salidas. El sumador se utiliza para realizar la operación OR de dos números binarios de un solo bit. Los bits de **sumador** y **sumador** son dos estados de entrada, y **'carry** ' y **'sum** ' son dos estados de salida del medio sumador.
 
@@ -23,8 +24,8 @@ El Half-Adder es un bloque de construcción básico para sumar dos números como
 	           │ HALF ADDER │
 	    B ---->└────────────┘----> Acarreo	  
 
-
-<H3 align= rigth style='color:#2471A3' >PASAR DE DECIMAL A BINARIO</H3>  
+<h1 align='center'></h1>
+<H3 align='center' style='color:#2471A3' >PASAR DE DECIMAL A BINARIO</H3>  
 
 Si quisiéramos sumar 19+24 sabemos que la suma de 9+4 = 13, por lo tanto en el resultado final en la unidad nos queda un 3 y debemos “llevarnos” la decena. Luego, para la decena debemos sumar 1 + 2 + 1 = 4. Obteniendo como resultado final 43.
 En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay acarreo) mientras que el XOR efectúa la suma.
@@ -42,8 +43,8 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay 
                                   └──────> Se agrega 0 y 1 AND 0 = 1
 
 
-
-<H3 align= rigth style='color:#2471A3' >PASAR DE BINARIO A DECIMAL</H3>
+<h1 align='center'></h1>
+<H3 align='center' style='color:#2471A3' >PASAR DE BINARIO A DECIMAL</H3>
 
 Supongamos que tenemos el número 43 (101011). Para pasarlo de binario a decimal seguiremos los siguientes pasos.
 
