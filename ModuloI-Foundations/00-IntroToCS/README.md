@@ -4,6 +4,17 @@
 <H3 align='center' style='color:#2471A3' >TABLA DE LA VERDAD</H3>  
 <h1 align='center'></h1>
 
+
+<table cellspacing="20">
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+<td>Celda 3</td>
+</tr>
+</table>
+
+<img src="/scr/MI-Foundations/00-IntroToCS/TablaAND.png" alt="AND" width="240" height="130" />
+
 ![](/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
 ![](/scr/MI-Foundations/00-IntroToCS/TablaOR.png)
 ![](/scr/MI-Foundations/00-IntroToCS/TablaXOR.png)
@@ -55,32 +66,35 @@ Supongamos que tenemos el número 43 (101011). Para pasarlo de binario a decimal
 
 Primero, enumeraremos las posiciones de los números, empezando desde el 0, y de derecha
 a izquierda.
-
-             Nro. Binario ---> 1 0 1 0 1 1
-             Posición -------> 5 4 3 2 1 0
+<H3 align='center'>Nro. Binario ---> 1 0 1 0 1 1</H5>
+<H3 align='center'>Posición ---------> 5 4 3 2 1 0</H5>
+             
+             
 
 Luego haremos la siguiente operación. Elevaremos el número 2 a cada posición. Luego lo multiplicaremos por el número binario de la posición. Finalmente sumaremos todos.
 
-                   Sumatoria ( 2^pos * valor) ----> de Derecha a Izquierda
+<H3 align='center'>Sumatoria ( 2^pos * valor) ----> de Derecha a Izquierda</H5>
+<br>
+                   
 
-  ![](/scr/MI-Foundations/00-IntroToCS/binarioAdecimal.jpg)                 
+  ![](/scr/MI-Foundations/00-IntroToCS/binarioAdecimal.jpg)      
+  <br>           
                
+<H3 align='center'>1  +  1 +  1 +  1 + 1 + 1 + 1 + 1⠀</H5>
+<H3 align='center'>128 + 64 + 32 + 16 + 8 + 4 + 2 + 1</H5>
+<H3 align='center'>7  +  6 +  5 +  4 + 3 + 2 + 1 + 0⠀</H5>
+<H3 align='center'>255 caracteres representables ASCCI</H5>
+<br>
+<br>
 
-                           1  +  1 +  1 +  1 + 1 + 1 + 1 + 1    
-                          128 + 64 + 32 + 16 + 8 + 4 + 2 + 1   ==> 255 caracteres representables ASSCI
-                           7  +  6 +  5 +  4 + 3 + 2 + 1 + 0  
-
-  
- ![](/scr/MI-Foundations/00-IntroToCS/binario.png)
+![](/scr/MI-Foundations/00-IntroToCS/binario.png)
 
 <h1 align='center'></h1>
 <H3 align='center' style='color:#2471A3' >UNICODE</H3>
 <h1 align='center'></h1>
-                       
-                       ************      ************
-                       *************************************
+ 
 
-![](/scr/MI-Foundations/00-IntroToCS/iunicode.jpg)
+![](/scr/MI-Foundations/00-IntroToCS/unicode.jpg)
 
      ─ ─ ─ ─ ─ ─ ─ ─
      :) = 800  --> BINARIO ===> 

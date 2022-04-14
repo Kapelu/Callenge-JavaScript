@@ -1,18 +1,23 @@
-<H1 align= 'center' style='color:#2471A3' ><i>JAVASCRIPT AVANZADO I</i></H1>
+<h1 align='center'></h1>
+<h1 align='center'><mark><i><big>JAVASCRIPT AVANZADO I</big></i></mark></h1>
  
 
+<h1 align='center'></h1>
 <H3 align= 'center' style='color:#2471A3' ><i>SINGLE THREADED Y SINCRÓNICO</i></H3>
 <h1 align='center'></h1>
 
 Un **thread** (o hilo de ejecución) es la secuencia de instrucciones más pequeña que puede ser manejada por un *planificador de recursos* (se encarga de repartir el tiempo disponible de los recursos del sistema entre todos los procesos).
     
 JavaScript es **Single Threaded** y **Sincrónico**, es decir que sólo puede hacer un sólo comando o instrucción en cada momento y que lo hace en orden, empieza la instrucción siguiente cuando termina la anterior.
-    
+<br>   
+<h1 align='center'></h1>
 <H3 align= 'center' style='color:#2471A3' ><i>SYNTAX PARSER</i></H3>
 <h1 align='center'></h1>
     
 Lee el código línea por línea y determina lo que hace cada parte. También chequea si la gramática es correcta o no. El ***Syntax Parser*** es el intérprete entre tu código y la computadora. Traduce tu código a un lenguaje que la máquina puede entender.
-    
+
+<br>   
+<h1 align='center'></h1>
 <H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
 <h1 align='center'></h1>
   
@@ -26,43 +31,52 @@ var bar = "chao!";
 ```
     
 Por ejemplo, para el interprete las dos declaraciones de variable del arriba tendrán signicados muy distintos. Si bien la operación es igual en los dos (asignación) al estar en lugares distintos (una dentro de una función y la otra no) el interprete las parseará de forma distinta.
-    
-- **GLOBAL ENVIROMENT**
+
+<br>   
+<h1 align='center'></h1>
+<H3 align= 'center' style='color:#2471A3' ><i>GLOBAL ENVIROMENT</i></H3>
+<h1 align='center'></h1>
+
+El **Global Enviroment** es la ventana “padre” del código. El la parte más externa, la que envuelve a todo el código. Dentro de este contexto podremos encontrar otros contextos.
         
-    El **Global Enviroment** es la ventana “padre” del código. El la parte más externa, la que envuelve a todo el código. Dentro de este contexto podremos encontrar otros contextos.
-        
-- **EXECUTION CONTEXT**
+<br>   
+<h1 align='center'></h1>
+<H3 align= 'center' style='color:#2471A3' ><i>EXECUTION CONTEXT</i></H3>
+<h1 align='center'></h1>
+
+El contexto de ejecución contiene información sobre **QUÉ** código se está ejecutando en cada momento. Esto se da en las *functions*.
     
-    El contexto de ejecución contiene información sobre **QUÉ** código se está ejecutando en cada momento. Esto se da en las *functions*.
+``` javascript
+var sayHello = "Hola Mundo!"           //GLOBAL CONTEXT
     
-    ```jsx
-    var sayHello = "Hola Mundo!";           //GLOBAL CONTEXT
-    
-    function persona() {                    //EXECUTION CONTEXT
-    	var first = "Maico";
-    	var last = "Rosa";
-    
-    	function firstName() {                //EXECUTION CONTEXT
-    		return first;
-    	}
-    
-    	function lastName() {                 //EXECUTION CONTEXT
-    		return last;
-    	}
+function persona() {                    //EXECUTION CONTEXT
+    var first = "Romero"
+	var last = "Nilda"
+    function firstName() {                //EXECUTION CONTEXT
+        return first
     }
-    ```
     
-    Dentro del ***Execution Context*** existen distintos elementos. Estos son
+    function lastName() {                 //EXECUTION CONTEXT
+    	return last
+    }
+}
+```
     
-          **Código  |  Global Object  |  ‘This’  |  Outer Enviroment**
-    
+Dentro del ***Execution Context*** existen distintos elementos. Estos son
+
+<h3 align='center'>Código  |  Global Object  |  ‘This’  |  Outer Enviroment</h3>    
+
+<br>
+<h1 align='center'></h1>
+<H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
+<h1 align='center'></h1>
 - **HOISTING**
     
     ***Hoisting*** es un comportamiento de JavaScript en el que “mueve las declaraciones al principio”.
     
     Lo que sucede aquí es que antes de ejecutar el código, JavaScript le da una primera lectura para “tomar nota” de todas las variables (**var, —let y const NO—**) y todas las functiones (**function**) que tenga el código en su contexto global. Así podrá tener una referencia de la memoria a utilizar.
     
-    ```jsx
+    ``` javascript
     bar();
     console.log(foo);
     
@@ -74,7 +88,7 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
     
     En el ejemplo de arriba, estamos ejecutando una función y una línea de texto antes de declarar cualquiera de las dos. Cuando se realiza la etapa de ***hoisting*** se distingue una variable (foo) y una función (bar). Aquí las moverá al principio.
     
-    ```jsx
+    ``` javascript
     //var foo = undefined;
     //function bar() {
     //	console.log("Soy una función");
@@ -91,6 +105,9 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
     
     Todas las variables declaradas no estarán definidas en el hoisting. Las funciones declaradas como variables tampoco. Solo las funciones declaradas como *statement* serán reconocidas como una función completa.
     
+<h1 align='center'></h1>
+<H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
+<h1 align='center'></h1>
 - **CREACIÓN Y EJECUCIÓN**
     
     Cuando el intérprete inicia el corrido del código entra en *execution context* e inicia dos etapas. La primera (**creation phase**) y la segunda (**execution phase**). En la ***creation phase*** suceden varios procesos. Los dos más importantes son el *hoisting* y la creación del nuevo entorno. En la ***execution phase*** se ejecuta el código.
@@ -106,7 +123,7 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
         
         En el primer recorrido del código se crea un **Global Execution Context**. Aquí se comenzaran a hacer la etapa de creación y la de ejecución.
         
-        ```jsx
+        ``` javascript
         function b() {
         	console.log("B!");
         }
@@ -126,11 +143,14 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
         
         Es importante señalar que el entorno de A() se cerrará sólo cuando se finalize el entorno y ejecución de la función B(). Posteriormente que finaliza el entorno de A() se finaliza el código y termina con el contexto global.
         
+<h1 align='center'></h1>
+<H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
+<h1 align='center'></h1>
 - **COMENTARIOS SOBRE LOS CONTEXTOS**
     
     Los contextos o *enviroments* del bloque global y de cada función mantienen una relación unilateral, donde las *inner functions* podrán tomar variables externas, pero no así al revez.
     
-    ```jsx
+    ``` javascript
     var foo = "Hola amigos";
     
     function persona() {
@@ -143,11 +163,14 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
     
     En este caso, nosotros podremos utilizar la variable **foo** en el contexto global y en las funciones. Pero las variables **saludo** solo pueden utilizarse en su función propia. Cabe destacar que, aunque ambas variables se llamen igual y tengan el mismo valor, no se pisaran y ambas son completamente diferentes, ya que están en contextos distintos. Es decir, si yo cambiara la variable **saludo** de alguna de las dos funciones, esta no cambiaría en la otra.
     
+<h1 align='center'></h1>
+<H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
+<h1 align='center'></h1>
 - **RECORRIDO POR ENTORNOS**
     
     Si recorremos el siguiente código la terminal mostraría lo siguiente.
     
-    ```jsx
+    ``` javascript
     var global = 'Hola!';
      
     function a() {
@@ -165,6 +188,9 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
     console.log(global);          // 'Hello'
     ```
     
+<h1 align='center'></h1>
+<H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
+<h1 align='center'></h1>
 - **SCOPE**
     
     El **Scope** de una variable hace referencia al lugar donde esta va a vivir , o podrá ser accesible. Podríamos decir también que **Scope** es el alcance que determina la accesibilidad de las variables en cada parte de nuestro código.
@@ -173,7 +199,7 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
     
     También sabemos que podemos acceder a una variable declarada en el contexto global dentro de una función. Esto se debe a que JavaScript primero busca una variable dentro del contexto que se está ejecutando, si no la encuentra ahí, usa la referencia al `outer context` para buscarla dentro de ese contexto.
     
-    ```jsx
+    ``` javascript
     var global = 'Hola!';
      
     function b(){
@@ -197,6 +223,9 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
     
     Si el intérprete llega el scope Global sin encontrar la variable, entonces va a tirar un error.
     
+<h1 align='center'></h1>
+<H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
+<h1 align='center'></h1>
 - **TIPOS DE DATOS**
     
     Existen dos tipos de lenguajes en programación. Los de tipado **dinámico** y los de tipado **estático**. JavaScript es de tipado dinámico. En este lenguaje no es necesario declarar el tipo de dato cuando creamos una variable. En el tipado estático, como en JAVA, cuando creamos una variable tendremos que definir qué tipo de dato será, y eso no se podrá cambiar.
@@ -215,14 +244,14 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
         
         La ***asociatividad de operadores*** es el orden en el que se ejecutan los operadores cuando tienen la misma precedencia, es decir, de izquierda a derecha o de derecha a izquierda.
         
-        ```jsx
+        ``` javascript
         3 + 4 * 5
         //23
         ```
         
         Para resolver esa expresión y saber qué resultado nos va a mostrar el intérprete deberíamos conocer en qué orden ejecuta las operaciones. La multiplicación tiene mayor precedencia que la suma. Por lo tanto el intérprete primero va a ejecutar la multiplicación y luego la suma con el resultado de lo anterior
         
-        ```jsx
+        ``` javascript
         	 let a = 1;
         	 let b = 2;
          	 let c = 3;
@@ -235,7 +264,7 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
         
         [**Tabla de igualdades**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#a_model_for_understanding_equality_comparisons)
         
-        ```jsx
+        ``` javascript
         6 / "3"                                     //2
         "2" * "3"                                   //6
         4 + 5 + "px"                                //9px
@@ -270,7 +299,7 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
         
         Respecto a las ***funciones***, también existen de dos tipos.
         
-        ```jsx
+        ``` javascript
         // FUNCTION STATEMENT
         function saludo(){
           console.log('hola');
@@ -282,9 +311,12 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
         }
         ```
         
+<h1 align='center'></h1>
+<H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
+<h1 align='center'></h1>
 - **VALOR Y REFERENCIA**
     
-    ```jsx
+    ``` javascript
     var a = 3;
     var b = 5;
     		a = b
@@ -296,7 +328,7 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
     
     En este caso estamos pasando variables por **valor**. Al comienzo **a** y **b** son distintas. Luego **a** se hace “***fotocopia***” de **b** y adquiere su valor. Si luego cambiamos el valor de **b**, el valor de **a** se seguirá manteniendo igual, ya que mantiene independencia. Las variables que se pasan por valor son los *datos primitivos*.
     
-    ```jsx
+    ``` javascript
     var obj = {Nombre: "Alejo", Apellido: "Bengo"};
     var newObj = obj;
     
@@ -309,6 +341,9 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
     
     Cuando pasamos objetos, arreglos o funciones en variables lo haremos por **referencia**. En ese caso hay un “***reflejo***” de los cambios que hagamos en cualquiera de las variables. En el ejemplo primero creamos un objeto, y luego definimos un nuevo objeto que es igual al primero. Cuando al primero le agregamos la propiedad *Edad*, esta se agregará automáticamente a la segunda.
     
+<h1 align='center'></h1>
+<H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
+<h1 align='center'></h1>
 - **THIS**
     
     Cuando se crea el `execution context`, el interprete reserva el espacio de memoria para las variables (hoisting), guarda la referencia al `outer enviroment` y además “setea” la variable `this`. Esta variable va a apuntar a distintos objetos dependiendo en cómo fue invocada la función.
@@ -325,7 +360,7 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
             
             En este caso, el interprete le da a `this` una referencia al objeto `global`.
             
-            ```jsx
+            ``` javascript
             function a() {
             	function b() {
             		return this;
@@ -339,7 +374,7 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
             
             Si tenemos una función como propiedad de un objeto, la palabra clave **this** va a hacer referencia al objeto.
             
-            ```jsx
+            ``` javascript
             //--------------EJEMPLO 1---------------
             var o = {  prop: 37, f: function() {return this.prop;}  };
             console.log(o.f()); // logs 37
@@ -355,6 +390,9 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
             // el resultado es le mismo!
             ```
             
+<h1 align='center'></h1>
+<H3 align= 'center' style='color:#2471A3' ><i>LEXICAL ENVIROMENT</i></H3>
+<h1 align='center'></h1>
 - **EVENT LOOP**
     
     **setTimeout()** es una función integrada en Javascript que nos permitirá retrasar el proceso de una función. Existe un espacio llamado “***Web Apis***” en el que es enviado el proceso de esta función. De esta forma JavaScript puede seguir procesando el código sin perder el tiempo en esa función.
@@ -363,7 +401,7 @@ Por ejemplo, para el interprete las dos declaraciones de variable del arriba ten
     
     Una vez que el **setTimeout** se terminó de procesar en el Web Apis, pasará al **Callback Queue**. Aquí serán enviados todos los procesos que JavaScript deriva, y como dijimos, una vez que el intérprete termina de leer el código, recién ahí serán reintegrados al **Call Stack**.
     
-    ```jsx
+    ``` javascript
     function saludarMasTarde(){
     var saludo = 'Hola';
     setTimeout( function(){
