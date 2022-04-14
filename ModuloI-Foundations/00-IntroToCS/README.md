@@ -5,7 +5,7 @@
 <h1 align='center'></h1>
 
 
-<table cellpadding='0' cellspacing='0' border='5'>
+<table cellpadding='1' cellspacing='1' border='5'>
 <tr>
 <td><img src="/scr/MI-Foundations/00-IntroToCS/TablaAND.png" alt="AND" width="240" height="130"/></td>
 <td><img src="/scr/MI-Foundations/00-IntroToCS/TablaOR.png" alt="AND" width="240" height="130"/></td>
