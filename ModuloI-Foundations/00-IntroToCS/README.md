@@ -73,9 +73,9 @@ Luego haremos la siguiente operación. Elevaremos el número 2 a cada posición.
   
  ![](/scr/MI-Foundations/00-IntroToCS/binario.png)
 
-<h1 align='center'>*************************************</h1>
-<H3 align='center' style='color:#2471A3' >************UNICODE************</H3>
-<h1 align='center'>*************************************</h1>
+<h1 align='center'></h1>
+<H3 align='center' style='color:#2471A3' >UNICODE</H3>
+<h1 align='center'></h1>
                        
                        ************      ************
                        *************************************
