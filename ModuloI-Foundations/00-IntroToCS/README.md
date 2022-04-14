@@ -13,7 +13,7 @@
 <td><img src="/scr/MI-Foundations/00-IntroToCS/TablaNOT.png" alt="AND" width="240" height="130"/></td>
 </tr>
 </table>
-
+<br>
 
 > XOR - exclusive OR ( una salida verdadera resulta si una, y solo una de las entradas a la puerta es verdadera. Si ambas entradas son falsas o ambas son verdaderas, resulta en una salida falsa)
 
