@@ -45,22 +45,26 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay 
 
 <H3 align= rigth style='color:#2471A3' >PASAR DE BINARIO A DECIMAL</H3>
 
+Supongamos que tenemos el número 43 (101011). Para pasarlo de binario a decimal seguiremos los siguientes pasos.
+
 1 Byte ---> 8 posiciones ---> 8 bit
 
-0 0 1 0 1 0 1 1
- 7 6 5 4 3 2 1 0
+Primero, enumeraremos las posiciones de los números, empezando desde el 0, y de derecha
+a izquierda.
 
-               Sumatoria ( 2^pos * valor) de Derecha a Izquierda
-                  2^0*1 + 2^1*1 + 2^2*0 + 2^3*1 + 2^4*0 + 2^5*1 
-                   1*1  +  2*1  +  4*0  +  8*1  +  16*0 +  32*1
-                    1   +   2   +   0   +   8   +    0  +   32
-                                        43
+             Nro. Binario ---> 1 0 1 0 1 1
+             Posición -------> 5 4 3 2 1 0
 
-                                                            __
+Luego haremos la siguiente operación. Elevaremos el número 2 a cada posición. Luego lo multiplicaremos por el número binario de la posición. Finalmente sumaremos todos.
 
-   1  +  1 +  1 +  1 + 1 + 1 + 1 + 1    
- 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1   ==> 255 caracteres representables ASSCI
-   7  +  6 +  5 +  4 + 3 + 2 + 1 + 0  
+                   Sumatoria ( 2^pos * valor) ----> de Derecha a Izquierda
+
+  ![](/scr/MI-Foundations/00-IntroToCS/binarioAdecimal.jpg)                 
+               
+
+                           1  +  1 +  1 +  1 + 1 + 1 + 1 + 1    
+                          128 + 64 + 32 + 16 + 8 + 4 + 2 + 1   ==> 255 caracteres representables ASSCI
+                           7  +  6 +  5 +  4 + 3 + 2 + 1 + 0  
 
   
  ![](/scr/MI-Foundations/00-IntroToCS/binario.png)
