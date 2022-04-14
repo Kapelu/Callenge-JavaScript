@@ -1,7 +1,9 @@
 <h1 align='center'></h1>
-<h1 align='center'><mark><i><big>*   INTRO TO CS   *</big></i></mark></h1>
+<h1 align='center'><mark><i><big>*   INTRO TO COMPUTER SCIENCE   *</big></i></mark></h1>
 
 <H3 align='center' style='color:#2471A3' >TABLA DE LA VERDAD</H3>  
+
+<img src="/scr/MI-Foundations/00-IntroToCS/TablaAND.png" alt="" width="240" height="130" />
 
 ![](/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
 ![](/scr/MI-Foundations/00-IntroToCS/TablaOR.png)
