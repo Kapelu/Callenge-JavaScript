@@ -100,20 +100,9 @@ Luego haremos la siguiente operación. Elevaremos el número 2 a cada posición.
               └─── se pasa a 3 byte ─────────> 111011 10001000 1000 
                                                      ├───> se cuenta de Izquierda a derecha para las 
                                                            posiciones de los bytes
-
-
 <br>
-
-
-
-
-
-
-
-
-
+<br/> 
+<br/> 
+<br/> 
 <h1 align='center'></h1>
-<br/> 
-<br/> 
-<br/> 
 <h3 align="center">Gracias!!!!  :rose:   XOXOXO
