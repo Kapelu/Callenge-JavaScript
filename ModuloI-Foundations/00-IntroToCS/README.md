@@ -3,15 +3,6 @@
 
 <H3 align='center' style='color:#2471A3' >TABLA DE LA VERDAD</H3>  
 
-<table>
-
-</table>
-
-<img src="/scr/MI-Foundations/00-IntroToCS/TablaAND.png" alt="" width="240" height="130" />
-<img src="/scr/MI-Foundations/00-IntroToCS/TablaOR.png" alt="" width="240" height="130" />
-<img src="/scr/MI-Foundations/00-IntroToCS/TablaXOR.png" alt="" width="240" height="130" />
-<img src="/scr/MI-Foundations/00-IntroToCS/TablaNOT.png" alt="" width="240" height="130" />
-
 ![](/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
 ![](/scr/MI-Foundations/00-IntroToCS/TablaOR.png)
 ![](/scr/MI-Foundations/00-IntroToCS/TablaXOR.png)
