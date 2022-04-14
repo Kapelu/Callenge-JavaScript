@@ -1,5 +1,5 @@
 <h1 align='center'></h1>
-<h1 align='center'><mark><i><big>*   INTRO TO COMPUTER SCIENCE   *</big></i></mark></h1>
+<h1 align='center'><mark><i>*   INTRO TO COMPUTER SCIENCE   *</i></mark></h1>
 
 <H3 align='center' style='color:#2471A3' >TABLA DE LA VERDAD</H3>  
 
