@@ -1,0 +1,27 @@
+{
+  "name": "m1-ft-aux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --collectCoverage=false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soyHenry/M1-FT-AUX.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soyHenry/M1-FT-AUX/issues"
+  },
+  "homepage": "https://github.com/soyHenry/M1-FT-AUX#readme",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "jest": "^27.5.1",
+    "tape": "^5.5.2"
+  }
+}
