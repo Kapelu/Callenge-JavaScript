@@ -2,6 +2,7 @@
 <h1 align='center'><mark><i><big>*   INTRO TO COMPUTER SCIENCE   *</big></i></mark></h1>
 
 <H3 align='center' style='color:#2471A3' >TABLA DE LA VERDAD</H3>  
+<h1 align='center'></h1>
 
 ![](/scr/MI-Foundations/00-IntroToCS/TablaAND.png)
 ![](/scr/MI-Foundations/00-IntroToCS/TablaOR.png)
@@ -26,6 +27,7 @@ El Half-Adder es un bloque de construcción básico para sumar dos números como
 
 <h1 align='center'></h1>
 <H3 align='center' style='color:#2471A3' >PASAR DE DECIMAL A BINARIO</H3>  
+<h1 align='center'></h1>
 
 Si quisiéramos sumar 19+24 sabemos que la suma de 9+4 = 13, por lo tanto en el resultado final en la unidad nos queda un 3 y debemos “llevarnos” la decena. Luego, para la decena debemos sumar 1 + 2 + 1 = 4. Obteniendo como resultado final 43.
 En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay acarreo) mientras que el XOR efectúa la suma.
@@ -45,6 +47,7 @@ En el Half Adder, ese rol de acarreo lo hace la puerta lógica AND (dice si hay 
 
 <h1 align='center'></h1>
 <H3 align='center' style='color:#2471A3' >PASAR DE BINARIO A DECIMAL</H3>
+<h1 align='center'></h1>
 
 Supongamos que tenemos el número 43 (101011). Para pasarlo de binario a decimal seguiremos los siguientes pasos.
 
