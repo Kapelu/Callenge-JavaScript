@@ -5,12 +5,12 @@
 <h1 align='center'></h1>
 
 
-<table cellpadding='1' cellspacing='1' border='1'>
+<table cellpadding='0' cellspacing='0' border='0'>
 <tr>
 <td><img src="/scr/MI-Foundations/00-IntroToCS/TablaAND.png" alt="AND" width="240" height="130"/></td>
-<td><img src="/scr/MI-Foundations/00-IntroToCS/TablaOR.png" alt="AND" width="240" height="130"/></td>
-<td><img src="/scr/MI-Foundations/00-IntroToCS/TablaXOR.png" alt="AND" width="240" height="130"/></td>
-<td><img src="/scr/MI-Foundations/00-IntroToCS/TablaNOT.png" alt="AND" width="240" height="130"/></td>
+<td><img src="/scr/MI-Foundations/00-IntroToCS/TablaOR.png" alt="OR" width="240" height="130"/></td>
+<td><img src="/scr/MI-Foundations/00-IntroToCS/TablaXOR.png" alt="XOR" width="240" height="130"/></td>
+<td><img src="/scr/MI-Foundations/00-IntroToCS/TablaNOT.png" alt="NOT" width="240" height="130"/></td>
 </tr>
 </table>
 <br>
@@ -71,9 +71,9 @@ Luego haremos la siguiente operación. Elevaremos el número 2 a cada posición.
 <H3 align='center'>Sumatoria ( 2^pos * valor) ----> de Derecha a Izquierda</H5>
 <br>
                    
+![](/scr/MI-Foundations/00-IntroToCS/binarioAdecimal.jpg)      
 
-  ![](/scr/MI-Foundations/00-IntroToCS/binarioAdecimal.jpg)      
-  <br>           
+<br>           
                
 <H3 align='center'>1  +  1 +  1 +  1 + 1 + 1 + 1 + 1⠀</H5>
 <H3 align='center'>128 + 64 + 32 + 16 + 8 + 4 + 2 + 1</H5>
