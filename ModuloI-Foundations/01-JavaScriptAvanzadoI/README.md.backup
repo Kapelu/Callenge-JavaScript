@@ -2,6 +2,8 @@
 <h1 align='center'><mark><i><big>JAVASCRIPT AVANZADO I</big></i></mark></h1>
  
 ### _SINGELE THREADED Y SINCRÓNICO_ (Hilo simple y sincrónico)
+---
+<br>
 
 >_**SINGLE THREADED:** Se llaman asi a cada secuencia de instrucciones que puede ser manejada por un programa._
 
@@ -9,8 +11,12 @@
 
 _JavaScript es **Single Threaded** y **Sincrónico**, es decir que sólo puede hacer un sólo comando o instrucción en cada momento y que lo hace en orden, empieza la instrucción siguiente cuando termina la anterior._
 
+<br>
+
 ---
-### _SYNTAX PARSER_ (Analizador de Sintaxis)
+### _SYNTAX <!--  -->PARSER_ (Analizador de Sintaxis)
+---
+<br>
 
 _El **Syntax Parcer** justamente eso es lo que hace, leer nuestro código, analizarlo y decirnos si la sintaxis que estamos aplicando es correcta o no._
 
@@ -19,6 +25,7 @@ _esta propiedad la tienen la mayoría de los lenguajes, lo único que la diferen
 _Lo importante de esto es que el intérprete además puede agregar ciertos comportamientos extras, vamos a ver alguna de esas cosas extras que el interprete maneja por nosotros._
 
 >* _LEXICAL ENVIRONMENT (Entorno Léxico):_ Esto hace referencia a  **Dónde** están declarados los _statments o expresiones_ en el código. Esto significa que el comportamiento de JavaScript puede cambiar segun **dónde** se haya escrito el código.
+
 ```javascript
 function hola(){
     var foo= 'Hola!!!'
