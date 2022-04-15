@@ -19,7 +19,6 @@ _esta propiedad la tienen la mayoría de los lenguajes, lo único que la diferen
 _Lo importante de esto es que el intérprete además puede agregar ciertos comportamientos extras, vamos a ver alguna de esas cosas extras que el interprete maneja por nosotros._
 
 >* _LEXICAL ENVIRONMENT (Entorno Léxico):_ Esto hace referencia a  **Dónde** están declarados los _statments o expresiones_ en el código. Esto significa que el comportamiento de JavaScript puede cambiar segun **dónde** se haya escrito el código.
-
 ```javascript
 function hola(){
     var foo= 'Hola!!!'
@@ -31,5 +30,5 @@ console.log(hola())   // undefined
 console.log(foo)   // foo in not defined
 
 ```
-
+_Para el interprete las 2 declaraciones de variables de arriba tendrán significados muy distintos. si bien la operación es igual en las 2 asignaciones, al estar en lugares distintos(una dentro de una función y la otra no), el interprete las parseara de forma distinta._
 
