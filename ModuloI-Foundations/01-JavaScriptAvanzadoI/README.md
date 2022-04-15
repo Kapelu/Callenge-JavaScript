@@ -45,7 +45,9 @@ _Contiene la información sobre **Qué** código se esta ejecutando en cada mome
 ### _**GLOBAL ENVIROMENT (Entorno Global):**_ 
 
 _Basicamente, vamos a decir que es **GLOBAL** cualquier bloque de código que no este declarado de ntro de una función. Cada vez que ejecutamos algo en JavaScript se corre dentro de un contexto de ejecución._
+
 <br>
+
 ![](/scr/MI-Foundations/01-JavaScriptAvanzado/context.png)
 
 _Cuando se crea el **Lexical Environment** dentro del **Execution Context** se crea el **Global Environment** y ademas una variable llamada **THIS**. que es la que hace referencia al **Global environment**. que en caso de que fuera muestra consola en el engine de JavaScript de **Chrome**, en el caso de ser otro el entorno global, esta variable _this_ va a hacer referencia al **objeto global(global environment)** que se este ejecutando. Pero siempre hay un **Global Environment**._
@@ -55,5 +57,3 @@ En JavaScript, cuando declaramos variables u funciones en el contexto global, es
 <br>
 
 ![](/scr/MI-Foundations/01-JavaScriptAvanzado/globalObject.png)
-
-<img align='center' scr='/scr/MI-Foundations/01-JavaScriptAvanzado/globalObject.png'>
