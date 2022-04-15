@@ -24,8 +24,7 @@ _esta propiedad la tienen la mayoría de los lenguajes, lo único que la diferen
 
 _Lo importante de esto es que el intérprete además puede agregar ciertos comportamientos extras, vamos a ver alguna de esas cosas extras que el interprete maneja por nosotros._
 
->* _**LEXICAL ENVIRONMENT (Entorno Léxico):**_ Esto hace referencia a  **Dónde** están declarados los _statments o expresiones_ en el código. Esto significa que el comportamiento de JavaScript puede cambiar segun **dónde** se haya escrito el código.
-
+* _**LEXICAL ENVIRONMENT (Entorno Léxico):**_ Esto hace referencia a  **Dónde** están declarados los _statments o expresiones_ en el código. Esto significa que el comportamiento de JavaScript puede cambiar segun **dónde** se haya escrito el código.
 _Como vemos en el  siguiente ejemplo, para el interprete las 2 declaraciones de variables de arriba tendrán significados muy distintos. si bien la operación es igual en las 2 asignaciones, al estar en lugares distintos(una dentro de una función y la otra no), el interprete las parseara de forma distinta._
 
     ```javascript
@@ -37,7 +36,7 @@ _Como vemos en el  siguiente ejemplo, para el interprete las 2 declaraciones de 
     console.log(foo)   // foo in not defined
     ```
 
->* _**EXECUTION CONTEXT (Contexto de ejecución):**_ _Contiene la información sobre **Qué** código se esta ejecutando en cada momento. Además de manteber el codigo que tiene que ejecutar, tambien mantiene más información sobre desde donde se invovo ese codigo, en qué lexical enviornment está, etc._
+* _**EXECUTION CONTEXT (Contexto de ejecución):**_ _Contiene la información sobre **Qué** código se esta ejecutando en cada momento. Además de manteber el codigo que tiene que ejecutar, tambien mantiene más información sobre desde donde se invovo ese codigo, en qué lexical enviornment está, etc._
 
->* _**GLOBAL ENVIROMENT (Entorno Global):**_ _Basicamente, vamos a decir que es **GLOBAL** cualquier bloque de código que no este declarado de ntro de una función. Cada vez que ejecutamos algo en JavaScript se corre dentro de un contexto de ejecución._
+* _**GLOBAL ENVIROMENT (Entorno Global):**_ _Basicamente, vamos a decir que es **GLOBAL** cualquier bloque de código que no este declarado de ntro de una función. Cada vez que ejecutamos algo en JavaScript se corre dentro de un contexto de ejecución._
 ![](/scr/MI-Foundations/01-JavaScriptAvanzado/context.png)  
