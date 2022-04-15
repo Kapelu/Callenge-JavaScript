@@ -38,4 +38,5 @@ _Para el interprete las 2 declaraciones de variables de arriba tendrán signific
 
 >* _**EXECUTION CONTEXT (Contexto de ejecución):**_ Contiene la información sobre **Qué** código se esta ejecutando en cada momento. Además de manteber el codigo que tiene que ejecutar, tambien mantiene más información sobre desde donde se invovo ese codigo, en qué lexical enviornment está, etc.
 
->* _**GLOBAL ENVIROMENT (Entorno Global):**_ 
+>* _**GLOBAL ENVIROMENT (Entorno Global):**_ Basicamente, vamos a decir que es **GLOBAL** cualquier bloque de código que no este declarado de ntro de una función. Cada vez que ejecutamos algo en JavaScript se corre dentro de un contexto de ejecución. 
+![](/scr/MI-Foundations/01-JavaScriptAvanzado/context.png)  
