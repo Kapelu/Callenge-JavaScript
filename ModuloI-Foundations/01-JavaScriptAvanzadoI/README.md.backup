@@ -26,9 +26,7 @@ var bar= 'Chao'
 
 Para el interprete las 2 declaraciones de variables de arriba tendrán significados muy distintos. si bien la operación es igual en las 2 asignaciones, al estar en lugares distintos(una dentro de una función y la otra no), el interprete las parseara de forma distinta.
 
-### _LEXICAL ENVIRONMENT_ (Entorno Léxico)
-
-
+### _LEXICAL ENVIRONMENT_ ()
 
 
 
