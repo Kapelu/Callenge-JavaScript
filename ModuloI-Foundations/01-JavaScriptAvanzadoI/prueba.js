@@ -1,113 +1,18 @@
 
 
+bar();
+console.log(foo);
 
+var foo = 'Hola, me declaro';
+function bar() {
+  console.log('Soy una función');
+} 
 
 
 
 /*
 
 
-
-gkkkkgfhgfjfgj
-
-
-
-
-
-
-
-
-
-
-
-El ***Lexical Environment*** tiene que ver con *dónde* están declarados ciertos statements o expresiones en tu código. No será lo mismo hacerlo en un lugar que en otro.
-    
-```javascrit
-function hola() {
-    var foo = "Hola!";
-}
-var bar = "chao!";
-```
-    
-Por ejemplo, para el interprete las dos declaraciones de variable del arriba tendrán signicados muy distintos. Si bien la operación es igual en los dos (asignación) al estar en lugares distintos (una dentro de una función y la otra no) el interprete las parseará de forma distinta.
-
-<br>   
-<h1 align='center'></h1>
-<H3 align= 'center' style='color:#2471A3' ><i>GLOBAL ENVIROMENT</i></H3>
-<h1 align='center'></h1>
-
-El **Global Enviroment** es la ventana “padre” del código. El la parte más externa, la que envuelve a todo el código. Dentro de este contexto podremos encontrar otros contextos.
-        
-<br>   
-<h1 align='center'></h1>
-<H3 align= 'center' style='color:#2471A3' ><i>EXECUTION CONTEXT</i></H3>
-<h1 align='center'></h1>
-
-El contexto de ejecución contiene información sobre **QUÉ** código se está ejecutando en cada momento. Esto se da en las *functions*.
-    
-``` javascript
-var sayHello = "Hola Mundo!"           //GLOBAL CONTEXT
-    
-function persona() {                    //EXECUTION CONTEXT
-    var first = "Romero"
-	var last = "Nilda"
-    function firstName() {                //EXECUTION CONTEXT
-        return first
-    }
-    
-    function lastName() {                 //EXECUTION CONTEXT
-    	return last
-    }
-}
-```
-    
-Dentro del ***Execution Context*** existen distintos elementos. Estos son
-
-<h3 align='center'>Código  |  Global Object  |  ‘This’  |  Outer Enviroment</h3>    
-
-<br>
-<h1 align='center'></h1>
-<H3 align= 'center' style='color:#2471A3' ><i>HOISTING</i></H3>
-<h1 align='center'></h1>
-
-***Hoisting*** es un comportamiento de JavaScript en el que “mueve las declaraciones al principio”.
-    
-Lo que sucede aquí es que antes de ejecutar el código, JavaScript le da una primera lectura para “tomar nota” de todas las variables (**var, —let y const NO—**) y todas las functiones (**function**) que tenga el código en su contexto global. Así podrá tener una referencia de la memoria a utilizar.
-    
-``` javascript
-bar();
-console.log(foo);
-    
-var foo = "Hola, me declaro";
-function bar() {
-    console.log("Soy una función");
-}
-```
-En el ejemplo de arriba, estamos ejecutando una función y una línea de texto antes de declarar cualquiera de las dos. Cuando se realiza la etapa de ***hoisting*** se distingue una variable (foo) y una función (bar). Aquí las moverá al principio.
-    
-``` javascript
-//var foo = undefined;
-//function bar() {
-//	console.log("Soy una función");
-//}
-  
-bar();
-console.log(foo);
-   
-var foo = "Hola, me declaro";
-function bar() {
-    console.log("Soy una función");
-}
-```
-    
-Todas las variables declaradas no estarán definidas en el hoisting. Las funciones declaradas como variables tampoco. Solo las funciones declaradas como *statement* serán reconocidas como una función completa.
-
-<br>
-<h1 align='center'></h1>
-<H3 align= 'center' style='color:#2471A3' ><i>CREACIÓN Y EJECUCIÓN</i></H3>
-<h1 align='center'></h1>
-
-Cuando el intérprete inicia el corrido del código entra en *execution context* e inicia dos etapas. La primera (**creation phase**) y la segunda (**execution phase**). En la ***creation phase*** suceden varios procesos. Los dos más importantes son el *hoisting* y la creación del nuevo entorno. En la ***execution phase*** se ejecuta el código.
     
 - **EXECUTION STACK**
 
