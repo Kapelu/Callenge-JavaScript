@@ -90,7 +90,104 @@ La segunda fase es la face de **"EJECUCION"**, en esta face ya tenemos todo lo q
 <br>
 
 ---
-## _**EXECUTION STACK**_ (_Pila de ejecución)_
+## _**EXECUTION STACK**_ (_Pila de ejecución_)
 ---
 <br>
+
+_Este proceso de crear contextos de ejecución sucede siempre al principio cuando se crea el contexto global, ahora vamos a ver que también sucede cada vez que invocamos una función en nuestro código, como se pueden imaginar, en un script cualquiera, es muy probable que se creen varios contextos de ejecución (muchas invocaciones a funciones), estos contextos se van a ir apilando en la pila de ejecución o execution stack._
+
+_Para ilustar cómo se van creando y cómo se apilan los contextos veamos el siguiente código:_
+
+```javascript
+function b() {
+  console.log('B!')
+};
+
+function a() {
+  // invoca a la función b
+  b()
+}
+
+//invocamos a
+a()
+```
+_Veamos que ocurre cuando corremos este script:_
+1. _Lo primero que pasa es la creción del contexto global y el proceso de hoisting, entonces la función a y b van a estar en memoria._ 
+2. _Empieza la fase de ejecución, en esa fase es que el interprete va a recorrer línea por línea el script. En nuestro ejemplo hay una única línea para ejecutar (las otras las leyó durante el hoisting) que es la línea donde invocamos a a()._
+
+<br>
+
+![](/scr/MI-Foundations/01-JavaScriptAvanzado/executionStack.png)
+
+<br>
+
+_Cada invocación a una función crea un contexto de ejecución nuevo, que pasa por las dos fases de creación antes mencionadas. Cuando se termina de ejecutar, se destruye y se saca de la pila de ejecución para seguir con los que quedan._
+
+<br>
+
+---
+## _**SCOPE**_ (_Alcance_)
+---
+<br>
+
+_Ahora que sabemos que existen los contextos de ejecución, podemos entender más fácilmente que ocurre con las variables que creamos dentro de las funciones que invocamos. Cada contexto maneja sus propias variables, y son independientes de los demás. Justamente por eso, podemos usar los mismos nombres de variables dentro de funciones que creamos sin que pisen las demás. También sabemos que podemos acceder a una variable declarada en el contexto global dentro de una función. Esto se debe a que JavaScript primero busca una variable dentro del contexto que se está ejecutando, si no la encuentra ahí, usa la referencia al outer context para buscarla dentro de ese contexto. Gracias a esto vamos a poder acceder a variables que estén afuera de nuestro contexto (siempre y cuando no hayamos declarado una nueva con el mismo nombre!!)._
+
+_Veamos el siguiente ejemplo:_
+
+```javascript
+var global = 'Hola!'
+
+function a() {
+  // como no hay una variable llamada global en este contexto,
+  // busca en el outer que es el global
+  console.log(global) 
+  global = 'Hello!' // cambia la variable del contexto global
+}
+
+function b(){
+  // declaramos una variable global en nuestro contexto
+  // esta es independiente 
+  var global = 'Chao'
+  console.log(global)
+}
+
+a() // 'Hola!'
+b() // 'Chao'
+console.log(global) // 'Hello'
+```
+
+_Para esto vamos a introducir el término scope, este es el set de variable, objeto y funciones al que tenemos acceso en determinado contexto. En el ejemplo anterior, la variable global está definida en dos scopes distintos, uno es el scope global y el otro es el scope de la función b, esto quiere decir que, a pesar de tener el mismo nombre, estas dos variables son distintas._
+
+_Justamente, cuando JavaScript no encuentra una variable en su scope, lo que hace es buscar en otros scopes (de contextos que esten en la referencia de outer contexts)._ _A esta búsqueda en distintos scope se la conoce como the scope chain, ya que el intérprete busca en cadena scope por scope por el nombre de la variable, hasta llegar al scope global._ _Noten que el outer enviroment no es necesariamente el contexto que esté debajo en la pila de ejecucción, ni tampoco el contexto en donde se invocó la función, si no es el contexto en donde se definió la función! (Se acuerdan que dijimos que en javascript el lexical enviroment era importante?)._
+
+> **NOTA:** Si el intérprete llega el scope Global sin encontrar la variable, entonces va a tirar un error.
+
+_Prueben el siguiente código y miren comó cambió todo cuando declaramos la funcion a dentro de la función b:_
+
+```javascript
+var global = 'Hola!'
+
+function b(){
+ var global = 'Chao' 
+ console.log(global) // Chao
+ function n() {
+  // como no hay una variable llamada global en este contexto,
+  // busca en el outer que es scope de b;
+  console.log(global) //Chao 
+  global = 'Hello!' // cambia la variable del contexto de b()
+ }  
+ n()
+}
+
+//No se puede llamar a n desde el scope global, xq acá no existe. solo existe dentro del scope de b.
+n() // a is not defined
+b()
+console.log(global); // 'Hola!'
+```
+
+
+
+
+
+
 
