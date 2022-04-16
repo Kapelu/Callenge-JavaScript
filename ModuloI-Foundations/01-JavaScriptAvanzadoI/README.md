@@ -185,9 +185,21 @@ b()
 console.log(global); // 'Hola!'
 ```
 
+<br>
 
+---
+## _**ASYNCHRONOUS NON BLOCKING**_ (Sin bloqueo asincrónico)
+---
+<br>
 
+_Cuando decimos código Asincrónico quiere que su ejecución o su completitud está diferida en el tiempo._ _Veamos que pasa cuando usamos una función asincrónica a la que le pasamos un callback._
 
+> _**Callback**: Le llamamos así a una función que le pasamos como argumento a otra función, para que sea invocada en esta ultima, en general cuando se cumpla una condición o termine de realizar algo (leer un archivo, escribir en una base de datos, traer datos de internet, etc...)_
 
+_Cuando declaramos un evento, el código o la función callback se va a ejecutar cuando suceda ese evento y no cuando el intérprete lee esas líneas, o cuando hacemos un request tipo AJAX y esperamos que llegue la respuesta, etc..._ _En todos estos casos, el engine JavaScript sigue haciendo o ejecutando otras líneas de código, y esto nos puede dar la sensación que estamos haciendo más de una cosa a la vez. Pero al principio dijimos que javascript es sincrónico y que ejecuta una sóla cosa a la vez._
+
+_Para entender esto, tenemos que ver un poco la imagen grande. Cuando hablamos del engine Javascript tenemos que comprender que nunca actuá sólo, siempre va a estar acompañado por otros componentes de software._ _El Engine de JavaScript tiene formas de comunicarse con estos otros componentes._ _Por ejemplo, el componente encargado de renderizar las páginas, o el componente encargado de hacer http requests (en general estos están programados en C o C++)._ _Lo que sucede entonces, es que JavaScript le pide cosas a los demás componentes y les pide que le avise cuando terminen de hacer esas cosas._ _Por lo tanto, los demás componentes del browser se encargán de hacer ese trabajo y cuando sucede un evento o terminan una tarea le avisan al engine, este interrumpe su proceso normal y mete el callback en el execution stack para realizarla._ 
+
+_Para lograr este comportamiento, el engine JavaScript tiene lo que se conoce como Event Queue, que es una cola que inicialmente está vacía y es en donde el browser (o quien se encarge de realizar las tareas) va a ir poniendo los avisos notificando que se terminó de ejecutar tal tarea. Ahora el engine JavaScript intercala cosas que tienen que ejecutar de su execution stack con cosas que tiene que hacer del event queue, de esta forma nos da la sensación que hay cosas que se hacen en paralelo. Cuando en realidad estamos delegando las tareas a otros componentes._
 
 
