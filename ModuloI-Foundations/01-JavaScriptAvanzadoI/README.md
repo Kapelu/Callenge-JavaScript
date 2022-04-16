@@ -24,25 +24,25 @@ _esta propiedad la tienen la mayoría de los lenguajes, lo único que la diferen
 
 _Lo importante de esto es que el intérprete además puede agregar ciertos comportamientos extras, vamos a ver alguna de esas cosas extras que el interprete maneja por nosotros._
 
-### _**LEXICAL ENVIRONMENT (Entorno Léxico):**_ 
+### _**LEXICAL ENVIRONMENT** (Entorno Léxico)_ 
 
 _Esto hace referencia a  **Dónde** están declarados los _statments o expresiones_ en el código. Esto significa que el comportamiento de JavaScript puede cambiar segun **dónde** se haya escrito el código._
 _Como vemos en el  siguiente ejemplo, para el interprete las 2 declaraciones de variables de arriba tendrán significados muy distintos. si bien la operación es igual en las 2 asignaciones, al estar en lugares distintos(una dentro de una función y la otra no), el interprete las parseara de forma distinta._
 
 ```javascript
 function hola(){
-    var foo= 'Hola!!!'
+    let foo= 'Hola!!!'
 }
-var bar= 'Chao!!!'
+let bar= 'Chao!!!'
 console.log(bar)   // Chao!!!
 console.log(foo)   // foo in not defined
 ```
 
-### _**EXECUTION CONTEXT (Contexto de ejecución):**_ 
+### _**EXECUTION CONTEXT** (Contexto de ejecución)_ 
 
 _Contiene la información sobre **Qué** código se esta ejecutando en cada momento. Además de manteber el codigo que tiene que ejecutar, tambien mantiene más información sobre desde donde se invovo ese codigo, en qué lexical enviornment está, etc._
 
-### _**GLOBAL ENVIROMENT (Entorno Global):**_ 
+### _**GLOBAL ENVIROMENT** (Entorno Global)_ 
 
 _Basicamente, vamos a decir que es **GLOBAL** cualquier bloque de código que no este declarado de ntro de una función. Cada vez que ejecutamos algo en JavaScript se corre dentro de un contexto de ejecución._
 
@@ -62,7 +62,7 @@ En JavaScript, cuando declaramos variables u funciones en el contexto global, es
 <br>
 
 ---
-## _**HOISTING**_ (_Creando el contexto de ejecución (Execution Context))_
+## _**HOISTING**_ (_Creando el contexto de ejecución (Execution Context)_)
 ---
 <br>
 
@@ -76,7 +76,7 @@ _Proba ejecutarlo siguiente en JavaScript_
 bar()
 console.log(foo)
 
-var foo= 'Hola, me declaro'
+let foo= 'Hola, me declaro'
 function bar(){
     console.log('Soy una función')
 } 
@@ -135,7 +135,7 @@ _Ahora que sabemos que existen los contextos de ejecución, podemos entender má
 _Veamos el siguiente ejemplo:_
 
 ```javascript
-var global = 'Hola!'
+let global = 'Hola!'
 
 function a() {
   // como no hay una variable llamada global en este contexto,
@@ -147,7 +147,7 @@ function a() {
 function b(){
   // declaramos una variable global en nuestro contexto
   // esta es independiente 
-  var global = 'Chao'
+  let global = 'Chao'
   console.log(global)
 }
 
@@ -165,10 +165,10 @@ _Justamente, cuando JavaScript no encuentra una variable en su scope, lo que hac
 _Prueben el siguiente código y miren comó cambió todo cuando declaramos la funcion a dentro de la función b:_
 
 ```javascript
-var global = 'Hola!'
+let global = 'Hola!'
 
 function b(){
- var global = 'Chao' 
+ let global = 'Chao' 
  console.log(global) // Chao
  function n() {
   // como no hay una variable llamada global en este contexto,
@@ -188,7 +188,7 @@ console.log(global); // 'Hola!'
 <br>
 
 ---
-## _**ASYNCHRONOUS NON BLOCKING**_ (Sin bloqueo asincrónico)
+## _**ASYNCHRONOUS NON BLOCKING**_ (_Sin bloqueo asincrónico_)
 ---
 <br>
 
@@ -202,4 +202,56 @@ _Para entender esto, tenemos que ver un poco la imagen grande. Cuando hablamos d
 
 _Para lograr este comportamiento, el engine JavaScript tiene lo que se conoce como Event Queue, que es una cola que inicialmente está vacía y es en donde el browser (o quien se encarge de realizar las tareas) va a ir poniendo los avisos notificando que se terminó de ejecutar tal tarea. Ahora el engine JavaScript intercala cosas que tienen que ejecutar de su execution stack con cosas que tiene que hacer del event queue, de esta forma nos da la sensación que hay cosas que se hacen en paralelo. Cuando en realidad estamos delegando las tareas a otros componentes._
 
+<br>
 
+---
+## _**TIPOS DE DATOS Y OPERADORES**_
+---
+<br>
+
+_Todos los lenguajes de programación tienen características distintas que los caracterizan. Una de ellas es la forma con la que trabajan con variables y tipos de datos. JavaScript en particular tiene lo que se conoce como tipado dinámico o dynamic typing. Esto quiere decir que no tenemos que decirle al intérprete que tipo de datos contiene una variable, él lo calcula por si mismo. En otros lenguajes, al declarar una variable tenemos que avisarle qué tipos de datos vamos a guardar en ella (static typing o tipado estático). Otra cosa importante, es que JavaScript nos permite cambiar el tipo de datos que guardamos en una variable, por ejemplo, podemos tener una variable con un número y luego guardar una string en la misma variable, en otros lenguajes hacer esto nos resultaría en un error._
+
+>_Cuando queremos convertir algo de un tipo de datos a otro, usamos el termino castear._
+
+<br>
+
+## _**TIPOS DE DATOS**_
+
+<br>
+ 
+_Un tipo de datos Primitivo, son tipos de datos básicos que vienen previamente definidos con el lenguaje. Usando estos tipos de datos primitivos vamos a poder crear tipos de datos más complejos. En Javascript hay seis tipos de datos primitivos:_
+
+* **undefined**: Este representa que algo no está definido, como por ejemplo cuando declaramos una variable y no le asignamos nada, toma el valor undefined por defecto.
+* **null**: Este tambien representa que algo no existe. Lo vamos a usar para decir que una variable está vacía o no tiene nada adentro. (No es lo mismo decir que una variable no está definida, a que NO tiene nada adentro. En el segundo caso sabemos que no tiene nada.)
+* **Boolean**: true o false.
+* **Number**: Este tipo de datos representa un número real. En JavaScript todos los números son representados como tipo flotantes.
+* **String**: Una secuencia de caractéres.
+* **Symbol**: Este tipo de datos es nuevo, está en el nuevo standart ES6. Por ahora lo ignoraremos.
+
+<br>
+
+## _**OPERADORES**_
+
+<br>
+
+_Un operador no es otra cosa que una función, pero al ser funciones básicas para el Engine y que se utilizan muchos, se escriben de una forma particular y que en general es corta y simple. Generalmente, los operadores toman dos parámetros y retornan un resultado. Por ejemplo: Para el intérprete al ver el signo +, sabe que tiene que ejecutar la función suma (que tiene internamente definida), y toma como parámetros los términos que estén a la izquierda y la derecha del operador. De hecho, es equivalente a tener una función que se llame suma y que reciba dos parámetros:_
+```javascript
+let a = 2 + 3   // 5
+
+function suma(a,b){return a + b}   // usamos el mismo operador como ejemplo, si no deberiamos hacer sumas binarias
+
+let a = suma(2,3)   // 5
+```
+
+_De hecho, esa forma de escribir tiene un nombre particular, se llama notación **infix** o **infija**, en ella se escribe el operador entre los operandos. Pero también existen otro tipos de notación como la **postfix** o **postfija** y la **prefix** o **prefija**. En estas última el operador va a la derecha de los operandos o a la izquierda respectivamente._
+
+<br>
+
+![](/scr/MI-Foundations/01-JavaScriptAvanzado/notaciones.png)
+
+<br>
+
+
+
+
+### _**EXECUTION CONTEXT (Contexto de ejecución):**_ 

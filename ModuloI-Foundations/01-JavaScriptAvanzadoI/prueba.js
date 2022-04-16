@@ -12,7 +12,7 @@ function b() {
   a();
 }
 
-console.log(a()); //Ya no puedo llamar a a desde el scope global, acá no existe.
+//console.log(a()); //Ya no puedo llamar a a desde el scope global, acá no existe.
 b();
 console.log(global); // 'Hola!'
 
