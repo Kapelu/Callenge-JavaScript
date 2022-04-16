@@ -1,7 +1,7 @@
 <h1 align='center'></h1>
 <h1 align='center'><mark><i><big>JAVASCRIPT AVANZADO I</big></i></mark></h1>
  
-## _**SINGELE THREADED Y SINCRÓNICO**_ (Hilo simple y sincrónico)
+## _**SINGELE THREADED Y SINCRÓNICO**_ (_Hilo simple y sincrónico_)
 ---
 <br>
 
@@ -14,7 +14,7 @@ _JavaScript es **Single Threaded** y **Sincrónico**, es decir que sólo puede h
 <br>
 
 ---
-## _**SYNTAX PARSER**_ (Analizador de Sintaxis)
+## _**SYNTAX PARSER**_ (_Analizador de Sintaxis_)
 ---
 <br>
 
@@ -24,7 +24,7 @@ _esta propiedad la tienen la mayoría de los lenguajes, lo único que la diferen
 
 _Lo importante de esto es que el intérprete además puede agregar ciertos comportamientos extras, vamos a ver alguna de esas cosas extras que el interprete maneja por nosotros._
 
-### _**LEXICAL ENVIRONMENT** (Entorno Léxico)_ 
+### _**LEXICAL ENVIRONMENT**_ (Entorno Léxico)
 
 _Esto hace referencia a  **Dónde** están declarados los _statments o expresiones_ en el código. Esto significa que el comportamiento de JavaScript puede cambiar segun **dónde** se haya escrito el código._
 _Como vemos en el  siguiente ejemplo, para el interprete las 2 declaraciones de variables de arriba tendrán significados muy distintos. si bien la operación es igual en las 2 asignaciones, al estar en lugares distintos(una dentro de una función y la otra no), el interprete las parseara de forma distinta._
@@ -38,11 +38,11 @@ console.log(bar)   // Chao!!!
 console.log(foo)   // foo in not defined
 ```
 
-### _**EXECUTION CONTEXT** (Contexto de ejecución)_ 
+### _**EXECUTION CONTEXT**_ (Contexto de ejecución)
 
 _Contiene la información sobre **Qué** código se esta ejecutando en cada momento. Además de manteber el codigo que tiene que ejecutar, tambien mantiene más información sobre desde donde se invovo ese codigo, en qué lexical enviornment está, etc._
 
-### _**GLOBAL ENVIROMENT** (Entorno Global)_ 
+### _**GLOBAL ENVIROMENT**_ (Entorno Global) 
 
 _Basicamente, vamos a decir que es **GLOBAL** cualquier bloque de código que no este declarado de ntro de una función. Cada vez que ejecutamos algo en JavaScript se corre dentro de un contexto de ejecución._
 
@@ -215,7 +215,7 @@ _Todos los lenguajes de programación tienen características distintas que los 
 
 <br>
 
-## _**TIPOS DE DATOS**_
+### _**TIPOS DE DATOS**_
 
 <br>
  
@@ -230,7 +230,7 @@ _Un tipo de datos Primitivo, son tipos de datos básicos que vienen previamente 
 
 <br>
 
-## _**OPERADORES**_
+### _**OPERADORES**_
 
 <br>
 
@@ -251,7 +251,56 @@ _De hecho, esa forma de escribir tiene un nombre particular, se llama notación 
 
 <br>
 
+### _**Precedencia de Operadores y Asociatividad**_ 
 
+* **Precedencia de operadores** es básicamente el orden en que se van a llamar las funciones de los operadores. Estás funciones son llamadas en orden de precedencia (las que tienen mayor precedencia se ejecutan primero). O sea que si tenemos más de un operador, el intérprete va a llamar al operador de mayor precendencia primero y después va a seguir con los demás.
 
+* **Asociatividad** de operadores es el orden en el que se ejecutan los operadores cuando tienen la misma precedencia, es decir, de izquierda a derecha o de derecha a izquierda.
 
-### _**EXECUTION CONTEXT (Contexto de ejecución):**_ 
+_Veamos un ejemplo para entenderlo mejor:_
+
+```javascript
+console.log( 3+ 4 * 5)    // 23
+```
+Para resolver esa expresión y saber qué resultado nos va a mostrar el intérprete deberíamos conocer en qué orden ejecuta las operaciones. Al ver la tabla de Precedencia de operadores [acá](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table). Vemos que la multiplicación tiene una precedencia de 14, y la suma de 13. Por lo tanto el intérprete primero va a ejecutar la multiplicación y luego la suma con el resultado de lo anterior -> console.log( 3 + 20 ) -> console.log(23).
+
+> Cuando invocamos una función en Javascript, los argumentos son evaluados primeros (se conoce como [__non-lazy__ evaluation]()), está definido en la [especificación](http://es5.github.io/#x11.2.3).
+> No confundir el orden de ejecución con asociatividad y precedencia, [ver esta pregunta de StackOverflow](http://stackoverflow.com/questions/13849906/operator-precedence-and-associativity-with-math-floormath-random).
+
+Ahora si tuvieramos la misma precedencia entraría en juego la asociatividad, veamos un ejemplo:
+
+```javascript
+var a = 1, b = 2, c = 3
+a = b = c
+console.log(a,b,c)    // 3 3 3 
+```
+_Para entender que paso tenemos que revisar la tabla por la asociatividad del operador de asignación =. Este tiene una precedencia de 3 y una asociatividad de `right-to-left`, es decir que las operaciones se realizan primero de **derecha** a **izquierda**. En este caso, primero se realiza b = c y luego a = b (en realidad al resultado de b = c, que retorna el valor que se está asignando). Por lo tanto al final de todo, todas las variable van a tener el valor 3. Si la asociatividad hubiese al revés, todos las variables tendrían el valor 1._
+
+<br>
+
+### _**COERSIÓN DE DATOS**_
+
+<br>
+
+_**Coersion**, asi se le llama cuando el interprete de JavaScript cambia un tipo de valor por otro, y esto es gracias a que JavaScript tiene `dynamic typing`._ _De hecho hay una [tabla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#A_model_for_understanding_equality_comparisons) donde podemos ver qué cosas son iguales y cuáles no cuando usamos coercion._
+
+_Por ejemplo:_
+```javascript
+var a = 1 + 'hola'
+console.log(a)    // 1hola 
+```
+_Lo que ocurrió es que el número 1 fue convertido a un string, y luego se realizó la operación de concatenado entre el 1 y el string hola. Lo importante es que nosotros nunca le pedimos a javascript que nos haga la conversión, el decidió hacerlo sólo (en otros lenguajes nos devolvería un error si quisieramos hacer lo mismo!)._
+
+> Cuando usamos ***` "===" `*** le estamos diciendo al interprete que **NO** convierta los operadores antes de hacer la comparacón.
+
+>**Prueben ver a qué convierten las cosas, para booleanos usar Boolean(), para strings String() y números Number()**.
+
+```javascript
+Number('3') // devuelve el número 3. Obvio!
+Number(false) // devuelve el número 0. mini Obvio.
+Number(true)  // devuelve el número 1. menos mini Obvio.
+Number(undefined) // devuelve `NaN`. No era obvio, pero tiene sentido.
+Number(null) // devuelve el nuḿero 0. WTFFFF!!! porqueeEE no debería ser `NaN`??
+```
+Podríamos decir que el valor `NaN` es un tipo primitivo de JavaScript. Este aparece cuando JavaScript intenta convertir algo a un número, pero no puede hacerlo. Literalmente significa `Not a Number`.
+
