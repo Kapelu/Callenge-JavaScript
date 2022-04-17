@@ -304,3 +304,79 @@ Number(null) // devuelve el nuḿero 0. WTFFFF!!! porqueeEE no debería ser `NaN
 ```
 Podríamos decir que el valor `NaN` es un tipo primitivo de JavaScript. Este aparece cuando JavaScript intenta convertir algo a un número, pero no puede hacerlo. Literalmente significa `Not a Number`.
 
+<br>
+
+---
+## _**FUNCIONES Y OBJETOS**_
+---
+<br>
+
+_Algo muy importante de JavaScript es que las funciones son de tipo `first class`, esto quiere decir que las funciones pueden ser tratadas igual que cualquier otro tipo de valor. Es decir, que podemos pasar una funcion como argumento, podemos asignar una función a una variable, podemos guardarla en un arreglo, etc.. Esta es uno de los rasgos de JavaScript que lo hace muy poderoso, hay otros lenguajes que pueden hacer lo mismo, pero el más popular es JavaScript. De hecho, las funciones en JavaScript son un tipo especial de objetos. Este objeto, además de poder tener cualquier propiedades adentro (como cualquier objeto) tiene dos propiedades especiales: La primera es el nombre (name), que contiene el nombre de la función, esta propiedad es opcional ( funciones anónimas ). La segunda propiedad se llama code (código) y en ella se guarda el código que escribiste para la función._
+
+<br>
+
+![](/scr/MI-Foundations/01-JavaScriptAvanzado/function.png)
+
+<br>
+
+Veamos un ejemplo:
+
+```javascript
+function hola(){
+  console.log('hola')
+}
+hola.saludo = 'Buen Día'
+console.log(hola)  // { [λ: hola] saludo: 'Buen Día' }
+```
+Veamos lo que paso aqui. Declaramos una función y luego le agregamos una propiedad llamada saludo a ella. Como la función es un objeto, entonces podemos hacer esto sin problemas.
+
+<br>
+
+#### **Expression (_Expresión_)**
+
+_Una Expresión es una unidad de código que evaluá a un valor. Toda expresion puede ser devuelta en un `console.log()` Por ejemplo:._
+
+```javascript
+a = 3   // es una expresion que nos devuelve el numero 3
+1 + 2   // tambien es una expresion que nos retorna el 3
+b = Math.pow(2,3) + 4
+console.log(a)   // 3
+console.log(1 + 2)   // 3
+console.log(b)   // 12
+```
+> _Por lo tanto vamos a decir que **EXPRESSION** es todo aquello que se `RETORNA` un valor._
+
+<br>
+
+#### **Statement (_Declaración_)**
+
+Los Statements, generalmente tienen adentro expresiones. Según el statement que usemos vamos a tener un comportamiento distinto, ejemplos de statements son `if`, `while`, `for`, etc. Por lo tanto no pueden ser devueltos a travez de un `console.log()`
+
+> _Entonces vamos a decir que los **STATMENT** es todo aquello que realiza una acción._
+
+En javascript, en términos de funciones podemos tener ambos `functions statements` y `functions expressions`, veamos la diferencia de ambos.
+
+  * _**function statement**: Es cuando una funcion es ejecutada por el intérprete y no retorna nada, pero sí hace algo: reserva un espacio en memoria para la función que definimos._
+  ```javascript
+  function saludo(){
+    console.log('hola');
+  }
+  ```
+  * * _**function statement**: Es cuando una funcion es ejecutada por el intérprete y no retorna nada, pero sí hace algo: reserva un espacio en memo
+  ```javascript
+  a = 3   // es una expresion que nos devuelve el numero 3
+  1 + 2   // tambien es una expresion que nos retorna el 3
+  b = Math.pow(2,3) + 4
+  console.log(a)   // 3
+  console.log(1 + 2)   // 3
+  console.log(b)   // 12
+  ```
+jlhkghlkjlkadszfxcghjkj,vnbncvcdereytfjgnbvfgfhnb
+
+
+
+
+<br/> 
+<br/> 
+<h1 align='center'></h1>
+<h3 align="center">Gracias!!!!  :rose:   XOXOXO

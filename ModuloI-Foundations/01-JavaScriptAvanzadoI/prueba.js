@@ -1,12 +1,6 @@
-var global = 'Hola!';
-
-var a = 1,
-  b = 2,
-  c = 3;
-
-a = b = c;
-
-console.log(a, b, c);
-
-
-console.log(3+4*5)
+a = 3;
+1 + 2;
+b = Math.pow(2,3) + 4
+console.log(a)   // 3
+console.log(1 + 2)   // 3
+console.log(b)
