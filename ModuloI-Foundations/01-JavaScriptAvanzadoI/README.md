@@ -358,9 +358,10 @@ En javascript, en términos de funciones podemos tener ambos `functions statemen
 
   * _**function statement**: Es cuando una funcion es ejecutada por el intérprete y no retorna nada, pero sí hace algo: reserva un espacio en memoria para la función que definimos._
   ```javascript
-  function saludo(){
-    console.log('hola');
+  function saludo() {
+    console.log('hola')
   }
+  console.log(saludo())   //undefined <--- Esto es xq esta definido, pero no retorna nada la función.  
   ```
   * * _**function statement**: Es cuando una funcion es ejecutada por el intérprete y no retorna nada, pero sí hace algo: reserva un espacio en memo
   ```javascript
