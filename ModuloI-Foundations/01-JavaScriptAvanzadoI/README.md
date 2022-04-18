@@ -492,30 +492,6 @@ _A veces es necesario acceder al objeto global dentro de nuestra función. Lo qu
 
 > _De esta forma, tenemos acceso al objeto global y estamos protegidos de cualquier accidente. **Nuestro código está a salvo!**_
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br/> 
 <br/> 
 <h1 align='center'></h1>
 <h3 align="center">Gracias!!!!  :rose:   XOXOXO
