@@ -363,16 +363,29 @@ En javascript, en términos de funciones podemos tener ambos `functions statemen
   }
   console.log(saludo())   //undefined <--- Esto es xq esta definido, pero no retorna nada la función.  
   ```
-  * * _**function statement**: Es cuando una funcion es ejecutada por el intérprete y no retorna nada, pero sí hace algo: reserva un espacio en memo
+  * _**function expression**: Es cuando creamos un objeto de tipo función (anónima) y además la estamos guardando en una variable llamada `saludo`. Justamente, la variable saludo va a apuntar a una dirección de memoria que contiene el objeto de tipo función que creamos anónimamente en una expresión (esa expresión retornó el objeto que se guardó en la variable.). Cuando declaramos una función anónima y la pasamos como argumento, también estamos haciendo una function expression_
+  _Veamos un ejemplo:_ 
+
   ```javascript
-  a = 3   // es una expresion que nos devuelve el numero 3
-  1 + 2   // tambien es una expresion que nos retorna el 3
-  b = Math.pow(2,3) + 4
-  console.log(a)   // 3
-  console.log(1 + 2)   // 3
-  console.log(b)   // 12
+  var saludo = function() {console.log('Hola!')}
+  console.log(saludo)
+
+  console.log(function () {
+  hola
+  })
   ```
-jlhkghlkjlkadszfxcghjkj,vnbncvcdereytfjgnbvfgfhnb
+
+#### **Pasando variables por referencia o por valor**
+
+_Hay dos formas de pasar variables en cualquier lenguaje de programación, en algunos podemos elegir la forma nosotros pero en JavaScript el intérprete elige la forma él mismo. Las dos formas son, por valor o por referencia._
+
+_Observemos la siguiente imagen_
+
+![ValueReference](http://i.stack.imgur.com/QdcG2.gif)
+
+  * _**Por REFERENCIA**: Es cuando pasamos una referencia. Lo que significa que cuando hagamos un cambio en esa referencia se va a ver reflejado en el objeto original
+
+  * _**Por VALOR**: 
 
 
 
