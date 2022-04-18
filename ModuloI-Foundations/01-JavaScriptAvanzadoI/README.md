@@ -383,9 +383,134 @@ _Observemos la siguiente imagen_
 
 ![ValueReference](http://i.stack.imgur.com/QdcG2.gif)
 
-  * _**Por REFERENCIA**: Es cuando pasamos una referencia. Lo que significa que cuando hagamos un cambio en esa referencia se va a ver reflejado en el objeto original
+  * _**Por REFERENCIA**: Es cuando pasamos una referencia. Lo que significa que cuando hagamos un cambio en esa referencia se va a ver reflejado en el objeto original. En la imagen, pasamos una referencia a la taza y en nuestra función la llenamos de café. Al ser una referencia al objeto cup, vemos que se ve reflejado el cambio en ella (se llena de café) ya que son el mismo objeto!._
 
-  * _**Por VALOR**: 
+  * _**Por VALOR**: Cuando pasamos algo por valor, estamos pasando el elemento por sí mismo, o una copia de él. En el ejemplo de la tasa, pasamos la tasa por valor, es decir que pasamos una tasa nueva, que existe por si misma (no es una referencia, si no la tasa misma). Por eso, cuando llenamos esa tasa de café, la otra se mantiene igual, ya que son dos objetos distintos._
+
+_En JavaScript, según qué cosa estemos pasando, el intérprete decide si es por valor o referencia. Básicamente, si pasamos un valor primitivo (números, strings, etc.. ) estos se pasan por valor, pero si pasamos un objeto (cualquier objeto, incluso funciones) este se pasa por referencia._ 
+
+_Veamos los siguientes ejemplos:_
+
+```javascript
+var a = 1, b = 2
+a = b
+b = 1
+console.log(a)   // 2 <--- Como se pasó el valor de `b` y no la referencia, cuando cambiamos b no impacta en el valor de `a`. 
+```
+```javascript
+var a, b = { nombre : 'hola'}
+a = b
+b.nombre = 'Chao'
+console.log(a.nombre)   // 'Chao' <--- Cuando se hizo la asignación se pasó la referencia de b, por lo tanto cuando cambiamos la propiedad nombre de b, se ve reflejado en a porque ambas variables "apuntan" al mismo objeto en memoria
+```
+
+<br>
+
+---
+## _**VARIABLE `this`**_
+---
+<br>
+
+_Habiamos dicho que cuando se crea el `execution context`, el interprete reserva el espacio de memoria para las variables (hoisting), guarda la referencia al `outer enviroment` y además setea la variable `this`. Esta variable va a apuntar a distintos objetos dependiendo en cómo fue invocada la función. Esto puede causar algunas confusiones. Veamos algunos escenarios:_
+
+### **_CONTEXTO GLOBAL_**
+
+_Este es el caso cuando ejecutamos código en el `contexto global` (afuera de cualquier función). En este caso `this` hace referencia al objeto `global`, en el caso del browser hace referencia a `window`.
+
+```javascript
+// En el browser esto es verdad:
+console.log(this === window)   // true
+this.a = 37
+console.log(window.a)   // 37
+```
+### **_CONTEXTO DE UNA FUNCIÓN_**
+
+_Cuando estamos dentro de una función, el valor de `this` va a depender de cómo sea invocada la función._
+
+#### **_Llamadas simples_**
+
+_En este caso, el interprete le da a `this` una referencia al objeto `global`._
+
+```javascript
+function f1() {
+  return this
+}
+f1() === window   //windows is not defined
+```
+> _Si usamos el modo `strict` de Javascript, el ejemplo de arriba va a devolver `undefined`, ya que no le deja al interprete asumir que this es el objeto `global`.
+
+```javascript
+'use strict'
+
+function f1() {
+  return this
+}
+f1() === window; //windows is not defined
+```
+
+<br>
+
+---
+## _**IMMEDIATELY INVOKED FUNCTIONS EXPRESSIONS**_ (_Expresiones de funciones invocadas inmediatamente_)
+---
+<br>
+
+_Vamos a ver un concepto ampliamente usado por los desarrolladores de JavaScript, y ver cómo nos puede servir. Ya vimos la diferencia entre una function statement y una function expression._ _Tambien sabemos que las funciones son objetos, y que podemos invocarlas usando el operador ()._ _Por lo tanto podemos hacer los siguiente:_
+
+```javascript
+var hola = function(){
+ return 'hola'
+}()   // ACA ESTOY INVOCANDO LA FUNCIÓN!.
+```
+_Lo que hicimos fue invocar la función inmediatamente despues de escribir la expresión. De ahi viene la expresión `"Expresiones de funciones invocadas inmediatamente"`._
+
+```javascript
+var hola = function( nombre ){
+ return 'Hola ' + nombre;
+}('Toni')
+```
+
+_Podemos usar todo lo que sabemos de funciones con las IIFE, en el ejemplo de arriba la función recibe un parámetro, que se lo pasamos cuando la invocamos inmediatamente. Luego de ejecutar eso, la variable hola va a contener la string Hola Toni._
+
+_También podemos declarar funciones anónimas en una function expression y ejecutarla sin tener que guardarla en ningún lugar, la ejecutamos como si fuera cualquier expresión, para eso voy a tener que envolver la declaración de la función con () (de hecho lo hacemos para engañar al syntax parser):_
+
+```javascript
+(function(nombre){
+ console.log(nombre);
+}('Toni'))   // Expresiones de funciones invocadas inmediatamente
+```
+
+_Este es el clásico ejemplo de una IIFE, este patrón lo vas a ver en casi todos las librerías y frameworks que hay hoy. Ya que nos permite ejecutar código sobre la marcha. Además, cuando llega a esa linea, y ejecuta esa función, el interprete invoca la función y por lo tanto crea un nuevo contexto de ejecución para ese código. Por lo tanto, las variables que declare adentro, van a estar viviendo en ese nuevo contexto y no en el contexto global. Esto último es lo más importante de este patrón, ya que nos crea un nuevo namespace sólo para nosotros y estamos seguros que no vamos a colisionar con variables que fueron declaradas en el contexto global por otras personas (Justamente por esto, los frameworks y librerías utilizan fuertemente este patrón)._
+
+_A veces es necesario acceder al objeto global dentro de nuestra función. Lo que podemos hacer, es pasar una referencia al objeto global cuando invocamos nuestra función:_
+
+```javascript
+(function(global, nombre){
+ console.log(nombre);
+}(window, 'Toni'))   // Expresiones de funciones invocadas inmediatamente
+```
+
+> _De esta forma, tenemos acceso al objeto global y estamos protegidos de cualquier accidente. **Nuestro código está a salvo!**_
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,12 @@
-var saludo = function() {console.log('Hola!')}
-console.log(saludo)
+var o = { prop: 37 };
 
-console.log(function () {
-  hola
-})
+// declaramos la función
+function loguea() {
+  return this.prop;
+}
+
+//agregamos la función como método del objeto `o`
+o.f = loguea;
+
+console.log(o.f()); // logs 37
+// el resultado es le mismo!
