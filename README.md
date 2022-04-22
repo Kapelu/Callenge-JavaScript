@@ -30,6 +30,8 @@ sayHi();
 <p>
 
 #### Respuesta correcta: D
+</p>
+<p>
 
 Dentro de la función, primero declaramos la variable `name` con la palabra reservada ` var`. Esto significa que la variable se _eleva_ (el espacio de memoria se configura durante la fase de creación. Hace referencia al termino [hoisting](https://developer.mozilla.org/es/docs/Glossary/Hoisting)) con el valor predeterminado de `indefinido`, hasta que realmente llegamos a la línea donde definimos la variable. Aún no hemos definido la variable en la línea donde intentamos registrar la variable `name`, por lo que aún mantiene el valor de` undefined`.
 
