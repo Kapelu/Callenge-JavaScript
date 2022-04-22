@@ -1,5 +1,5 @@
 
-# Lista de preguntas (avanzadas) de JavaScript 
+# Challenge JavaScript 
 
  _Publicaré preguntas de opción múltiple en JavaScript. Desde lo básico a lo avanzado: comprueba si realmente conoces **Javascript**, actualiza tus conocimientos_ 💪 🚀
  
