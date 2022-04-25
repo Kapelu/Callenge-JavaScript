@@ -105,3 +105,27 @@ No hay valor `radius` en ese objeto, que devuelve` undefined`.
 </p>
 </details>
 
+---
+
+###### 4. ¿Qué devuelve la siguiente función?
+
+```javascript
++true;
+!"Lydia";
+```
+
+- A: `1` y `false`
+- B: `false` y `NaN`
+- C: `false` y `false`
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+#### Respuesta correcta: A
+
+En el primera caso se intenta convertir un operando en un número. `true` es` 1`, y `false` es` 0`.
+
+En el segundo caso la cadena `'Lydia'` es un valor verdadero. Lo que realmente estamos preguntando es "¿es este verdadero valor falso?". Esto devuelve `false`.
+
+</p>
+</details>
