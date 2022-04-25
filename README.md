@@ -27,7 +27,7 @@ sayHi();
 - D: `undefined` y `ReferenceError`
 
 <details><summary><b>Solución</b></summary>
-<p>
+
 
 #### Respuesta correcta: D
 </p>
