@@ -123,7 +123,7 @@ No hay valor `radius` en ese objeto, que devuelve` undefined`.
 
 #### Respuesta correcta: A
 
-En el primer caso se intenta convertir un operando en un número. `true` es` 1`, y `false` es` 0`.
+En el primer caso se intenta convertir un operando en un número. `true` es` 1`, y `false` es` 0`. 
 
 En el segundo caso la cadena `'Lydia'` es un valor verdadero. Lo que realmente estamos preguntando es "¿es este verdadero valor falso?". Esto devuelve `false`.
 
