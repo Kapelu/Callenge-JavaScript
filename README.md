@@ -149,7 +149,7 @@ console.log(result);
 - D: `undefined`
 
 <details><summary><b>Solución</b></summary>
-<p>
+
 
 #### Respuesta correcta: B
 
@@ -157,5 +157,5 @@ console.log(result);
 
 El método `push` modifica el array original. Si quisieras devolver el _array_ de la función en lugar de la _longitud del array_ deberías haber devuelto `list` después de introducir `item` en él.
 
-</p>
+
 </details>
