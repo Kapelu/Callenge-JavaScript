@@ -150,8 +150,7 @@ console.log(result);
 
 <details><summary><b>Solución</b></summary>
 
-
-#### Respuesta correcta: B
+ Respuesta correcta: B
 
 ¡El método `.push()` devuelve la _longitud_ del nuevo array! Al principio, el array contenía un elemento (el string `"banana"`) y tenía una longitud de `1`. Después de añadir el string `"apple"` al array, el array contiene dos elementos, y tiene una longitud de `2`. Esto es lo que devuelve la función `addToList`.
 
