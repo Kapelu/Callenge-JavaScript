@@ -5,7 +5,7 @@
  
 _Actualizaré este repo cada 48Hs con nuevas preguntas. Las respuestas se encuentran en las secciones contraídas debajo de las preguntas, simplemente haz clic en ellas para expandirlas. Buena suerte ❤️_
 
-[![FeedBack](https://img.shields.io/badge/Feedback-414141?style=for-the-badge&logo=ApacheRocketMQ&logoColor=informational&link=https://form.jotform.com/221181252861652)](https://form.jotform.com/221181252861652)
+![GitHub watchers](https://img.shields.io/github/watchers/kapelu/Challenge-JavaScript) [![FeedBack](https://img.shields.io/badge/Feedback-414141?style=flat&logo=ApacheRocketMQ&logoColor=informational&link=https://form.jotform.com/221181252861652)](https://form.jotform.com/221181252861652)
 
 ---
 
