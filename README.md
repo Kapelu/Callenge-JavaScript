@@ -129,3 +129,33 @@ En el segundo caso la cadena `'Lydia'` es un valor verdadero. Lo que realmente e
 
 </p>
 </details>
+
+---
+
+###### 5. ¿Cuál es el resultado?
+
+```javascript
+function addToList(item, list) {
+  return list.push(item);
+}
+
+const result = addToList("apple", ["banana"]);
+console.log(result);
+```
+
+- A: `['apple', 'banana']`
+- B: `2`
+- C: `true`
+- D: `undefined`
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+#### Respuesta correcta: B
+
+¡El método `.push()` devuelve la _longitud_ del nuevo array! Al principio, el array contenía un elemento (el string `"banana"`) y tenía una longitud de `1`. Después de añadir el string `"apple"` al array, el array contiene dos elementos, y tiene una longitud de `2`. Esto es lo que devuelve la función `addToList`.
+
+El método `push` modifica el array original. Si quisieras devolver el _array_ de la función en lugar de la _longitud del array_ deberías haber devuelto `list` después de introducir `item` en él.
+
+</p>
+</details>
