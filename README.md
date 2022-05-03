@@ -5,7 +5,7 @@
  
 _Actualizaré este repo cada 48Hs con nuevas preguntas. Las respuestas se encuentran en las secciones contraídas debajo de las preguntas, simplemente haz clic en ellas para expandirlas. Buena suerte ❤️_
 
-![GitHub watchers](https://img.shields.io/github/watchers/kapelu/Challenge-JavaScript) [![FeedBack](https://img.shields.io/badge/Feedback-414141?style=flat&logo=ApacheRocketMQ&logoColor=informational&link=https://form.jotform.com/221181252861652)](https://form.jotform.com/221181252861652)
+[![FeedBack](https://img.shields.io/badge/Feedback-414141?style=flat&logo=ApacheRocketMQ&logoColor=informational&link=https://form.jotform.com/221181252861652)](https://form.jotform.com/221181252861652)
 
 ---
 
@@ -144,4 +144,30 @@ console.log(result);
 El método `push` modifica el array original. Si quisieras devolver el _array_ de la función en lugar de la _longitud del array_ deberías haber devuelto `list` después de introducir `item` en él.
 </p>
 
+</details>
+
+---
+
+###### 9. ¿Qué devuelve la siguiente función?
+
+```javascript
+let greeting;
+greetign = {}; // Typo!
+console.log(greetign);
+```
+
+- A: `{}`
+- B: `ReferenceError: greetign is not defined`
+- C: `undefined`
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+#### Respuesta correcta: A
+
+Lo que hace JS aquí es registrar el objeto debido a que acabamos de crear un objeto vacío en el objeto global. Cuando escribimos erróneamente `greeting` como `greetign`, el intérprete de JS ve esto como `global.greetign = {}` (o `window.greetign = {}` en un navegador).
+
+Para evitar esto, podemos usar el ["uso estricto"](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Modo_estricto). Esto asegura que se haya declarado una variable antes de establecerla igual a cualquier cosa.
+
+</p>
 </details>
