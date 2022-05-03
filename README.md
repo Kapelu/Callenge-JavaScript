@@ -148,7 +148,7 @@ El método `push` modifica el array original. Si quisieras devolver el _array_ d
 
 ---
 
-###### 9. ¿Qué devuelve la siguiente función?
+###### 6. ¿Qué devuelve la siguiente función?
 
 ```javascript
 let greeting;
