@@ -161,9 +161,8 @@ console.log(greetign);
 - C: `undefined`
 
 <details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A</p>
 <p>
-
-#### Respuesta correcta: A
 
 Lo que hace JS aquí es registrar el objeto debido a que acabamos de crear un objeto vacío en el objeto global. Cuando escribimos erróneamente `greeting` como `greetign`, el intérprete de JS ve esto como `global.greetign = {}` (o `window.greetign = {}` en un navegador).
 
