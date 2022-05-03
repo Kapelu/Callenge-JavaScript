@@ -9,7 +9,7 @@ _Actualizaré este repo cada 48Hs con nuevas preguntas. Las respuestas se encuen
 
 ---
 
-###### 1. ¿Qué devuelve la siguiente función?
+#### 1. ¿Qué devuelve la siguiente función?
 
 ```javascript
 function sayHi() {
@@ -29,14 +29,14 @@ sayHi();
 
 <details><summary><b>Solución</b></summary>
 <p>Respuesta correcta: D</p>
-<>
-Dentro de la funci&oacute;n, primero declaramos la variable&nbsp;<strong>`name`</strong>&nbsp;con la palabra reservada&nbsp;<strong>`var`</strong>. Esto significa que la variable se _<em>eleva</em>_ (el espacio de memoria se configura durante la fase de creaci&oacute;n. Hace referencia al termino; <a href="https://developer.mozilla.org/es/docs/Glossary/Hoisting" target="_blank"><strong>"Hoisting"</strong></a>;con el valor predeterminado de&nbsp;<strong>`indefinido`</strong>, hasta que realmente llegamos a la l&iacute;nea donde definimos la variable. A&uacute;n no hemos definido la variable en la l&iacute;nea donde intentamos registrar la variable `name`, por lo que a&uacute;n mantiene el valor de` undefined`.<br />Las variables con la palabra clave&nbsp;<strong>`let`</strong>&nbsp;(y&nbsp;<strong>`const`</strong>) se _e<strong>levan</strong>_, pero a diferencia de&nbsp;<strong>`var`</strong>, no se inicializa&nbsp;. No son accesibles antes de la l&iacute;nea que los declaramos (inicializamos). Esto se llama la&nbsp;<a href="https://wesbos.com/temporal-dead-zone/" target="_blank">"zona muerta temporal"</a>. Cuando intentamos acceder a las variables antes de que se declaren, JavaScript lanza un&nbsp;<strong>`ReferenceError`</strong>
+<p>
+Dentro de la función, primero declaramos la variable `name` con la palabra reservada `var`. Esto significa que la variable se _eleva_ (el espacio de memoria se configura durante la fase de creación. Hace referencia al termino "Hoisting" con el valor predeterminado de <strong>`indefinido`</strong>, hasta que realmente llegamos a la línea donde definimos la variable. Aún no hemos definido la variable en la línea donde intentamos registrar la variable `name`, por lo que aún mantiene el valor de `undefined`.<br />Las variables con la palabra clave <strong>`let`</strong> (y <strong>`const`</strong>) se _<strong>elevan</strong>_, pero a diferencia de <strong>`var`</strong>, no se inicializa. No son accesibles antes de la línea que los declaramos (inicializamos). Esto se llama la <a href="https://wesbos.com/temporal-dead-zone/" target="_blank"><strong>"zona muerta temporal"</strong></a>. Cuando intentamos acceder a las variables antes de que se declaren, JavaScript lanza un <strong>`ReferenceError`</strong>
 </p>
 </details>
 
 ---
 
-###### 2. ¿Qué devuelve la siguiente función?
+#### 2. ¿Qué devuelve la siguiente función?
 
 ```javascript
 for (var i = 0; i < 3; i++) {
@@ -55,9 +55,9 @@ for (let i = 0; i < 3; i++) {
 <details><summary><b>Solución</b></summary>
 <p>Respuesta correcta: C</p>
 <p>
-Debido a la cola de eventos en JavaScript, la función `setTimeout` se llama una vez el ciclo se ha ejecutado. Dado que la variable `i` en el primer bucle se declaró utilizando la palabra reservada ` var`, este valor es global. Durante el bucle, incrementamos el valor de `i` en` 1` cada vez, utilizando el operador unario `++`. Cuando se invocó la función `setTimeout`,` i` era igual a `3` en el primer ejemplo.
-<br>
-En el segundo bucle, la variable `i` se declaró utilizando la palabra reservada` let`: las variables declaradas con la palabra reservada `let` (y` const`) tienen un ámbito de bloque (un bloque es lo que se encuentra entre `{}`). Durante cada iteración, `i` tendrá un nuevo valor, y cada valor se encuentra dentro del bucle.
+Debido a la cola de eventos en JavaScript, la función <strong>`setTimeout`</strong> se llama una vez el ciclo se ha ejecutado. Dado que la variable <strong>`i`</strong> en el primer bucle se declará utilizando la palabra reservada <strong>`var`</strong>, este valor es global. Durante el bucle, incrementamos el valor de <strong>`i`</strong> en <strong>`1`</strong> cada vez, utilizando el operador unario <strong>`++`</strong>. Cuando se invoc&oacute; la funci&oacute;n <strong>`setTimeout`</strong>,<strong>` i`</strong> era igual a <strong>`3`</strong> en el primer ejemplo.
+
+En el segundo bucle, la variable <strong>`i`</strong> se declar&oacute; utilizando la palabra reservada <strong>`let`</strong>: las variables declaradas con la palabra reservada <strong>`let`</strong> (y <strong>`const`</strong>) tienen un &aacute;mbito de bloque (un bloque es lo que se encuentra entre <strong>`{}`</strong>). Durante cada iteraci&oacute;n, <strong>`i`</strong> tendr&aacute; un nuevo valor, y cada valor se encuentra dentro del bucle.
 </p>
 </details>
 
