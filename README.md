@@ -30,9 +30,9 @@ sayHi();
 <details><summary><b>Solución</b></summary>
 <p>Respuesta correcta: D</p>
 <p>
-Dentro de la función, primero declaramos la variable `name` con la palabra reservada ` var`. Esto significa que la variable se _eleva_ (el espacio de memoria se configura durante la fase de creación. Hace referencia al termino [hoisting](https://developer.mozilla.org/es/docs/Glossary/Hoisting)) con el valor predeterminado de `indefinido`, hasta que realmente llegamos a la línea donde definimos la variable. Aún no hemos definido la variable en la línea donde intentamos registrar la variable `name`, por lo que aún mantiene el valor de` undefined`.
-<br>
-Las variables con la palabra clave `let` (y` const`) se _elevan_, pero a diferencia de `var`, no se inicializa <i> </i>. No son accesibles antes de la línea que los declaramos (inicializamos). Esto se llama la ["zona muerta temporal"](https://wesbos.com/temporal-dead-zone/). Cuando intentamos acceder a las variables antes de que se declaren, JavaScript lanza un `ReferenceError`
+<p><details open="">
+<p dir="auto">Dentro de la funci&oacute;n, primero declaramos la variable <strong>`name`</strong> con la palabra reservada <strong>`var`</strong>. Esto significa que la variable se _<em>eleva</em>_ (el espacio de memoria se configura durante la fase de creaci&oacute;n. Hace referencia al termino <strong>"hoisting"</strong>(<a href="https://developer.mozilla.org/es/docs/Glossary/Hoisting" rel="nofollow">https://developer.mozilla.org/es/docs/Glossary/Hoisting</a>)) con el valor predeterminado de <strong>`indefinido`</strong>, hasta que realmente llegamos a la l&iacute;nea donde definimos la variable. A&uacute;n no hemos definido la variable en la l&iacute;nea donde intentamos registrar la variable `name`, por lo que a&uacute;n mantiene el valor de` undefined`.<br />Las variables con la palabra clave <strong>`let`</strong> (y <strong>`const`</strong>) se _e<strong>levan</strong>_, pero a diferencia de <strong>`var`</strong>, no se inicializa&nbsp;. No son accesibles antes de la l&iacute;nea que los declaramos (inicializamos). Esto se llama la <strong>"zona muerta temporal"</strong>(<a href="https://wesbos.com/temporal-dead-zone/" rel="nofollow">https://wesbos.com/temporal-dead-zone/</a>). Cuando intentamos acceder a las variables antes de que se declaren, JavaScript lanza un <strong>`ReferenceError`</strong></p>
+</details></p>
 </p>
 </details>
 
