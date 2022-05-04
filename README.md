@@ -3,9 +3,9 @@
 
  _Publicaré preguntas de opción múltiple en JavaScript. Desde lo básico a lo avanzado: comprueba si realmente conoces **Javascript**, actualiza tus conocimientos_ 💪 🚀
  
-_Actualizaré este repo cada 48Hs con nuevas preguntas. Las respuestas se encuentran en las secciones contraídas debajo de las preguntas, simplemente haz clic en ellas para expandirlas. Buena suerte ❤️_
+_Las respuestas se encuentran en las secciones contraídas debajo de las preguntas, simplemente haz clic en ellas para expandirlas. Buena suerte ❤️_
 
-[![FeedBack](https://img.shields.io/badge/Feedback-414141?style=flat&logo=ApacheRocketMQ&logoColor=informational&link=https://form.jotform.com/221181252861652)](https://form.jotform.com/221181252861652)
+No olvides dejar tu 👉 [![FeedBack](https://img.shields.io/badge/Feedback-414141?style=flat&logo=ApacheRocketMQ&logoColor=informational&link=https://form.jotform.com/221181252861652)](https://form.jotform.com/221181252861652)   👍 💪 GRACIAS!!! 
 
 ---
 
