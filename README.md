@@ -1,6 +1,3 @@
-
-# Challenge JavaScript 
-
 <p style='text-align: justify; color: #144b8c'><i>
  Publicaré preguntas de opción múltiple en JavaScript. Desde lo básico a lo avanzado: comprueba si realmente conoces **Javascript**, actualiza tus conocimientos 💪 🚀</i></p> 
 
