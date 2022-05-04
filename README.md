@@ -8,7 +8,7 @@
 Las respuestas se encuentran en las secciones contraídas debajo de las preguntas, simplemente haz clic en ellas para expandirlas. EXITOS !!! 💛</i></p> 
 
 <p style='text-align: justify; color: #144b8c'><i>
-No olvides dejar tu 👉 <button style= 'background-color:#FFEB3B; text-shadow: 1px 2px #fff'href="https://form.jotform.com/221181252861652"><b><i>Feedback</i></b></button> 👍 💪 GRACIAS!!!
+No olvides dejar tu 👉 <button style= 'background-color:#FFEB3B; text-shadow: 1px 2px #FFEB3B' href="https://form.jotform.com/221181252861652"><b><i>Feedback</i></b></button> 👍 💪 GRACIAS!!!
 </i></p> 
 
 ---
