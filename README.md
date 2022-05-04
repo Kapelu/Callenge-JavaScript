@@ -30,7 +30,10 @@ sayHi();
 <details><summary><b>Solución</b></summary>
 <p>Respuesta correcta: D</p>
 <p>
-Dentro de la función, primero declaramos la variable `name` con la palabra reservada `var`. Esto significa que la variable se _eleva_ (el espacio de memoria se configura durante la fase de creación. Hace referencia al termino "Hoisting" con el valor predeterminado de <strong>`indefinido`</strong>, hasta que realmente llegamos a la línea donde definimos la variable. Aún no hemos definido la variable en la línea donde intentamos registrar la variable `name`, por lo que aún mantiene el valor de `undefined`.<br />Las variables con la palabra clave <strong>`let`</strong> (y <strong>`const`</strong>) se _<strong>elevan</strong>_, pero a diferencia de <strong>`var`</strong>, no se inicializa. No son accesibles antes de la línea que los declaramos (inicializamos). Esto se llama la <a href="https://wesbos.com/temporal-dead-zone/" target="_blank"><strong>"zona muerta temporal"</strong></a>. Cuando intentamos acceder a las variables antes de que se declaren, JavaScript lanza un <strong>`ReferenceError`</strong>
+
+Dentro de la función, primero declaramos la variable `name` con la palabra reservada `var`. Esto significa que la variable se _`eleva`_ (el espacio de memoria se configura durante la fase de creación. Hace referencia al termino <a href="https://developer.mozilla.org/es/docs/Glossary/Hoisting" target="_blank"><strong>"Hoisting"</strong></a> con el valor predeterminado de `indefinido`, hasta que realmente llegamos a la línea donde definimos la variable. Aún no hemos definido la variable en la línea donde intentamos registrar la variable `name`, por lo que aún mantiene el valor de `undefined`.
+
+Las variables con la palabra clave `let` (y `const`) se _`elevan`_, pero a diferencia de `var`, no se inicializa. No son accesibles antes de la línea que los declaramos (inicializamos). Esto se llama la <a href="https://wesbos.com/temporal-dead-zone/" target="_blank"><strong>"zona muerta temporal"</strong></a>. Cuando intentamos acceder a las variables antes de que se declaren, JavaScript lanza un `ReferenceError`
 </p>
 </details>
 
@@ -55,15 +58,16 @@ for (let i = 0; i < 3; i++) {
 <details><summary><b>Solución</b></summary>
 <p>Respuesta correcta: C</p>
 <p>
-Debido a la cola de eventos en JavaScript, la función <strong>`setTimeout`</strong> se llama una vez el ciclo se ha ejecutado. Dado que la variable <strong>`i`</strong> en el primer bucle se declará utilizando la palabra reservada <strong>`var`</strong>, este valor es global. Durante el bucle, incrementamos el valor de <strong>`i`</strong> en <strong>`1`</strong> cada vez, utilizando el operador unario <strong>`++`</strong>. Cuando se invoc&oacute; la funci&oacute;n <strong>`setTimeout`</strong>,<strong>` i`</strong> era igual a <strong>`3`</strong> en el primer ejemplo.
 
-En el segundo bucle, la variable <strong>`i`</strong> se declar&oacute; utilizando la palabra reservada <strong>`let`</strong>: las variables declaradas con la palabra reservada <strong>`let`</strong> (y <strong>`const`</strong>) tienen un &aacute;mbito de bloque (un bloque es lo que se encuentra entre <strong>`{}`</strong>). Durante cada iteraci&oacute;n, <strong>`i`</strong> tendr&aacute; un nuevo valor, y cada valor se encuentra dentro del bucle.
+Debido a la cola de eventos en JavaScript, la función `setTimeout` se llama una vez el ciclo se ha ejecutado. Dado que la variable `i` en el primer bucle se declará utilizando la palabra reservada `var`, este valor es global. Durante el bucle, incrementamos el valor de `i` en `1` cada vez, utilizando el operador unario `++`. Cuando se invocá la función `setTimeout` `i` era igual a `3` en el primer ejemplo.
+
+En el segundo bucle, la variable `i` se declará utilizando la palabra reservada `let`, las variables declaradas con la palabra reservada `let` (y `const`) tienen un ámbito de bloque (un bloque es lo que se encuentra entre `{}`). Durante cada iteración, `i` tendrá un nuevo valor, y cada valor se encuentra dentro del bucle.
 </p>
 </details>
 
 ---
 
-###### 3. ¿Qué devuelve la siguiente función?
+#### 3. ¿Qué devuelve la siguiente función?
 
 ```javascript
 const shape = {
@@ -86,17 +90,18 @@ shape.perimeter();
 <details><summary><b>Solución</b></summary>
 <p>Respuesta correcta: B</p>
 <p>
+
 Hay que tener en cuenta aqui que el valor de `diámetro` es una función regular o _normal_, mientras que el valor de `perímetro` es una función de flecha.
-<br>
+
 Con las funciones de flecha, la palabra clave `this` se refiere a su ámbito actual, a diferencia de las funciones regulares. Esto significa que cuando llamamos "perímetro", no se refiere al objeto en sí mismo, sino a su ámbito circundante (ventana por ejemplo).
-<br>
+
 No hay valor `radius` en ese objeto, que devuelve` undefined`.
 </p>
 </details>
 
 ---
 
-###### 4. ¿Qué devuelve la siguiente función?
+#### 4. ¿Qué devuelve la siguiente función?
 
 ```javascript
 +true;
@@ -110,15 +115,16 @@ No hay valor `radius` en ese objeto, que devuelve` undefined`.
 <details><summary><b>Solución</b></summary>
 <p>Respuesta correcta: A</p>
 <p>
+
 En el primer caso se intenta convertir un operando en un número. `true` es` 1`, y `false` es` 0`. 
-<br>
+
 En el segundo caso la cadena `'Lydia'` es un valor verdadero. Lo que realmente estamos preguntando es "¿es este verdadero valor falso?". Esto devuelve `false`.
 </p>
 </details>
 
 ---
 
-###### 5. ¿Cuál es el resultado?
+#### 5. ¿Cuál es el resultado?
 
 ```javascript
 function addToList(item, list) {
@@ -137,16 +143,17 @@ console.log(result);
 <details><summary><b>Solución</b></summary>
 <p>Respuesta correcta: B</p>
 <p>
+
 ¡El método `.push()` devuelve la _longitud_ del nuevo array! Al principio, el array contenía un elemento (el string `"banana"`) y tenía una longitud de `1`. Después de añadir el string `"apple"` al array, el array contiene dos elementos, y tiene una longitud de `2`. Esto es lo que devuelve la función `addToList`.
-<br>
-El método `push` modifica el array original. Si quisieras devolver el _array_ de la función en lugar de la _longitud del array_ deberías haber devuelto `list` después de introducir `item` en él.
+
+El método `push` modifica el array original. Si quisieras devolver el _array_ de la función en lugar de la _`longitud del array`_ deberías haber devuelto `list` después de introducir `item` en él.
 </p>
 
 </details>
 
 ---
 
-###### 6. ¿Qué devuelve la siguiente función?
+#### 6. ¿Qué devuelve la siguiente función?
 
 ```javascript
 let greeting;
@@ -164,7 +171,7 @@ console.log(greetign);
 
 Lo que hace JS aquí es registrar el objeto debido a que acabamos de crear un objeto vacío en el objeto global. Cuando escribimos erróneamente `greeting` como `greetign`, el intérprete de JS ve esto como `global.greetign = {}` (o `window.greetign = {}` en un navegador).
 
-Para evitar esto, podemos usar el ["uso estricto"](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Modo_estricto). Esto asegura que se haya declarado una variable antes de establecerla igual a cualquier cosa.
+Para evitar esto, podemos usar el <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Modo_estricto" target="_blank"><strong>"uso estricto"</strong></a>. Esto asegura que se haya declarado una variable antes de establecerla igual a cualquier cosa.
 
 </p>
 </details>
