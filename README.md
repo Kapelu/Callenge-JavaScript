@@ -175,3 +175,64 @@ Para evitar esto, podemos usar el <a href="https://developer.mozilla.org/es/docs
 
 </p>
 </details>
+
+#### 7. ¿Qué devuelve la siguiente función?
+
+```javascript
+function sum(a, b) {
+  return a + b;
+}
+
+sum(1, "2");
+```
+
+- A: `NaN`
+- B: `TypeError`
+- C: `"12"`
+- D: `3`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C</p>
+<p>
+
+JavaScript es un **lenguaje dinámicamente tipado** o de tipado débil, esto significa que no es necesario declarar el tipo de variable antes de usarla pues será determinado automáticamente cuando el programa comience a ser procesado. Los valores se pueden convertir automáticamente en otro tipo sin que se sepa, esto se llama denomina _implicit type coercion_ (Más info <a href="https://medium.com/@ManuCastrillonM/entendiendo-la-coerci%C3%B3n-en-javascript-bc202d22d23f" target="_blank"><strong>Aqui</strong></a>). **La coerción es la conversión de un tipo a otro.**
+
+En este ejemplo, JavaScript convierte el número `1` en una cadena, para que la función tenga sentido y devuelva un valor. Durante la suma de un tipo numérico (`1`) y un tipo de cadena (`'2'`), el número se trata como una cadena. Podemos concatenar cadenas como `"Hello" + "World"``, así que lo que está pasando aquí es `"1" + "2"` que devuelve `"12"`
+
+</p>
+</details>
+
+---
+
+###### 16. ¿Qué devuelve la siguiente función?
+
+```javascript
+let number = 0;
+console.log(number++);
+console.log(++number);
+console.log(number);
+```
+
+- A: `1` `1` `2`
+- B: `1` `2` `2`
+- C: `0` `2` `2`
+- D: `0` `1` `2`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C</p>
+<p>
+
+El operador **postfix** unario `++`:
+
+1. Devuelve el valor (esto devuelve `0`)
+2. Incrementa el valor (el número es ahora `1`)
+
+El operador unario **prefix** `++`:
+
+1. Incrementa el valor (el número es ahora `2`)
+2. Devuelve el valor (esto devuelve `2`)
+
+Por lo tanto, devuelve `0 2 2 2`.
+
+</p>
+</details>
