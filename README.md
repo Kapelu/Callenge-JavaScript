@@ -1,5 +1,5 @@
 <p style='text-align: justify; color: #144b8c'><i>
- Publicaré preguntas de opción múltiple en JavaScript. Desde lo básico a lo avanzado: comprueba si realmente conoces <span style='background-color:#FFEB3B; color: #212121;'><b><i>⠀JavaScript⠀</i></b></span>, actualiza tus conocimientos 💪 🚀</i></p> 
+ Comprueba si realmente conoces <span style='background-color:#FFEB3B; color: #212121;'><b><i>⠀JavaScript⠀</i></b></span> ó actualiza tus conocimientos 💪 🚀</i></p> 
 
 <p style='text-align: justify; color: #144b8c'><i>
 Las respuestas se encuentran en las secciones contraídas debajo de las preguntas, simplemente haz clic en ellas para expandirlas. EXITOS !!! 💛</i></p> 
