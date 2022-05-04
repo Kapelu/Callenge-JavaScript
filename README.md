@@ -204,7 +204,7 @@ En este ejemplo, JavaScript convierte el número `1` en una cadena, para que la 
 
 ---
 
-###### 16. ¿Qué devuelve la siguiente función?
+#### 8. ¿Qué devuelve la siguiente función?
 
 ```javascript
 let number = 0;
@@ -220,7 +220,7 @@ console.log(number);
 
 <details><summary><b>Solución</b></summary>
 <p>Respuesta correcta: C</p>
-<p>
+<p></p>
 
 El operador **postfix** unario `++`:
 
