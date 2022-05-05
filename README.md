@@ -30,11 +30,11 @@ sayHi();
 
 <details><summary><b>Solución</b></summary>
 <p>Respuesta correcta: D</p>
-<p></strong>
+<p>
 
-Dentro de la función, primero declaramos la variable <strong>`name`</strong> con la palabra reservada <strong>`var`</strong>. Esto significa que la variable se _<strong>`eleva`</strong>_ (el espacio de memoria se configura durante la fase de creación. Hace referencia al termino <a href="https://developer.mozilla.org/es/docs/Glossary/Hoisting" target="_blank"><strong>"Hoisting"</strong></a> con el valor predeterminado de `indefinido`</strong>, hasta que realmente llegamos a la línea donde definimos la variable. Aún no hemos definido la variable en la línea donde intentamos registrar la variable <strong>`name`</strong>, por lo que aún mantiene el valor de <strong>`undefined`</strong>.
+Dentro de la función, primero declaramos la variable <strong>`name`</strong> con la palabra reservada <strong>`var`</strong>. Esto significa que la variable se <strong><i>`eleva`</i></strong> (el espacio de memoria se configura durante la fase de creación. Hace referencia al termino <a href="https://developer.mozilla.org/es/docs/Glossary/Hoisting" target="_blank"><strong>"Hoisting"</strong></a> con el valor predeterminado de <strong>`indefinido`</strong>, hasta que realmente llegamos a la línea donde definimos la variable. Aún no hemos definido la variable en la línea donde intentamos registrar la variable <strong>`name`</strong>, por lo que aún mantiene el valor de <strong>`Undefined`</strong>.
 
-Las variables con la palabra clave <strong>`let`</strong> (y <strong>`const`</strong>) se _<strong>`elevan`</strong>_, pero a diferencia de <strong>`var`</strong>, no se inicializa. No son accesibles antes de la línea que los declaramos (inicializamos). Esto se llama la <a href="https://wesbos.com/temporal-dead-zone/" target="_blank"><strong>"zona muerta temporal"</strong></a>. Cuando intentamos acceder a las variables antes de que se declaren, JavaScript lanza un <strong>`ReferenceError`</strong>
+Las variables con la palabra clave <strong>`let`</strong> (y <strong>`const`</strong>) se <strong><i>`elevan`</i></strong>, pero a diferencia de <strong>`var`</strong>, no se inicializa. No son accesibles antes de la línea que los declaramos (inicializamos). Esto se llama la <a href="https://wesbos.com/temporal-dead-zone/" target="_blank"><strong>"zona muerta temporal"</strong></a>. Cuando intentamos acceder a las variables antes de que se declaren, JavaScript lanza un <strong>`ReferenceError`</strong>
 </p>
 </details>
 
@@ -90,9 +90,9 @@ shape.perimeter();
 
 <details><summary><b>Solución</b></summary>
 <p>Respuesta correcta: B</p>
-<p></trong>
+<p>
 
-Hay que tener en cuenta aqui que el valor de <trong>`diámetro`</trong> es una función regular o _normal_, mientras que el valor de <trong>`perímetro`</trong> es una función de flecha.
+Hay que tener en cuenta aqui que el valor de <trong>`diámetro`</trong> es una función regular o <i>normal</i>, mientras que el valor de <trong>`perímetro`</trong> es una función de flecha.
 
 Con las funciones de flecha, la palabra clave <trong>`this`</trong> se refiere a su ámbito actual, a diferencia de las funciones regulares. Esto significa que cuando llamamos "perímetro", no se refiere al objeto en sí mismo, sino a su ámbito circundante (ventana por ejemplo).
 
@@ -145,9 +145,9 @@ console.log(result);
 <p>Respuesta correcta: B</p>
 <p>
 
-¡El método <trong>`.push()`</trong> devuelve la _longitud_ del nuevo array! Al principio, el array contenía un elemento (el string <trong>`"banana"`</trong>) y tenía una longitud de <trong>`1`</trong>. Después de añadir el string <trong>`"apple"`</trong> al array, el array contiene dos elementos, y tiene una longitud de <trong>`2`</trong>. Esto es lo que devuelve la función <trong>`addToList`</trong>.
+¡El método <strong>`.push()`</strong> devuelve la _longitud_ del nuevo array! Al principio, el array contenía un elemento (el string <strong>`"banana"`</strong>) y tenía una longitud de <strong>`1`</strong>. Después de añadir el string <strong>`"apple"`</strong> al array, el array contiene dos elementos, y tiene una longitud de <trong>`2`</trong>. Esto es lo que devuelve la función <strong>`addToList`</strong>.
 
-El método <trong>`push`</trong> modifica el array original. Si quisieras devolver el _array_ de la función en lugar de la _<trong>`longitud del array`</trong>_ deberías haber devuelto <trong>`list`</trong> después de introducir <trong>`item`</trong> en él.
+El método <strong>`push`</strong> modifica el array original. Si quisieras devolver el <i>array</i> de la función en lugar de la <strong><i>`longitud del array`</i></strong> deberías haber devuelto <strong>`list`</strong> después de introducir <strong>`item`</strong> en él.
 </p>
 
 </details>
@@ -170,12 +170,13 @@ console.log(greetign);
 <p>Respuesta correcta: A</p>
 <p>
 
-Lo que hace JS aquí es registrar el objeto debido a que acabamos de crear un objeto vacío en el objeto global. Cuando escribimos erróneamente <strong>`greeting`</trong> como <strong>`greetign`</trong>, el intérprete de JS ve esto como <strong>`global.greetign = {}`</trong> (o `window.greetign = {}`</trong> en un navegador).
+Lo que hace JS aquí es registrar el objeto debido a que acabamos de crear un objeto vacío en el objeto global. Cuando escribimos erróneamente <strong>`greeting`</strong> como <strong>`greetign`</strong>, el intérprete de JS ve esto como <strong>`global.greetign = {}`</strong> (o `window.greetign = {}`</strong> en un navegador).
 
-Para evitar esto, podemos usar el <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Modo_estricto" target="_blank"><strong>"uso estricto"</strong></a>. Esto asegura que se haya declarado una variable antes de establecerla igual a cualquier cosa.
-
+Para evitar esto, podemos usar el <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Modo_estricto" target="_blank"><strong>"use estrict"</strong></a>. Esto asegura que se haya declarado una variable antes de establecerla igual a cualquier cosa.
 </p>
 </details>
+
+---
 
 #### 7. ¿Qué devuelve la siguiente función?
 
@@ -198,8 +199,7 @@ sum(1, "2");
 
 JavaScript es un **lenguaje dinámicamente tipado** o de tipado débil, esto significa que no es necesario declarar el tipo de variable antes de usarla pues será determinado automáticamente cuando el programa comience a ser procesado. Los valores se pueden convertir automáticamente en otro tipo sin que se sepa, esto se llama denomina _implicit type coercion_ (Más info <a href="https://medium.com/@ManuCastrillonM/entendiendo-la-coerci%C3%B3n-en-javascript-bc202d22d23f" target="_blank"><strong>Aqui</strong></a>). **La coerción es la conversión de un tipo a otro.**
 
-En este ejemplo, JavaScript convierte el número <strong>`1`</strong> en una cadena, para que la función tenga sentido y devuelva un valor. Durante la suma de un tipo numérico (<strong>`1`</strong>) y un tipo de cadena (<strong>`'2'`</strong>), el número se trata como una cadena. Podemos concatenar cadenas como <strong>`"Hello" + "World"`</strong><strong>`, así que lo que está pasando aquí es `</strong> "1" + "2" <strong>` que devuelve <strong>`"12"`</strong>
-
+En este ejemplo, JavaScript convierte el número <strong>`1`</strong> en una cadena, para que la función tenga sentido y devuelva un valor. Durante la suma de un tipo numérico (<strong>`1`</strong>) y un tipo de cadena (<strong>`'2'`</strong>), el número se trata como una cadena. Podemos concatenar cadenas como <strong>`"Hello" + "World"`</strong>, así que lo que está pasando aquí es <strong>`"1" + "2"`</strong> que devuelve <strong>`"12"`</strong>
 </p>
 </details>
 
@@ -221,7 +221,7 @@ console.log(number);
 
 <details><summary><b>Solución</b></summary>
 <p>Respuesta correcta: C</p>
-<p></p>
+<p>
 
 El operador **postfix** unario <strong>`++`</strong>:
 
@@ -233,7 +233,6 @@ El operador unario **prefix** <strong>`++`</strong>:
 1. Incrementa el valor (el número es ahora <strong>`2`</strong>)
 2. Devuelve el valor (esto devuelve <strong>`2`</strong>)
 
-Por lo tanto, devuelve `0 2 2 2`.
-
+Por lo tanto, devuelve <strong>`0 2 2 2`</strong>.
 </p>
 </details>
