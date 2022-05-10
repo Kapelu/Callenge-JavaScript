@@ -237,6 +237,129 @@ Por lo tanto, devuelve <strong>`0 2 2 2`</strong>.
 </p>
 </details>
 
+---
+
+#### 9. ¿Qué ocurre cuando hacemos esto?
+
+```javascript
+function bark() {
+  console.log("Woof!");
+}
+
+bark.animal = "dog";
+```
+
+- A: No pasa nada, es totalmente correcto.
+- B: `SyntaxError`. No es posible agregar propiedades a una función de esta manera.
+- C: `undefined`
+- D: `ReferenceError`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A</p>
+<p>
+
+Esto es perfectamente posible en JavaScript, porque las funciones son objetos (Recuerda: **todo** aparte de los tipos primitivos son objetos en JS)
+
+Una función es un tipo especial de objeto. El código que escribes tú mismo no es la función real. La función es un objeto con propiedades. Esta propiedad es invocable.
+
+</p>
+</details>
+
+---
+
+#### 10. ¿Qué devuelve la siguiente función?
+
+```javascript
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+const member = new Person("Lydia", "Hallie");
+Person.getFullName = function () {
+  return `${this.firstName} ${this.lastName}`;
+}
+
+console.log(member.getFullName());
+```
+
+- A: `TypeError`
+- B: `SyntaxError`
+- C: `Lydia Hallie`
+- D: `undefined` `undefined`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A</p>
+<p>
+
+En JS no se pueden añadir propiedades a un constructor como se puede hacer con los objetos. Si se desea añadir una característica a todos los objetos a la vez, se debe utilizar [prototype](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes) en su lugar. Así que en este caso,
+
+```js
+Person.prototype.getFullName = function () {
+  return `${this.firstName} ${this.lastName}`;
+}
+```
+
+habría hecho que `member.getFullName()` funcionara. ¿Por qué es bueno? Imaginemos que añadimos este método al constructor. Quizás no todas las "personas" necesitaban este método. Esto desperdiciaría mucho espacio de memoria, ya que todavía tendrían esa propiedad, que ocupa espacio de memoria para cada caso. En cambio, si sólo lo añadimos al prototipo, sólo lo tenemos en un lugar en la memoria, ¡pero todos ellos tienen acceso a él!
+
+</p>
+</details>
+
+---
+
+#### 11. ¿Qué devuelve la siguiente función?
+
+```javascript
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+const lydia = new Person("Lydia", "Hallie");
+const sarah = Person("Sarah", "Smith");
+
+console.log(lydia);
+console.log(sarah);
+```
+
+- A: `Person {firstName: "Lydia", lastName: "Hallie"}` and `undefined`
+- B: `Person {firstName: "Lydia", lastName: "Hallie"}` and `Person {firstName: "Sarah", lastName: "Smith"}`
+- C: `Person {firstName: "Lydia", lastName: "Hallie"}` and `{}`
+- D:`Person {firstName: "Lydia", lastName: "Hallie"}` and `ReferenceError`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A</p>
+<p>
+
+Para `sarah`, no usamos la palabra reservada `new`. Cuando se usa `new`, se refiere al nuevo objeto vacío que creamos. Sin embargo, si no se agrega `new', se refiere al **objeto global**!
+
+En el ejemplo `this.firstName` equivale a `"Sarah"` y `this.lastName` equivale a `"Smith"`. Lo que realmente hicimos fue definir `global.firstName = `Sarah'` y `global.lastName = `Smith'`. La misma `sarah` se deja `indefinida`.
+
+</p>
+</details>
+
+---
+
+#### 12. ¿Cuáles son las tres fases de la propagación de eventos?
+
+- A: Target > Capturing > Bubbling
+- B: Bubbling > Target > Capturing
+- C: Target > Bubbling > Capturing
+- D: Capturing > Target > Bubbling
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: D</p>
+<p>
+
+#### Respuesta correcta: D
+
+Durante la fase de **Capturing**, el evento pasa a través de los elementos ancestrales hasta el elemento objetivo. A continuación, alcanza el elemento **Target** y comienza el **bubbling**. Más información [aquí](https://www.sitepoint.com/event-bubbling-javascript/).
+
+<img src="https://i.imgur.com/N18oRgd.png" width="200">
+
+</p>
+</details>
+
 
 
 
