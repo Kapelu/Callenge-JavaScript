@@ -360,6 +360,26 @@ Durante la fase de **Capturing**, el evento pasa a través de los elementos ance
 </p>
 </details>
 
+---
+
+#### 14. ¿Todos los objetos tienen prototypes?
+
+- A: true
+- B: false
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: B</p>
+<p>
+
+Todos los objetos tienen prototipos, excepto el **objeto base** (Más info [aquí](https://stackoverflow.com/questions/56659303/what-is-base-object-in-javascript)). El componente tiene acceso a algunos métodos y propiedades, como `.toString`. Esta es la razón principal por la que se puede utilizar los métodos JavaScript incorporados. Todos estos métodos están disponibles en el prototipo. Aunque JavaScript no puede encontrar de manera directa en su objeto, baja por la cadena de prototipos y lo encuentra allí, lo que lo hace accesible para poder usarse posteriormente.
+
+</p>
+</details>
+
+---
+
+
+
 
 
 
