@@ -362,7 +362,7 @@ Durante la fase de **Capturing**, el evento pasa a través de los elementos ance
 
 ---
 
-#### 14. ¿Todos los objetos tienen prototypes?
+#### 13. ¿Todos los objetos tienen prototypes?
 
 - A: true
 - B: false
