@@ -340,47 +340,7 @@ En el ejemplo `this.firstName` equivale a `"Sarah"` y `this.lastName` equivale a
 
 ---
 
-#### 12. ¿Cuáles son las tres fases de la propagación de eventos?
-
-- A: Target > Capturing > Bubbling
-- B: Bubbling > Target > Capturing
-- C: Target > Bubbling > Capturing
-- D: Capturing > Target > Bubbling
-
-<details><summary><b>Solución</b></summary>
-<p>Respuesta correcta: D</p>
-<p>
-
-#### Respuesta correcta: D
-
-Durante la fase de **Capturing**, el evento pasa a través de los elementos ancestrales hasta el elemento objetivo. A continuación, alcanza el elemento **Target** y comienza el **bubbling**. Más información [aquí](https://www.sitepoint.com/event-bubbling-javascript/).
-
-<img src="https://i.imgur.com/N18oRgd.png" width="200">
-
-</p>
-</details>
-
----
-
-#### 13. ¿Todos los objetos tienen prototypes?
-
-- A: true
-- B: false
-
-<details><summary><b>Solución</b></summary>
-<p>Respuesta correcta: B</p>
-<p>
-
-Todos los objetos tienen prototipos, excepto el **objeto base** (Más info [aquí](https://stackoverflow.com/questions/56659303/what-is-base-object-in-javascript)). El componente tiene acceso a algunos métodos y propiedades, como `.toString`. Esta es la razón principal por la que se puede utilizar los métodos JavaScript incorporados. Todos estos métodos están disponibles en el prototipo. Aunque JavaScript no puede encontrar de manera directa en su objeto, baja por la cadena de prototipos y lo encuentra allí, lo que lo hace accesible para poder usarse posteriormente.
-
-</p>
-</details>
-
----
-
----
-
-#### 14. ¿Qué devuelve la siguiente función?
+#### 12. ¿Qué devuelve la siguiente función?
 
 ```javascript
 function getPersonInfo(one, two, three) {
@@ -412,7 +372,7 @@ _Tagged templates_ es un caso de uso de [template literals](https://codeburst.io
 
 ---
 
-#### 15. ¿Qué devuelve la siguiente función?
+#### 13. ¿Qué devuelve la siguiente función?
 
 ```javascript
 function checkAge(data) {
@@ -448,7 +408,7 @@ Esta es la razón por la que ambos `{ edad: 18 } === { edad: 18 }` y `{ edad: 18
 
 ---
 
-#### 16. ¿Qué devuelve la siguiente función?
+#### 14. ¿Qué devuelve la siguiente función?
 
 ```javascript
 function getAge(...args) {
@@ -469,6 +429,294 @@ getAge(21);
 
 
 El operador spread (`...args`.) devuelve un array con argumentos. Una matriz es un objeto, así que `typeof args` devuelve `"object"`
+
+</p>
+</details>
+
+---
+
+#### 15. ¿Qué método(s) devolverá el valor `'Hello world!'`?
+
+```javascript
+const myMap = new Map()
+const myFunc = () => 'greeting'
+
+myMap.set(myFunc, 'Hello world!')
+
+//1
+myMap.get('greeting')
+//2
+myMap.get(myFunc)
+//3
+myMap.get(() => 'greeting')
+```
+
+- A: 1
+- B: 2
+- C: 2 and 3
+- D: All of them
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+#### Answer: B
+
+Al agregar un par clave/valor utilizando el método `set`, la clave será el valor del primer argumento pasado a la función `set`, y el valor será el segundo argumento pasado a la función `set`. La clave es la _función_ `() => 'greeting'` en este caso, y el valor `'Hello world'`. `myMap` ahora es `{ () => 'greeting' => 'Hello world!' }`. 
+
+1 es incorrecto, ya que la clave no es `'greeting'` sino `() => 'greeting'`.
+3 es incorrecto, ya que estamos creando una nueva función pasándola como parámetro al método `get`. El objeto interactúa por _referencia_. Las funciones son objetos, por eso dos funciones nunca son estrictamente iguales, aunque sean idénticas: tienen una referencia a un punto diferente en la memoria. 
+
+</p>
+</details>
+
+---
+
+#### 16. ¿Cuál es el resultado?
+
+```javascript
+const person = {
+  name: "Lydia",
+  age: 21
+}
+
+const changeAge = (x = { ...person }) => x.age += 1
+const changeAgeAndName = (x = { ...person }) => {
+  x.age += 1
+  x.name = "Sarah"
+}
+
+changeAge(person)
+changeAgeAndName()
+
+console.log(person)
+```
+
+- A: `{name: "Sarah", age: 22}`
+- B: `{name: "Sarah", age: 23}`
+- C: `{name: "Lydia", age: 22}`
+- D: `{name: "Lydia", age: 23}`
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+#### Answer: C
+
+Tanto las funciones `changeAge` como `changeAgeAndName` tienen un parámetro por defecto, a saber, un objeto _nuevo_ creado `{ ...person }`. Este objeto tiene copias de todos los pares clave/valor en el objeto `person`. 
+
+Primero, invocamos la función `changeAge` y le pasamos el objeto `person` como argumento. Esta función aumenta el valor de la propiedad `age` en 1. `person` ahora es `{name: "Lydia", age: 22}`.
+
+Luego, invocamos la función `changeAgeAndName`, sin embargo, no pasamos un parámetro. En cambio, el valor de `x` es igual a un _nuevo_ objeto: `{ ...person }`. Dado que es un objeto nuevo, no afecta los valores de las propiedades en el objeto `person`. `person` sigue siendo igual a `{ name: "Lydia",age: 22 }`.
+
+</p>
+</details>
+
+---
+
+#### 17. ¿Qué devuelve la siguiente función?
+
+```javascript
+function getAge() {
+  "use strict";
+  age = 21;
+  console.log(age);
+}
+
+getAge();
+```
+
+- A: `21`
+- B: `undefined`
+- C: `ReferenceError`
+- D: `TypeError`
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+<p>Respuesta correcta: C
+
+Con `"use strict"`, es posible asegurarse de que no se declara accidentalmente variables globales. Nunca declaramos la variable `age`, y como usamos `"use strict"`, nos dará un error de referencia. Si no hubiéramos usado `"use strict"`, habría funcionado, ya que la propiedad `age` se habría añadido al objeto global.
+
+</p>
+</details>
+
+---
+
+#### 18. ¿Cuál es el valor de `sum`?
+
+```javascript
+const sum = eval("10*10+5");
+```
+
+- A: `105`
+- B: `"105"`
+- C: `TypeError`
+- D: `"10*10+5"`
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+<p>Respuesta correcta: A
+
+`eval` evalúa los códigos que se pasan como una cadena. Si es una expresión, como en este caso, evalúa la expresión. La expresión es `10 * 10 + 5`. Esto devuelve el número `105`.
+
+</p>
+</details>
+
+---
+
+#### 19. ¿Cuánto tiempo es accesible cool_secret?
+
+```javascript
+sessionStorage.setItem("cool_secret", 123);
+```
+
+- A: Para siempre, los datos no se pierden.
+- B: Cuando el usuario cierra la pestaña.
+- C: Cuando el usuario cierra todo el navegador, no sólo la pestaña.
+- D: Cuando el usuario apaga su ordenador.
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+<p>Respuesta correcta: B
+
+Los datos almacenados en `sessionStorage` se eliminan después de cerrar la pestaña.
+
+Si se usó `localStorage`, los datos habrían estado allí siempre, a menos que por ejemplo `localStorage.clear()` sea invocado.
+
+</p>
+</details>
+
+---
+
+#### 20. ¿Qué devuelve la siguiente función?
+
+```javascript
+var num = 8;
+var num = 10;
+
+console.log(num);
+```
+
+- A: `8`
+- B: `10`
+- C: `SyntaxError`
+- D: `ReferenceError`
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+<p>Respuesta correcta: B
+
+Con la palabra reservada `var`, se pueden declarar múltiples variables con el mismo nombre. La variable tendrá entonces el último valor.
+
+No es posible hacer esto con `let` o `const` ya que tienen un alcance de bloque.
+
+</p>
+</details>
+
+---
+
+#### 21. ¿Qué devuelve la siguiente función?
+
+```javascript
+const obj = { 1: "a", 2: "b", 3: "c" };
+const set = new Set([1, 2, 3, 4, 5]);
+
+obj.hasOwnProperty("1");
+obj.hasOwnProperty(1);
+set.has("1");
+set.has(1);
+```
+
+- A: `false` `true` `false` `true`
+- B: `false` `true` `true` `true`
+- C: `true` `true` `false` `true`
+- D: `true` `true` `true` `true`
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+<p>Respuesta correcta: C
+
+Todas las claves de un objeto (excepto los símbolos) actúan como cadenas, incluso si no son escritas como una cadena. Es por eso que `obj.hasOwnProperty('1')` también devuelve verdadero.
+
+No funciona así para un conjunto. No hay un "1" en nuestro set: `set.has('1')` devuelve `falso`. Tiene el tipo numérico `1`, `set.has(1)` devuelve `true`.
+
+
+</p>
+</details>
+
+---
+
+#### 22. ¿Qué devuelve la siguiente función?
+
+```javascript
+const obj = { a: "one", b: "two", a: "three" };
+console.log(obj);
+```
+
+- A: `{ a: "one", b: "two" }`
+- B: `{ b: "two", a: "three" }`
+- C: `{ a: "three", b: "two" }`
+- D: `SyntaxError`
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+<p>Respuesta correcta: C
+
+Si tiene dos claves con el mismo nombre, la clave será reemplazada. Seguirá estando en su primera posición, pero con el último valor especificado
+
+</p>
+</details>
+
+#### 23. ¿Cuál es el resultado?
+
+```javascript
+console.log(`${(x => x)('I love')} to program`)
+```
+
+- A: `I love to program`
+- B: `undefined to program`
+- C: `${(x => x)('I love') to program`
+- D: `TypeError`
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+#### Answer: A
+
+Las expresiones dentro de las plantillas de cadena de texto se evalúan primero. Esto significa que la cadena contendrá el valor devuelto de la expresión, la función invocada inmediatamente `(x => x)('I love')` en este caso. Pasamos el valor `'I love'` como argumento para la función de flecha `x => x`. `x` es igual a `'I love'`, que se devuelve tal cual. Esto da como resultado `I love to program`. 
+
+</p>
+</details>
+
+---
+
+#### 24. ¿Qué ocurrirá?
+
+```javascript
+let config = {
+  alert: setInterval(() => {
+    console.log('Alert!')
+  }, 1000)
+}
+
+config = null
+```
+
+- A: The `setInterval` callback won't be invoked
+- B: The `setInterval` callback gets invoked once
+- C: The `setInterval` callback will still be called every second
+- D: We never invoked `config.alert()`, config is `null`
+
+<details><summary><b>Solución</b></summary>
+<p>
+
+#### Answer: C
+
+Normalmente, cuando establecemos objetos iguales a `null`, esos objetos se recogen por el _recolector de basura_ ya que ya no hay ninguna referencia a ese objeto. Sin embargo, dado que la función de devolución de llamada dentro de `setInterval` es una función flecha (por lo tanto vinculada al objeto` config`), la función de devolución de llamada todavía tiene una referencia al objeto `config`. Mientras haya una referencia, el objeto no será recolectado. Como no es recolectado, la función de devolución de llamada `setInterval` aún se invocará cada 1000ms (1s).
 
 </p>
 </details>
