@@ -8,9 +8,6 @@ Las respuestas se encuentran en las secciones contraídas debajo de las pregunta
 No olvides dejar tu 👉 <button style= 'background-color:#FFEB3B; text-shadow: 1px 2px #FFEB3B' onclick="window.location.href='https://form.jotform.com/221181252861652'"><b><i>Feedback</i></b></button> 👍 💪 GRACIAS!!!
 </i></p> 
 
-<a href="https://github.com/Kapelu/Callenge-JavaScript">
-    <img alt="Si la etiqueta no se ve, dale F5 actualizar la página" title="Visitas Perfil GitHub" src="https://github-contador-visitas.herokuapp.com/"/>
-
 ---
 
 #### 1. ¿Qué devuelve la siguiente función?
