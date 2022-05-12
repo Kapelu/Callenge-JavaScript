@@ -378,8 +378,97 @@ Todos los objetos tienen prototipos, excepto el **objeto base** (Más info [aqu�
 
 ---
 
+---
+
+#### 14. ¿Qué devuelve la siguiente función?
+
+```javascript
+function getPersonInfo(one, two, three) {
+  console.log(one);
+  console.log(two);
+  console.log(three);
+}
+
+const person = "Lydia";
+const age = 21;
+
+getPersonInfo`${person} is ${age} years old`;
+```
+
+- A: `"Lydia"` `21` `["", " is ", " years old"]`
+- B: `["", " is ", " years old"]` `"Lydia"` `21`
+- C: `"Lydia"` `["", " is ", " years old"]` `21`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: B</p>
+<p>
 
 
 
 
+_Tagged templates_ es un caso de uso de [template literals](https://codeburst.io/javascript-template-literals-tag-functions-for-beginners-758a041160e1). Una _plantilla etiquetada_ es una llamada de función que utiliza una plantilla literal de la que obtener sus argumentos. Si se usan literales de plantillas etiquetadas, el valor del primer argumento es siempre una matriz de los valores de las cadenas. El resto de los argumentos obtienen los valores de las expresiones pasadas.
+</p>
+</details>
 
+---
+
+#### 15. ¿Qué devuelve la siguiente función?
+
+```javascript
+function checkAge(data) {
+  if (data === { age: 18 }) {
+    console.log("You are an adult!");
+  } else if (data == { age: 18 }) {
+    console.log("You are still an adult.");
+  } else {
+    console.log(`Hmm.. You don't have an age I guess`);
+  }
+}
+
+checkAge({ age: 18 });
+```
+
+- A: `You are an adult!`
+- B: `You are still an adult.`
+- C: `Hmm.. You don't have an age I guess`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C</p>
+<p>
+
+
+Al probar la igualdad, las primitivas se comparan por su _valor_, mientras que los objetos se comparan por su _referencia_. JavaScript comprueba si los objetos tienen una referencia a la misma ubicación en la memoria.
+
+Los dos objetos que estamos comparando no tienen eso: el objeto que pasamos como parámetro se refiere a una ubicación diferente en la memoria que el objeto que usamos para comprobar la igualdad.
+
+Esta es la razón por la que ambos `{ edad: 18 } === { edad: 18 }` y `{ edad: 18 }} == { edad: 18 }` devuelven `false`
+
+</p>
+</details>
+
+---
+
+#### 16. ¿Qué devuelve la siguiente función?
+
+```javascript
+function getAge(...args) {
+  console.log(typeof args);
+}
+
+getAge(21);
+```
+
+- A: `"number"`
+- B: `"array"`
+- C: `"object"`
+- D: `"NaN"`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C</p>
+<p>
+
+
+El operador spread (`...args`.) devuelve un array con argumentos. Una matriz es un objeto, así que `typeof args` devuelve `"object"`
+
+</p>
+</details>
