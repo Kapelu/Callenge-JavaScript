@@ -457,9 +457,8 @@ myMap.get(() => 'greeting')
 - D: All of them
 
 <details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: B</p>
 <p>
-
-#### Answer: B
 
 Al agregar un par clave/valor utilizando el método `set`, la clave será el valor del primer argumento pasado a la función `set`, y el valor será el segundo argumento pasado a la función `set`. La clave es la _función_ `() => 'greeting'` en este caso, y el valor `'Hello world'`. `myMap` ahora es `{ () => 'greeting' => 'Hello world!' }`. 
 
@@ -497,9 +496,8 @@ console.log(person)
 - D: `{name: "Lydia", age: 23}`
 
 <details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C</p>
 <p>
-
-#### Answer: C
 
 Tanto las funciones `changeAge` como `changeAgeAndName` tienen un parámetro por defecto, a saber, un objeto _nuevo_ creado `{ ...person }`. Este objeto tiene copias de todos los pares clave/valor en el objeto `person`. 
 
@@ -530,9 +528,8 @@ getAge();
 - D: `TypeError`
 
 <details><summary><b>Solución</b></summary>
-<p>
-
 <p>Respuesta correcta: C
+<p>
 
 Con `"use strict"`, es posible asegurarse de que no se declara accidentalmente variables globales. Nunca declaramos la variable `age`, y como usamos `"use strict"`, nos dará un error de referencia. Si no hubiéramos usado `"use strict"`, habría funcionado, ya que la propiedad `age` se habría añadido al objeto global.
 
@@ -553,9 +550,8 @@ const sum = eval("10*10+5");
 - D: `"10*10+5"`
 
 <details><summary><b>Solución</b></summary>
-<p>
-
 <p>Respuesta correcta: A
+<p>
 
 `eval` evalúa los códigos que se pasan como una cadena. Si es una expresión, como en este caso, evalúa la expresión. La expresión es `10 * 10 + 5`. Esto devuelve el número `105`.
 
@@ -576,9 +572,8 @@ sessionStorage.setItem("cool_secret", 123);
 - D: Cuando el usuario apaga su ordenador.
 
 <details><summary><b>Solución</b></summary>
-<p>
-
 <p>Respuesta correcta: B
+<p>
 
 Los datos almacenados en `sessionStorage` se eliminan después de cerrar la pestaña.
 
@@ -604,9 +599,8 @@ console.log(num);
 - D: `ReferenceError`
 
 <details><summary><b>Solución</b></summary>
-<p>
-
 <p>Respuesta correcta: B
+<p>
 
 Con la palabra reservada `var`, se pueden declarar múltiples variables con el mismo nombre. La variable tendrá entonces el último valor.
 
@@ -635,9 +629,8 @@ set.has(1);
 - D: `true` `true` `true` `true`
 
 <details><summary><b>Solución</b></summary>
-<p>
-
 <p>Respuesta correcta: C
+<p>
 
 Todas las claves de un objeto (excepto los símbolos) actúan como cadenas, incluso si no son escritas como una cadena. Es por eso que `obj.hasOwnProperty('1')` también devuelve verdadero.
 
@@ -662,9 +655,8 @@ console.log(obj);
 - D: `SyntaxError`
 
 <details><summary><b>Solución</b></summary>
-<p>
-
 <p>Respuesta correcta: C
+<p>
 
 Si tiene dos claves con el mismo nombre, la clave será reemplazada. Seguirá estando en su primera posición, pero con el último valor especificado
 
@@ -683,9 +675,8 @@ console.log(`${(x => x)('I love')} to program`)
 - D: `TypeError`
 
 <details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A</p>
 <p>
-
-#### Answer: A
 
 Las expresiones dentro de las plantillas de cadena de texto se evalúan primero. Esto significa que la cadena contendrá el valor devuelto de la expresión, la función invocada inmediatamente `(x => x)('I love')` en este caso. Pasamos el valor `'I love'` como argumento para la función de flecha `x => x`. `x` es igual a `'I love'`, que se devuelve tal cual. Esto da como resultado `I love to program`. 
 
@@ -712,11 +703,60 @@ config = null
 - D: We never invoked `config.alert()`, config is `null`
 
 <details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C</p>
 <p>
 
-#### Answer: C
-
 Normalmente, cuando establecemos objetos iguales a `null`, esos objetos se recogen por el _recolector de basura_ ya que ya no hay ninguna referencia a ese objeto. Sin embargo, dado que la función de devolución de llamada dentro de `setInterval` es una función flecha (por lo tanto vinculada al objeto` config`), la función de devolución de llamada todavía tiene una referencia al objeto `config`. Mientras haya una referencia, el objeto no será recolectado. Como no es recolectado, la función de devolución de llamada `setInterval` aún se invocará cada 1000ms (1s).
+
+</p>
+</details>
+
+---
+
+#### 25. ¿Cuál es el resultado?
+
+```javascript
+function* generatorOne() {
+  yield ['a', 'b', 'c'];
+}
+
+function* generatorTwo() {
+  yield* ['a', 'b', 'c'];
+}
+
+const one = generatorOne()
+const two = generatorTwo()
+
+console.log(one.next().value)
+console.log(two.next().value)
+```
+
+- A: `a` y `a`
+- B: `a` y `undefined`
+- C: `['a', 'b', 'c']` y `a`
+- D: `a` y `['a', 'b', 'c']`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C</p>
+<p>
+
+Con la palabra clave `yield`, cedemos valores en una función generadora. Con la palabra clave `yield*`, podemos obtener valores de otra función generadora u objeto iterable (por ejemplo, un array).
+
+En la función `generatorOne`, cedemos todo el array `['a', 'b', 'c']` usando la palabra clave `yield`. El valor de la propiedad `value` en el objeto devuelto por el método `next` en `one` (`one.next().value`) es igual a todo el array `['a', 'b', 'c']`.
+
+```javascript
+console.log(one.next().value) // ['a', 'b', 'c']
+console.log(one.next().value) // undefined
+```
+
+En la función `generatorTwo`, usamos la palabra clave `yield*`. Esto significa que el primer valor cedido de `two` es igual al primer valor cedido en el iterador. El iterador es el array `['a', 'b', 'c']`. El primer valor producido es `a`, por lo que la primera vez que llamamos a `two.next().value`, se devuelve `a`. 
+
+```javascript
+console.log(two.next().value) // 'a'
+console.log(two.next().value) // 'b'
+console.log(two.next().value) // 'c'
+console.log(two.next().value) // undefined
+```
 
 </p>
 </details>
