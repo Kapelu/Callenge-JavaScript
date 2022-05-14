@@ -711,6 +711,7 @@ Normalmente, cuando establecemos objetos iguales a `null`, esos objetos se recog
 </p>
 </details>
 
+<<<<<<< HEAD
 ---
 
 #### 25. ¿Cuál es el resultado?
@@ -760,3 +761,9 @@ console.log(two.next().value) // undefined
 
 </p>
 </details>
+=======
+
+
+
+
+>>>>>>> c77e7bb060007216468d56484d686e324ef70a70
