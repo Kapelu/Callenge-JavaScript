@@ -757,3 +757,74 @@ console.log(two.next().value) // undefined
 
 </p>
 </details>
+
+---
+
+#### 26. El contexto de ejecución de JS crea dos cosas: el objecto global y la palabra reservada "this".
+
+- A: true
+- B: false
+- C: it depends
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A
+<p>
+
+
+El contexto de ejecución base es el contexto de ejecución global: es accesible en todo el código.
+
+</p>
+</details>
+
+---
+
+#### 27. ¿Qué devuelve la siguiente función?
+
+```javascript
+for (let i = 1; i < 5; i++) {
+  if (i === 3) continue;
+  console.log(i);
+}
+```
+
+- A: `1` `2`
+- B: `1` `2` `3`
+- C: `1` `2` `4`
+- D: `1` `3` `4`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C
+<p>
+
+La sentencia `continue` omite una iteración si una cierta condición, en este caso `(i === 3)`,  devuelve `true`.
+
+</p>
+</details>
+
+---
+
+#### 28. ¿Qué devuelve la siguiente función?
+
+```javascript
+String.prototype.giveLydiaPizza = () => {
+  return "Just give Lydia pizza already!";
+};
+
+const name = "Lydia";
+
+name.giveLydiaPizza();
+```
+
+- A: `"Just give Lydia pizza already!"`
+- B: `TypeError: not a function`
+- C: `SyntaxError`
+- D: `undefined`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A
+<p>
+
+`String` es un constructor incorporado, al que podemos añadir propiedades. En este caso concreto, añadimos un método a su prototipo. Las cadenas primitivas se convierten automáticamente en un objeto de cadena, generado por la función de prototipo de cadena. Por lo tanto, todas las cadenas (objetos de cadena) tienen acceso a ese método.
+
+</p>
+</details>
