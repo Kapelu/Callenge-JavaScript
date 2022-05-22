@@ -828,3 +828,89 @@ name.giveLydiaPizza();
 
 </p>
 </details>
+
+---
+
+#### 29. ¿Qué devuelve la siguiente función?
+
+```javascript
+const a = {};
+const b = { key: "b" };
+const c = { key: "c" };
+
+a[b] = 123;
+a[c] = 456;
+
+console.log(a[b]);
+```
+
+- A: `123`
+- B: `456`
+- C: `undefined`
+- D: `ReferenceError`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: B
+<p>
+
+
+Las claves se convierten automáticamente en strings. Estamos tratando en este pregunta de establecer un objeto como clave para el objeto `a`, con el valor de `123`.
+
+Sin embargo, cuando se _stringfy_ (compleja traducción) un objeto, se convierte en `"[object Object]"`. Así que lo que estamos diciendo aquí, es que `a["object Object"] = 123`. Entonces, podemos intentar hacer lo mismo de nuevo. `c` es otro objeto que estamos implícitamente encadenando. Entonces, `a["object Object"] = 456`.
+
+Para finalizar, registramos `a[b]`, que en realidad es `a["Object"]`. Acabamos de ponerlo en `456`, así que devuelve `456`.
+
+</p>
+</details>
+
+---
+
+#### 30. ¿Qué devuelve la siguiente función?
+
+```javascript
+const foo = () => console.log("First");
+const bar = () => setTimeout(() => console.log("Second"));
+const baz = () => console.log("Third");
+
+bar();
+foo();
+baz();
+```
+
+- A: `First` `Second` `Third`
+- B: `First` `Third` `Second`
+- C: `Second` `First` `Third`
+- D: `Second` `Third` `First`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: B
+<p>
+
+Tenemos una función `setTimeout` y la invocamos primero. Sin embargo, fue el último en ser registrado.
+
+Esto se debe a que en los navegadores, no sólo tenemos el motor de tiempo de ejecución, también tenemos algo llamado `WebAPI`. El `WebAPI` nos da la función `setTimeout` para empezar, y por ejemplo el DOM.
+
+Después de que la _callback_ es empujada a la WebAPI, la función `setTimeout` en sí misma (¡pero no la callback!) es removida de la pila.
+
+<img src="https://i.imgur.com/X5wsHOg.png" width="200">
+
+Ahora, `foo` es invocado, y ``"First"`` está siendo registrado.
+
+<img src="https://i.imgur.com/Pvc0dGq.png" width="200">
+
+`Foo` se quita de la pila, y `Baz` es invocado. `Third` se registra.
+
+<img src="https://i.imgur.com/WhA2bCP.png" width="200">
+
+La WebAPI no puede simplemente añadir cosas a la pila cuando está lista. En su lugar, empuja la función de devolución de llamada a algo llamado la _queue_ (cola en español).
+
+<img src="https://i.imgur.com/NSnDZmU.png" width="200">
+
+Aquí es donde un bucle de eventos comienza a funcionar. Un **lazo de evento** mira la pila y la cola de tareas. Si la pila está vacía, toma lo primero que encuentra en la cola y la empuja sobre la pila.
+
+<img src="https://i.imgur.com/uyiScAI.png" width="200">
+
+Se invoca el `bar`, se registra el `"Second"` y se quita de la pila.
+
+</p>
+</details>
