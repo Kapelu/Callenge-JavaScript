@@ -914,3 +914,58 @@ Se invoca el `bar`, se registra el `"Second"` y se quita de la pila.
 
 </p>
 </details>
+
+---
+
+#### 31. ¿Cuál es la referencia al objeto que lanza el evento cuando se hace click en el botón?
+
+```html
+<div onclick="console.log('first div')">
+  <div onclick="console.log('second div')">
+    <button onclick="console.log('button')">
+      Click!
+    </button>
+  </div>
+</div>
+```
+
+- A: Outer `div`
+- B: Inner `div`
+- C: `button`
+- D: An array of all nested elements.
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C
+<p>
+
+
+El elemento anidado más profundo que causa el evento es el destino de ese evento.
+
+</p>
+</details>
+
+---
+
+#### 32. Al hacer click en el párrafo, ¿qué se muestra por pantalla?
+
+```html
+<div onclick="console.log('div')">
+  <p onclick="console.log('p')">
+    Click here!
+  </p>
+</div>
+```
+
+- A: `p` `div`
+- B: `div` `p`
+- C: `p`
+- D: `div`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A
+<p>
+
+Si hacemos clic en `p`, vemos dos _outputs_: `p` y `div`. Durante la propagación del evento, hay 3 [fases](https://www.sitepoint.com/event-bubbling-javascript/): _capturing_, _target_ y _bubbling_. De forma predeterminada, los controladores de eventos se ejecutan en la fase uno (a menos que se establezca `useCapture` en `true`). Va desde el elemento anidado más profundo hacia el exterior.
+
+</p>
+</details>
