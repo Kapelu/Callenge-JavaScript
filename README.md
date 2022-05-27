@@ -969,3 +969,62 @@ Si hacemos clic en `p`, vemos dos _outputs_: `p` y `div`. Durante la propagació
 
 </p>
 </details>
+
+---
+
+#### 33. ¿Qué devuelve la siguiente función?
+
+```javascript
+const person = { name: "Lydia" };
+
+function sayHi(age) {
+  console.log(`${this.name} is ${age}`);
+}
+
+sayHi.call(person, 21);
+sayHi.bind(person, 21);
+```
+
+- A: `undefined is 21` `Lydia is 21`
+- B: `function` `function`
+- C: `Lydia is 21` `Lydia is 21`
+- D: `Lydia is 21` `function`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: D
+<p>
+
+En ambos  podemos pasar el objeto al que queremos que se refiera la palabra reservada `this`. Sin embargo, la diferencia es que `.call` es *ejecutado inmediatamente*!
+
+`.bind` devuelve una copia de la función, pero con un contexto enlazado. Es decir, no se ejecuta de inmediato.
+
+</p>
+</details>
+
+---
+
+#### 34. ¿Qué devuelve la siguiente función?
+
+```javascript
+function sayHi() {
+  return (() => 0)();
+}
+
+typeof sayHi();
+```
+
+- A: `"object"`
+- B: `"number"`
+- C: `"function"`
+- D: `"undefined"`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: B
+<p>
+
+La función `sayHi` devuelve el valor devuelto de la función invocada inmediatamente ([IIFE](https://developer.mozilla.org/es/docs/Glossary/IIFE)). Esta función devuelve `0`, que es el tipo `"number"`.
+
+En JS solo hay 7 tipos incorporados (En inglés se llaman _built-in types_, y pueden identificarse con el operador `typeof`. Más información [aquí](https://www.oreilly.com/library/view/you-dont-know/9781491905159/ch01.html)): `null`,` undefined`, `boolean`,` number`, `string`,` object`, `symbol` y `bigint`. `"function"` no es un tipo, ya que las funciones son objetos, es de tipo `"object"`.
+
+</p>
+</details>
