@@ -1065,3 +1065,27 @@ Los constructores de funciones, como `new Number` y `new Boolean` son correctos.
 
 </p>
 </details>
+
+---
+
+#### 36. ¿Qué devuelve la siguiente función?
+
+```javascript
+console.log(typeof typeof 1);
+```
+
+- A: `"number"`
+- B: `"string"`
+- C: `"object"`
+- D: `"undefined"`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: B
+<p>
+
+
+`typeof 1` devuelve `"number" `.
+`typeof "number"` devuelve `"string"`
+
+</p>
+</details>
