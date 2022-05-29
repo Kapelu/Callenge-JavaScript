@@ -1028,3 +1028,40 @@ En JS solo hay 7 tipos incorporados (En inglés se llaman _built-in types_, y pu
 
 </p>
 </details>
+
+---
+
+#### 35. ¿Cuáles de estos valores son falsos?
+
+```javascript
+0;
+new Number(0);
+("");
+(" ");
+new Boolean(false);
+undefined;
+```
+
+- A: `0`, `''`, `undefined`
+- B: `0`, `new Number(0)`, `''`, `new Boolean(false)`, `undefined`
+- C: `0`, `''`, `new Boolean(false)`, `undefined`
+- D: All of them are falsy
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A
+<p>
+
+Solo hay seis valores falsos:
+
+- `undefined`
+- `null`
+- `NaN`
+- `0`
+- `''` (cadena vacía)
+- `false`
+
+
+Los constructores de funciones, como `new Number` y `new Boolean` son correctos.
+
+</p>
+</details>
