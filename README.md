@@ -1089,3 +1089,67 @@ console.log(typeof typeof 1);
 
 </p>
 </details>
+
+---
+
+#### 37. ¿Qué devuelve la siguiente función?
+
+```javascript
+const numbers = [1, 2, 3];
+numbers[10] = 11;
+console.log(numbers);
+```
+
+- A: `[1, 2, 3, 7 x null, 11]`
+- B: `[1, 2, 3, 11]`
+- C: `[1, 2, 3, 7 x empty, 11]`
+- D: `SyntaxError`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C
+<p>
+
+Cuando se establece un valor en un elemento de una matriz que excede la longitud de la matriz, JS crea algo llamado "ranuras vacías". Estos realmente tienen el valor de `undefined`, pero se podrá ver algo como:
+
+`[1, 2, 3, 7 x empty, 11]`
+
+dependiendo de dónde lo ejecute (es diferente para cada navegador, nodo, etc.)
+
+</p>
+</details>
+
+---
+
+#### 38. ¿Qué devuelve la siguiente función?
+
+```javascript
+(() => {
+  let x, y;
+  try {
+    throw new Error();
+  } catch (x) {
+    (x = 1), (y = 2);
+    console.log(x);
+  }
+  console.log(x);
+  console.log(y);
+})();
+```
+
+- A: `1` `undefined` `2`
+- B: `undefined` `undefined` `undefined`
+- C: `1` `1` `2`
+- D: `1` `undefined` `undefined`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A
+<p>
+
+El bloque `catch` recibe el argumento` x`. Este no es el mismo `x` que la variable cuando pasamos los argumentos. Esta variable `x` tiene un ámbito de bloque.
+
+Más adelante, establecemos esta variable de ámbito de bloque igual a `1`, y establecemos el valor de la variable `y`. Ahora, registramos la variable de ámbito de bloque `x`, que es igual a `1`.
+
+Fuera del bloque `catch`,` x` sigue siendo `undefined`, e `y` es `2`. Cuando queremos `console.log (x)` fuera del bloque `catch`, devuelve `undefined`, y `y` devuelve` 2`.
+
+</p>
+</details>
