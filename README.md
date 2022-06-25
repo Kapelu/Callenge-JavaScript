@@ -1153,3 +1153,126 @@ Fuera del bloque `catch`,` x` sigue siendo `undefined`, e `y` es `2`. Cuando que
 
 </p>
 </details>
+
+---
+
+#### 39. Todo en Javascript es o bien un(a)..
+
+- A: tipo primitivo o un objeto
+- B: función u objeto
+- C: ¡pregunta trampa! solo objetos
+- D: número u objeto
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A
+<p>
+
+JavaScript solo tiene tipos y objetos primitivos.
+
+Los tipos primitivos son `boolean`, `null`, `undefined`, `bigint`, `number`, `string` y `symbol`.
+
+Lo que diferencia a un tipo primitivo de un objeto es que los primeros no tienen propiedades o métodos; sin embargo, se puede ver que `'foo'.toUpperCase ()` se evalúa como `'FOO'` y no da como resultado un `TypeError`. Esto se debe a que cuando se intenta acceder a una propiedad o método en un tipo primitivo, como una cadena, JavaScript envolverá implícitamente el objeto utilizando una de las clases de envoltura, por ejemplo `string`, y luego descartará la envoltura inmediatamente después de evaluar la expresión. Todas los tipos primitivos excepto `null` y `undefined` poseen este comportamiento.
+
+</p>
+</details>
+
+---
+
+#### 40. ¿Qué devuelve la siguiente función?
+
+```javascript
+[[0, 1], [2, 3]].reduce(
+  (acc, cur) => {
+    return acc.concat(cur);
+  },
+  [1, 2]
+);
+```
+
+- A: `[0, 1, 2, 3, 1, 2]`
+- B: `[6, 1, 2]`
+- C: `[1, 2, 0, 1, 2, 3]`
+- D: `[1, 2, 6]`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C
+<p>
+
+`[1, 2]` es nuestro valor inicial. Este es el valor con el que empezamos y el valor del primer `acc`. Durante la primera ronda, `acc` es` [1,2] `, y `cur` es `[0, 1]`. Los concatenamos, lo que resulta en `[1, 2, 0, 1]`.
+
+Entonces, `[1, 2, 0, 1]` es `acc` y` [2, 3]` es `cur`. Los concatenamos, y obtenemos `[1, 2, 0, 1, 2, 3]`
+
+</p>
+</details>
+
+---
+
+#### 41. ¿Qué devuelve la siguiente función?
+
+```javascript
+!!null;
+!!"";
+!!1;
+```
+
+- A: `false` `true` `false`
+- B: `false` `false` `true`
+- C: `false` `true` `true`
+- D: `true` `true` `false`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: B
+<p>
+
+`null` es falso. `! null` devuelve `true`. `! true` devuelve `false`.
+
+`" "` es falso. `!" "` devuelve `true`. `! true` devuelve `false`.
+
+'1' es verdadero. `! 1` devuelve `false`. `! false` devuelve `true`.
+
+</p>
+</details>
+
+---
+
+#### 42. ¿Qué devuelveel método `setInterval`?
+
+```javascript
+setInterval(() => console.log("Hi"), 1000);
+```
+
+- A: una id único
+- B: la cantidad de milisegundos especificada
+- C: la función pasada
+- D: `undefined`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A
+<p>
+
+Devuelve una identificación única, un id único. Este id se puede usar para borrar ese intervalo con la función `clearInterval ()`.
+
+</p>
+</details>
+
+---
+
+#### 43. ¿Qué devuelve la siguiente función?
+
+```javascript
+[..."Lydia"];
+```
+
+- A: `["L", "y", "d", "i", "a"]`
+- B: `["Lydia"]`
+- C: `[[], "Lydia"]`
+- D: `[["L", "y", "d", "i", "a"]]`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: A
+<p>
+
+Una cadena es un iterable. El [operador de propagación](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Spread_operator) asigna todos los caracteres de un iterable a un elemento.
+
+</p>
+</details>
