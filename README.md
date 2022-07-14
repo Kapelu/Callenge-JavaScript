@@ -1276,3 +1276,212 @@ Una cadena es un iterable. El [operador de propagación](https://developer.mozil
 
 </p>
 </details>
+
+---
+
+#### 44. ¿Cuál es el resultado?
+
+```javascript
+function* generator(i) {
+  yield i;
+  yield i * 2;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+console.log(gen.next().value);
+```
+
+- A: `[0, 10], [10, 20]`
+- B: `20, 20`
+- C: `10, 20`
+- D: `0, 10 y 10, 20`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C
+<p>
+
+Las funciones regulares no pueden pararse a mitad de ejecución después de invocarse. Sin embargo, una función generadora sí puede ser parada, y más adelante continuar desde donde fue detenida. Cada vez que una función generadora encuentra un `yield`, la función cede el valor especificado después de él. Observa que la función generadora en este caso no _devuelve_ el valor, _cede_ el valor.
+
+Primero, iniciamos la función generadora con `i` igual a `10`. Invocamos la función generadora usando el método `next()`. La primera vez que invocamos la función generadora, `i` es igual a `10`. Encuentra el primer `yield`: cede el valor de `i`. El generador está ahora "pausado", y `10` es mostrado por consola.
+
+Después, invocamos la función otra vez con el método `next()`. Continúa donde fue detenida previamente, todavía con `i` igual a `10`. Ahora, encuentra el siguiente `yield`, y cede `i * 2`. `i` es igual a `10`, así que devuelve `10 * 2`, que es `20`. Esto da como resultado `10, 20`.
+
+</p>
+</details>
+
+---
+
+#### 45. ¿Qué devuelve esto?
+
+```javascript
+const firstPromise = new Promise((res, rej) => {
+  setTimeout(res, 500, "one");
+});
+
+const secondPromise = new Promise((res, rej) => {
+  setTimeout(res, 100, "two");
+});
+
+Promise.race([firstPromise, secondPromise]).then(res => console.log(res));
+```
+
+- A: `"one"`
+- B: `"two"`
+- C: `"two" "one"`
+- D: `"one" "two"`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: B
+<p>
+
+Cuando pasamos múltiples promesas al método `Promise.race`, resuelve/rechaza la _primera_ promesa que sea resuelta/rechazada. Para el método `setTimeout`, pasamos un cronómetro: 500ms para la primera promesa (`firstPromise`), y 100ms para la segunda promesa (`secondPromise`). Esto significa que `secondPromise` se resuelve primero con el valor de `'two'`. `res` ahora guarda el valor `'two'`, el cual se muestra por consola.
+
+</p>
+</details>
+
+---
+
+#### 46. ¿Cuál es el resultado?
+
+```javascript
+let person = { name: "Lydia" };
+const members = [person];
+person = null;
+
+console.log(members);
+```
+
+- A: `null`
+- B: `[null]`
+- C: `[{}]`
+- D: `[{ name: "Lydia" }]`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: D
+<p>
+
+Primero, declaramos la variable `person` con el valor de un objeto que tiene una propiedad `name`.
+
+<img src="https://i.imgur.com/TML1MbS.png" width="200">
+
+Después, declaramos una variable llamada `members`. Asignamos el primer elemento de ese array igual al valor de la variable `person`. Un objeto interactúa por _referencia_ cuando es asignado igual a otro objeto. Cuando asignas una referencia de una variable a otra, haces una _copia_ de esa referencia. (¡observa que no tienen la _misma_ referencia!)
+
+<img src="https://i.imgur.com/FSG5K3F.png" width="300">
+
+Después, asignamos que la variable `person` es igual a `null`.
+
+<img src="https://i.imgur.com/sYjcsMT.png" width="300">
+
+Solo estamos modificando el valor de la variable `person`, y no el primer elemento del array, ya que este elemento tiene una referencia diferente (copiada) al objeto. El primer elemento en `members` todavía mantiene su referencia hacia el objeto original. Cuando mostramos por consola el array `members`, el primer elemento todavía mantiene el valor del objeto, el cual se muestra por consola.
+
+</p>
+</details>
+
+---
+
+#### 47. ¿Cuál es el resultado?
+
+```javascript
+const person = {
+  name: "Lydia",
+  age: 21
+};
+
+for (const item in person) {
+  console.log(item);
+}
+```
+
+- A: `{ name: "Lydia" }, { age: 21 }`
+- B: `"name", "age"`
+- C: `"Lydia", 21`
+- D: `["name", "Lydia"], ["age", 21]`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: B
+<p>
+
+Con un bucle `for-in`, podemos iterar sobre claves de objetos, en este caso `name` y `age`. Internamente, las claves de objetos son strings (si no son Symbol). En cada bucle, asignamos `item` igual a la clave actual que se está iterando. Primero, `item` es igual a `name`, y se muestra por consola. Después, `item` es igual a `age`, que se muestra por consola.
+
+</p>
+</details>
+
+---
+
+#### 48. ¿Cuál es el resultado?
+
+```javascript
+console.log(3 + 4 + "5");
+```
+
+- A: `"345"`
+- B: `"75"`
+- C: `12`
+- D: `"12"`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: B
+<p>
+
+La asociatividad de operadores es el orden en el que el compilador evalúa las expresiones, ya sea de izquierda a derecha o de derecha a izquierda. Esto solo pasa si todos los operadores tienen la _misma_ precedencia. Solo tenemos un tipo de operador: `+`. Para la suma, la asociatividad es de izquierda a derecha.
+
+`3 + 4` se evalúa primero. Esto da como resultado el número `7`.
+
+`7 + '5'` da `"75"` por la coerción. JavaScript convierte el número `7` a string, mira la pregunta 15. Podemos concatenar dos strings usando el operador `+`. `7 + '5'` da como resultado `"75"`.
+
+</p>
+</details>
+
+---
+
+#### 49. ¿Cuál es el valor de `num`?
+
+```javascript
+const num = parseInt("7*6", 10);
+```
+
+- A: `42`
+- B: `"42"`
+- C: `7`
+- D: `NaN`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C
+<p>
+
+Solo el primer número en el string es devuelto. Según en la _base_ seleccionada (el segundo argumento para especificar a qué tipo de número queremos transformarlo: base 10, hexadecimal, octal, binario, etc.), el `parseInt` comprueba si los caracteres del string son válidos. Una vez encuentra un caracter que no es un número válido en la base seleccionada, deja de recorrer el string e ignora los siguientes caracteres.
+
+`*` no es un número válido. Solo convierte `"7"` al decimal `7`. `num` tiene el valor `7`.
+
+</p>
+</details>
+
+---
+
+#### 50. ¿Cuál es el resultado?
+
+```javascript
+[1, 2, 3].map(num => {
+  if (typeof num === "number") return;
+  return num * 2;
+});
+```
+
+- A: `[]`
+- B: `[null, null, null]`
+- C: `[undefined, undefined, undefined]`
+- D: `[ 3 huecos vacíos ]`
+
+<details><summary><b>Solución</b></summary>
+<p>Respuesta correcta: C
+<p>
+
+Cuando se mapea sobre un array, el valor de `num` es igual al elemento que se está iterando. En este caso, los elementos son números, por lo que la condición del if `typeof num === "number"` devuelve `true`. La función de mapeo crea un nuevo array e inserta los valores devueltos por la función.
+
+Sin embargo, no devolvemos un valor. Cuando no devolvemos un valor desde la función, la función devuelve `undefined`. Para cada elemento en el array, la función de bloque es llamada, así que por cada elemento devolvemos `undefined`.
+
+</p>
+</details>
+
